@@ -136,13 +136,18 @@ i {font-family: "Font Awesome 6 Free" !important; }
 
 
 
+/* 복리후생 */
+
+#content_box > li:nth-of-type(3) {background:#ebebeb; }
+
+/* 전형절차 */
+
+#content_box > li:nth-of-type(4) {
+    background:#bddbff; 
+}
 
 
-
-
-
-
-
+#content_box > li:last-of-type {background:#f3e2ff; }
 
 
 
