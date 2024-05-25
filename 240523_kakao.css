@@ -1,157 +1,198 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
-
-/* PC&M필수CSS */
-
-body, a, table, th, td, input, button { font-size: 16px; line-height:1.5; word-break:keep-all; color:#000; }
-img {max-width:100%; }
-h1, h2,h3,h4, h5,h6 {font-size:100%; }
-i {font-family: "Font Awesome 6 Free" !important; }
-
-@media only screen and (max-width: 961px) {
-    body {font-size: 16px; }
-   /* #view_contents_wrap*/
-    br {display:block !important; content:""; }
-   /* #view_contents_wrap*/
-    .tempate-detailed-summary-root .detailed-summary-contents {padding:0 1.88em 5em 1.88em; }
+body {
+	word-break: keep-all;
 }
 
-.detailTable {border: 1px solid #e2e4e3; border-top:none; }
-.tempate-detailed-summary-root .detailed-summary-contents {padding: 0 3.13em 5em 3.13em; border:none; }
-#view_contents_wrap {height:max-content; }
+ul,
+ol,
+li {
+	list-style: none;
+}
 
+img {
+	max-width: 100%;
+}
+
+i {
+	font-family: "Font Awesome 6 Free" !important;
+}
+
+@media only screen and (max-width: 961px) {
+	
+	body {
+		border: none;
+	}
+
+	#view_contents_wrap br {
+		display: block !important;
+		content: "";
+	}
+
+	#view_contents_wrap #wrapbox {
+		border: none;
+		margin-top: 0px;
+	}
+
+	#view_contents_wrap #content_box {
+		padding: 0px;
+	}
+	
+}
 
 /* 공고별CSS */
 
-#wrapbox {display:grid; grid-template-rows:repeat(2,max-content); row-gap:5em; margin:0 auto; box-sizing:border-box; max-width:100%; }
-#wrapbox * {box-sizing:border-box; }
+
+/* 상세요강 전체를 감싸는 영역 */
+
+#wrapbox {
+	display: grid;
+	grid-template-rows: repeat(3, max-content);
+	row-gap: 5em;
+	border: 1px solid #e2e4e3;
+	border-top: none;
+	margin-top: -2.5em;
+	padding-bottom: 1.5em;
+}
+
+#wrapbox * {
+	box-sizing: border-box;
+}
+
+/* 상단 이미지 */
 
 #visual_box {
-    height: 31.25em;
-    display: grid;
-    align-items: center;
-    justify-content: start;
-    padding-left: 4em;
-    background: url(https://file1.jobkorea.co.kr/Mng/2024/5/linkagelab_44716701_240523.jpg) no-repeat;
-    background-size: cover;
+	height: 39.13em;
+	display: grid;
+	align-items: center;
+	justify-content: start;
+	padding-left: 6em;
+	background: url(https://file1.jobkorea.co.kr/Mng/2024/5/linkagelab_44716701_240523.jpg)
+		no-repeat;
+	background-size: 100%;
 }
+
+/* 상단 이미지 내부 텍스트 */
 
 #visual_box > h2 {
-    background: black;
-    padding: 0.8em;
-    color: white;
-    font-size: 3em;
-    line-height: 1.5em;
-    font-weight: 800;
-    letter-spacing: -1px;
-    text-align: left;
-    box-shadow: 0.1em 0.1em 0.3em 0.3em #00000075;
-    display: grid;
-    align-items: center;
-    font-family: "NanumSquare", sans-serif !important;
-    max-width: fit-content;
+	background: black;
+	padding: 1.2em;
+	width: calc(100% - 3.5em);
+	height: calc(100% - 4em);
+	color: white;
+	font-size: 3em;
+	line-height: 1.5em;
+	font-weight: 800;
+	letter-spacing: -1px;
+	text-align: left;
+	box-shadow: 0.1em 0.1em 0.3em 0.3em #00000075;
+	display: grid;
+	align-items: center;
+	align-content: center;
+	font-family: "NanumSquare", sans-serif !important;
+	max-width: fit-content;
 }
 
-#content_box {display:grid; grid-auto-flow:row; row-gap:3em; }
-#content_box * {letter-spacing:-.5px; box-sizing:border-box; }
-#content_box > li {display:grid; grid-template-rows:repeat(2,max-content); row-gap:1.25em; }
+/* 이미지하단 세부 채용공고 영역 */
+
+#content_box {
+	display: grid;
+	grid-auto-flow: row;
+	row-gap: 3em;
+	padding: 0 3.13em 3.13em 3.13em;
+}
+
+#content_box * {
+	letter-spacing: -0.5px;
+	box-sizing: border-box;
+}
+
+#content_box > li {
+	display: grid;
+	grid-template-rows: repeat(2, max-content);
+	row-gap: 1.25em;
+}
 
 .table_box_t1 {
-    font-size: 1.88em;
-    display:flex;
-    flex-flow:row nowrap;
-    column-gap:0.4em;
-    background:white;
-    position:relative;
-    
-}
-.title_pin1 {
-    font-size:0.25em;
-    line-height:1.25em;
-    display:flex;
-    flex-flow:column nowrap;
-    width:fit-content;
-    justify-content: center;
-    align-items: flex-start;
+	font-size: 1.88em;
+	display: flex;
+	flex-flow: row nowrap;
+	column-gap: 0.4em;
+	background: white;
+	position: relative;
 }
 
-.title_pin1 > span:nth-of-type(2) {color:#999; }
+.title_pin1 {
+	font-size: 0.25em;
+	line-height: 1.25em;
+	display: flex;
+	flex-flow: column nowrap;
+	width: fit-content;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.title_pin1 > span:nth-of-type(2) {
+	color: #999;
+}
 
 /*
     폰트어썸: 도트별 컬러 동일 (3단) 
     <i class="fa-solid fa-ellipsis-vertical"></i>
     .table_box_t1 > i {line-height:1.5; }
- */
+    */
 
 .table_box1 {
-    display:grid;
-    grid-template-columns:25% 72%;
-    column-gap: 3%;  
-    border-top:1px solid #bbb;
+	display: grid;
+	grid-template-columns: 25% 72%;
+	column-gap: 3%;
+	border-top: 1px solid #bbb;
 }
 
 .table_box1 > li {
-    padding:2em ;
+	padding: 2em;
 }
 
 .table_box1 > li:first-of-type {
-    position:relative;
-    /*border-top:3px solid #000;
+	position: relative;
+	/*border-top:3px solid #000;
     padding-top:1.25em;
     margin:-1.4em 0 0 -3.25em;*/
-    display:grid;
-    justify-self:center;
-    align-items:start;
+	display: grid;
+	justify-self: center;
+	align-items: start;
 }
 
 .table_box1 > li:first-of-type:before {
-    width:130%;
-    height:3px;
-    background:black;
-    position:absolute;
-    content:"";
-    top:-2px;
-    left:-14.5%;
-    
+	width: 130%;
+	height: 3px;
+	background: black;
+	position: absolute;
+	content: "";
+	top: -2px;
+	left: -14.5%;
 }
 
 .table_box1 > li:first-of-type > h4 {
-    font-weight:700;    
+	font-weight: 700;
 }
 
 .table_box1 > li:last-of-type > div {
-    display:grid;
-    grid-auto-flow:row;
-    row-gap:0.5em;
+	display: grid;
+	grid-auto-flow: row;
+	row-gap: 0.5em;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* 복리후생 */
 
-#content_box > li:nth-of-type(3) {background:#ebebeb; }
+#content_box > li:nth-of-type(3) {
+	background: #ebebeb;
+}
 
 /* 전형절차 */
 
 #content_box > li:nth-of-type(4) {
-    background:#bddbff; 
+	background: #bddbff;
 }
 
-
-#content_box > li:last-of-type {background:#f3e2ff; }
-
-
-
-
-
-
-
+#content_box > li:last-of-type {
+	background: #f3e2ff;
+}
