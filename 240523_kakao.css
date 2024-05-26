@@ -323,6 +323,14 @@ i {
 	font-size: 1.5em;
 }
 
+.step_box1 > li:after {
+	position: absolute;
+	content:"";
+	right:-2em;
+	top:3em;
+	
+}
+
 .step_box1 > li:nth-of-type(2) {
 	background: #777;
 	color: #ddd;
