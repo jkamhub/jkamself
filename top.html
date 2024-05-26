@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<title>잡코리아 상세요강 아이프레임</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+	<link href="//i.jobkorea.kr/content/css/ver_1/yct/yctr_gen-sv-202401301659.css" rel="stylesheet" type="text/css">
+	<style>
+		/*공고뷰 상세요강 모바일 버전*/
+		body .jkGEN_recruit .jkGEN_visual,
+		body .jkGEN_btnFunc {
+			display: none;
+		}
+
+		body .jkGEN_stepList:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		body .jkGEN_stepList .jkGEN_shape img {
+			display: none;
+		}
+
+		body .jkGEN_stepList li {
+			float: left;
+			padding: 0;
+			margin: 0 5px 0 0;
+		}
+
+		body span.jkGEN_textareaStep {
+			font-size: 18px;
+			width: auto;
+			padding: 0;
+			text-align: left;
+			display: inline-block;
+			line-height: 1.8;
+		}
+
+		body .jkGEN_recruit .jkGEN_bxTextAreaStep:after {
+			content: "&gt;";
+			display: inline-block;
+			margin-left: 5px;
+		}
+
+		body .jkGEN_stepList li:last-child .jkGEN_bxTextAreaStep:after {
+			display: none;
+		}
+
+		body .jkGEN_vertical {
+			display: none;
+		}
+
+		body .jkGEN_stepList .jkGEN_shape {
+			position: static;
+			width: auto;
+			height: auto;
+			float: none;
+		}
+
+		body .jkGEN_recruit .jkGEN_bxTextAreaStep {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+		}
+	</style>
+	<script src="/Public/Scripts/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/Public/Scripts/common/cookie.js?ver=202405211400"></script>
+	<script type="text/javascript">
+		$("document").ready(function() {
+			// 담당자 이메일 클릭
+			$("body").on("click", ".devChargeEmail", function() {
+				var model_type = 1;
+				if ("0" === "4") {
+					// ios
+					model_type = "3";
+				} else if ("0" === "5") {
+					//android
+					model_type = "2";
+				}
+				$.ajax({
+					type: "GET",
+					url: "/Recruit/GIEffectLog",
+					data: "Gno=44764553&Cnt_DIV=4&Model_Type=" + model_type,
+					success: function(data) {}
+				});
+			});
+		});
+
+		$(window).load(function() {
+			var iOSversion = function() {
+				if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+					var v = navigator.userAgent.match(
+						/OS (\d+)_(\d+)_?(\d+)?/
+					);
+					return [
+						parseInt(v[1], 10),
+						parseInt(v[2], 10),
+						parseInt(v[3] || 0, 10)
+					];
+				}
+			};
+
+			var ver = iOSversion();
+			var flag;
+			flag = true;
+
+			if (Array.isArray(ver)) {
+				var majorVer = ver[0];
+				var subVer = ver[1];
+				var minorVer = ver[2];
+				if (
+					majorVer < 10 ||
+					(majorVer === 10 && subVer === 0 && minorVer <= 2)
+				) {
+					flag = false;
+				}
+			}
+
+			newRecruitScale = 1; // ZoomContent 에서 사용하는 전역변수
+
+			if (flag) {
+				f = new ZoomContent("#view_contents_wrap");
+				f.options.zoomMax = 3;
+			}
+		});
+	</script>
+</head>
+
+<body style="transform: scale(0.34); transform-origin: 0px 0px">
+	<input type=" hidden" id="dev_ts_xml" value="0">
+	<div id="view_contents_wrap">
+		<div class="coDetail" id="devCoDetail" data-detail-type="smart" style="transform-origin: 0px 0px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px); ">
+			<div class="coDetailCtInner" style="width: 960px; max-width: 100%">
