@@ -12,13 +12,14 @@ html {
 
 body {
 	word-break: keep-all;
-	border: none;
 }
 
 ul,
 ol,
 li {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 img {
@@ -62,12 +63,10 @@ i {
 	row-gap: 5em;
 	border: 1px solid #e2e4e3;
 	border-top: none;
-	margin-top: -1.88em;
-	padding-bottom: 1.5em;
+	margin-top: -2.5em;
+	padding-bottom: 3.5em;
 	justify-items: center;
 	box-sizing: border-box;
-	margin:0;
-	padding:0;
 }
 
 #wrapbox * {
@@ -77,14 +76,16 @@ i {
 /* 상단 이미지 */
 
 #visual_box {
-	height: 33.75em; /*39.13em;*/
+	height: 39.13em;
 	display:grid;
 	align-items:center;
 	justify-items:center;
+	margin:0;
+	padding:0;
 }
 
 #visual_box > li {
-	height: 33.75em; /*39.13em;*/
+	height: 39.13em;
 	overflow-y: clip;
 }
 
@@ -305,9 +306,11 @@ i {
 .step_box1 > li {
 	position: relative;
 	padding: 1em 2em;
+	width: 9em;
 	height: 9em;
 	background: #ddd;
-	/*border-radius: 1.33em;*/
+	display: grid;
+	justify-content: center;
 	align-content: center;
 	color: #000;
 	font-size: 1.5em;
