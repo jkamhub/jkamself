@@ -8,10 +8,12 @@ html {
 	/* 파이어폭스 */
 	-o-text-size-adjust: none;
 	/* 오페라(구)*/
+	background: #1a4c8b;
 }
 
 body {
-	word-break: keep-all;
+	word-break: keep-all;	
+	border: none;
 }
 
 ul,
@@ -31,14 +33,15 @@ i {
 @media only screen and (max-width: 961px) {
 	
 	body {
-		border: none;
-	}
-	
-	body * {
-		font-size-adjust: none;
+		border: none;		
 	}
 
 	#view_contents_wrap br {
+		display: block !important;
+		content: "";
+	}
+	/* 로컬 테스트시 필요 */
+	br {
 		display: block !important;
 		content: "";
 	}
@@ -49,6 +52,10 @@ i {
 	}
 
 	#view_contents_wrap #content_box {
+		padding: 0px;
+	}
+	/* 로컬 테스트시 필요 */
+	#content_box {
 		padding: 0px;
 	}
 	
@@ -67,6 +74,10 @@ i {
 	border-top: none;
 	margin-top: -1.88em;
 	padding-bottom: 1.5em;
+	justify-items: center;
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
 }
 
 #wrapbox * {
@@ -76,26 +87,46 @@ i {
 /* 상단 이미지 */
 
 #visual_box {
-	height: 39.13em;
+	height: 33.75em; /*39.13em;*/
+	display:grid;
+	align-items:center;
+	justify-items:center;
+}
+
+#visual_box > li {
+	height: 33.75em; /*39.13em;*/
+	overflow-y: clip;
+}
+
+#visual_box li:first-of-type {
 	display: grid;
+	grid-row: 1/2;
+	grid-column: none;
+	justify-items: center;
+}
+
+#visual_box img {
+	max-width: calc(100% + 2px);
+}
+
+#visual_box li:last-of-type {
+	display: grid;
+	grid-row: 1/2;
+	grid-column: none;
 	align-items: center;
-	justify-content: start;
-	padding-left: 6em;
-	background: url(https://file1.jobkorea.co.kr/Mng/2024/5/linkagelab_44716701_240523.jpg)
-		no-repeat;
-	background-size: 100%;
+	justify-self: start;
+	padding: 5em;
 }
 
 /* 상단 이미지 내부 텍스트 */
 
-#visual_box > h2 {
+#visual_box li:last-of-type h2 {
 	background: black;
 	padding: 1.2em;
-	width: calc(100% - 3.5em);
-	height: calc(100% - 4em);
+	width: fit-content;
 	color: white;
-	font-size: 3em;
-	line-height: 1.5em;
+	font-size: 2.5em;
+	line-height: 1.5;
 	font-weight: 800;
 	letter-spacing: -1px;
 	text-align: left;
@@ -104,7 +135,6 @@ i {
 	align-items: center;
 	align-content: center;
 	font-family: "NanumSquare", sans-serif !important;
-	max-width: fit-content;
 }
 
 /* 이미지하단 세부 채용공고 영역 */
@@ -123,27 +153,34 @@ i {
 
 #content_box > li {
 	display: grid;
-	grid-template-rows: repeat(2, max-content);
-	row-gap: 1.25em;
+	grid-auto-flow: row;
+	/*grid-template-rows: repeat(2, max-content);*/
+	row-gap: 1.5em;
 }
 
 .table_box_t1 {
 	font-size: 1.88em;
-	display: flex;
-	flex-flow: row nowrap;
+	font-weight: 500;
+	display: grid;
+    grid-template-columns: max-content 1fr;
 	column-gap: 0.4em;
+	align-items: center;
+	align-content: center;
 	background: white;
 	position: relative;
 }
 
 .title_pin1 {
-	font-size: 0.25em;
-	line-height: 1.25em;
 	display: flex;
 	flex-flow: column nowrap;
 	width: fit-content;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
+}
+
+.title_pin1 > span {	
+	font-size: 30%;
+	line-height: 115%;
 }
 
 .title_pin1 > span:nth-of-type(2) {
@@ -161,6 +198,7 @@ i {
 	grid-template-columns: 25% 72%;
 	column-gap: 3%;
 	border-top: 1px solid #bbb;
+	padding-top: 3.13em;
 }
 
 .table_box1 > li {
@@ -168,27 +206,18 @@ i {
 }
 
 .table_box1 > li:first-of-type {
-	position: relative;
-	/*border-top:3px solid #000;
-    padding-top:1.25em;
-    margin:-1.4em 0 0 -3.25em;*/
+	border-top: 3px solid #000;
+    margin-top: -3.26em;
 	display: grid;
-	justify-self: center;
+	justify-content: center;
 	align-items: start;
-}
-
-.table_box1 > li:first-of-type:before {
-	width: 130%;
-	height: 3px;
-	background: black;
-	position: absolute;
-	content: "";
-	top: -2px;
-	left: -14.5%;
 }
 
 .table_box1 > li:first-of-type > h4 {
 	font-weight: 700;
+	font-size: 1.35em;
+	line-height: 1.75em;
+	text-align: center;
 }
 
 .table_box1 > li:last-of-type > div {
@@ -197,18 +226,118 @@ i {
 	row-gap: 0.5em;
 }
 
+#content_box > li.other_box {
+	row-gap: 1em;
+}
+
+#content_box > li.other_box > p,
+#content_box > li > .table_box1 p {
+	font-size: 16px;
+	line-height: 1.75;
+	color: #333;
+	text-indent: 0.5em;
+}
+
+#content_box > li:nth-of-type(2) > p:last-of-type {
+	margin-top: -0.5em;
+}
+
 /* 복리후생 */
 
-#content_box > li:nth-of-type(3) {
-	background: #ebebeb;
+/*#content_box > li:nth-of-type(3) {
+	background: #f1f1f1;
+}*/
+
+.benefit_box1 {
+	margin: 0.5em 0;
+	padding: 2em 3em 2em 1em;
+	background: #ddd;
+	display: grid;
+	grid: repeat(3,auto)/repeat(3,0.7fr);
+	gap: 1em 1.5em;
+	justify-items: center;
+	/*justify-content: space-between;*/
+	max-width:fit-content;
+}
+
+.benefit_box1 > li {
+	display: grid;
+	grid-template-rows: 5.315em repeat(2, max-content);
+	row-gap: 1em;
+	justify-items: center;
+	/*justify-content: center;*/
+	text-align: center;
+	letter-spacing: -1px;
+	padding: 0 1em;
+	width: 100%;
+}
+
+#content_box > li.other_box > ul.benefit_box1 > li > img {
+	max-width: 5.3em;
+}
+
+#content_box > li.other_box > ul.benefit_box1 > li > p {
+	font-size: 1.2em;
+	line-height: 1.75em;
+	font-weight: 700;
+	color: #222;
+}
+
+#content_box > li.other_box > ul.benefit_box1 > li > span {
+	font-size: 1.1em;
+	line-height: 1.5;
+	font-weight: 500;
+	color: #333;
+	margin-top: -1em;
+	
+}
+
+#content_box > li:nth-of-type(3) > p {
+	margin-top: -0.5em;
 }
 
 /* 전형절차 */
 
-#content_box > li:nth-of-type(4) {
+/*#content_box > li:nth-of-type(4) {
 	background: #bddbff;
+}*/
+
+.step_box1 {
+	display: grid;
+	grid-auto-flow: column dense;
+	column-gap: 3.5em;
+	max-width: fit-content;
+	justify-content: start;
+	background: white;
+	margin: 0.5em 0;
 }
 
-#content_box > li:last-of-type {
+.step_box1 > li {
+	position: relative;
+	padding: 1em 2em;
+	height: 9em;
+	background: #ddd;
+	/*border-radius: 1.33em;*/
+	align-content: center;
+	color: #000;
+	font-size: 1.5em;
+}
+
+.step_box1 > li:nth-of-type(2) {
+	background: #777;
+	color: #ddd;
+}
+
+.step_box1 > li:last-of-type {
+	background: #000;
+	color: #fff;
+}
+
+
+/*#content_box > li:last-of-type {
 	background: #f3e2ff;
+}*/
+
+#content_box > li.other_box > p {
+	text-indent: 0.5em;
 }
