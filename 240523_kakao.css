@@ -1,5 +1,5 @@
 html {
-	text-size-adjus: none;
+	text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	/* 크롬, 사파리, 오페라(신) */
 	-ms-text-size-adjust: none;
@@ -54,18 +54,18 @@ i {
 	
 }
 
-/* 공고별CSS */
+/********** 공고별CSS **********/
 
 
 /* 상세요강 전체를 감싸는 영역 */
 
 #wrapbox {
 	display: grid;
-	grid-template-rows: repeat(3, max-content);
+	grid-template-rows: repeat(2, max-content);
 	row-gap: 5em;
 	border: 1px solid #e2e4e3;
 	border-top: none;
-	margin-top: -2.5em;
+	margin-top: -1.88em;
 	padding-bottom: 1.5em;
 }
 
