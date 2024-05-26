@@ -20,6 +20,9 @@ i {
 	
 	body {
 		border: none;
+	}
+	
+	body * {
 		font-size-adjust: none;
 	}
 
