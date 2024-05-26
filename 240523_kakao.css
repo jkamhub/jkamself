@@ -70,6 +70,7 @@ i {
 	
 	body {
 		border: none;
+		font-size-adjust: none;
 	}
 
 	#view_contents_wrap br {
