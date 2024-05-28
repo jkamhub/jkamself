@@ -55,8 +55,23 @@
             word-break: keep-all;
             font-family: "NanumSquare", sans-serif !important;
         }
+	<!--- 어드민에 넣는 Style 코드는 여기까지만 --->
+	    
+        textarea {
+            width: 100%;
+            height: 33em;
+            padding: 1.5em;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 0.25em;
+            background-color: #888;
+            font-size: 1em;
+            line-height: 1.5em;
+            resize: none;
+        }
+        
     </style>
-    <!--- 어드민에 넣는 Style 코드는 여기까지만 --->
+    
 
 </head>
 
@@ -79,52 +94,51 @@
             <li style="padding-bottom:0.5em; border-bottom:1px dotted #3054a0;">
                 상단이미지 및 배경색 고정 비주얼 + 텍스트 변경시 비주얼박스 자동 영역 확장 css 포함
             </li>
-            <li>
-                <div style="background:#888; color:#fff; max-width:850px;">
-                    <textarea rows="35" cols="75">
+            <li style="width:calc(100% - 6.26em);">
+                    <textarea>
 
-                    &lt;style&gt;
+&lt;style&gt;
 
-	@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-	#visual_box1 {
-		display:grid;
-		/*
-		grid-template-rows: repeat(2,max-content);
-		row-gap: 1.2em; justify-items: center;
-		*/
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-start;
-		background: #3054a0;
-	}
-	#visual_box1 &gt; li {
-	background: #3054a0;
-	}
-	#visual_box1 li:first-of-type {
-	display: grid;
-	grid-row: 1/2;
-	grid-column: none;
-	justify-items: center;
-	height: 33em;
-	overflow:hidden;
-	}
-	#visual_box1 li:last-of-type {
-	display: grid;
-	align-items:start;
-	justify-items: center;
-	padding: 0 4.06em 2em 4.06em;
-	}
-	#visual_box1 li:last-of-type h2 {
-	max-width: 90%;
-	color: white;
-	font-size: 3.13em;
-	line-height: 1.3;
-	font-weight: 800;
-	letter-spacing: -1px;
-	text-align: center;
-	word-break: keep-all;
-	font-family: "NanumSquare", sans-serif !important;
-	}
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+#visual_box1 {
+    display:grid;
+    /*
+    grid-template-rows: repeat(2,max-content);
+    row-gap: 1.2em; justify-items: center;
+    */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background: #3054a0;
+}
+#visual_box1 &gt; li {
+    background: #3054a0;
+}
+#visual_box1 li:first-of-type {
+    display: grid;
+    grid-row: 1/2;
+    grid-column: none;
+    justify-items: center;
+    height: 33em;
+    overflow:hidden;
+}
+#visual_box1 li:last-of-type {
+    display: grid;
+    align-items:start;
+    justify-items: center;
+    padding: 0 4.06em 2em 4.06em;
+}
+#visual_box1 li:last-of-type h2 {
+    max-width: 90%;
+    color: white;
+    font-size: 3.13em;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+    word-break: keep-all;
+    font-family: "NanumSquare", sans-serif !important;
+}
 
 &lt;/style&gt;
 
