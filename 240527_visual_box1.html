@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html lang="ko" style="background:#fff;">
 
 <head>
     <meta charset="UTF-8">
     <title>JKAM TEST Page</title>
-   <!-- <link href="https://i.jobkorea.kr/content/css/ver_2/common-sv-202403271945.css" rel="stylesheet" type="text/css">-->
+    <!-- <link href="https://i.jobkorea.kr/content/css/ver_2/common-sv-202403271945.css" rel="stylesheet" type="text/css">-->
     <link href="https://i.jobkorea.kr/content/css/ver_1/yct/yctr_gen-sv-202401301659.css" rel="stylesheet" type="text/css">
     <link href="https://i.jobkorea.kr/content/css/ver_2/jobs/detail-sv-202404151625.css" rel="stylesheet" type="text/css">
     <link href="https://i.jobkorea.kr/content/css/ver_2/jobs/m.detail-sv-202403201824.css" rel="stylesheet" type="text/css">
     <link href="https://i.jobkorea.kr/deploy/mobile/dist/css/pages/corp/register/detailed_summary/detailed_summary-sv-202401171301.css" rel="stylesheet" type="text/css">
     <link href="https://jkamhub.github.io/jkamself/240523_kakao.css" rel="stylesheet" type="text/css">
 
-<!--- 어드민에 넣는 Style 코드는 여기서부터 --->        
+    <!--- 어드민에 넣는 Style 코드는 여기서부터 --->
     <style>
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
-    @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-    #visual_box1 {display:grid; /*grid-template-rows: repeat(2,max-content); row-gap: 1.2em; justify-items: center;*/ display: flex; flex-flow: column nowrap; justify-content: flex-start; background: #3054a0; }
-    #visual_box1 > li {background: #3054a0; }
-    #visual_box1 li:first-of-type {display: grid; grid-row: 1/2; grid-column: none; justify-items: center; /*height: 38.44em;*/ height: 33em; overflow:hidden; }
-    #visual_box1 li:last-of-type {display: grid; align-items:start; justify-items: center; padding: 0 4.06em 2em 4.06em;  }
-    #visual_box1 li:last-of-type h2 {max-width: 90%; color: white; font-size: 3.13em; line-height: 1.3; font-weight: 800; letter-spacing: -1px; text-align: center; word-break: keep-all; font-family: "NanumSquare", sans-serif !important; }
+        #visual_box1 {
+            display: grid;
+            /*grid-template-rows: repeat(2,max-content); row-gap: 1.2em; justify-items: center;*/
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            background: #3054a0;
+        }
 
+        #visual_box1>li {
+            background: #3054a0;
+        }
+
+        #visual_box1 li:first-of-type {
+            display: grid;
+            grid-row: 1/2;
+            grid-column: none;
+            justify-items: center;
+            /*height: 38.44em;*/
+            height: 33em;
+            overflow: hidden;
+        }
+
+        #visual_box1 li:last-of-type {
+            display: grid;
+            align-items: start;
+            justify-items: center;
+            padding: 0 4.06em 2em 4.06em;
+        }
+
+        #visual_box1 li:last-of-type h2 {
+            max-width: 90%;
+            color: white;
+            font-size: 3.13em;
+            line-height: 1.3;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-align: center;
+            word-break: keep-all;
+            font-family: "NanumSquare", sans-serif !important;
+        }
     </style>
- <!--- 어드민에 넣는 Style 코드는 여기까지만 --->
- 
+    <!--- 어드민에 넣는 Style 코드는 여기까지만 --->
+
 </head>
+
 <body style="max-width:960px; margin:0 auto;">
 
     <div id="wrapbox">
@@ -45,32 +80,31 @@
                 상단이미지 및 배경색 고정 비주얼 + 텍스트 변경시 비주얼박스 자동 영역 확장 css 포함
             </li>
             <li>
-                    <div style="background:#888; color:#fff; max-width:850px;">
-                        <div class="se-code-source se-code-source-highlighted" draggable="true" style="max-width:100%;">
-                                <pre class="language-javascript" tabindex="0" style="max-width:100%;">
-                                    <code class="language-javascript" style="max-width:100%;">
-                                        <span class="token se-code-operator">&lt;</span>style<span class="token se-code-operator">&gt;</span>
-                                        @<span class="token se-code-keyword">import</span> <span class="token se-code-function">url</span><span class="token se-code-punctuation">(</span>https<span class="token se-code-operator">:</span><span class="token se-code-operator">/</span><span class="token se-code-operator">/</span>cdn<span class="token se-code-punctuation">.</span>jsdelivr<span class="token se-code-punctuation">.</span>net<span class="token se-code-operator">/</span>gh<span class="token se-code-operator">/</span>moonspam<span class="token se-code-operator">/</span>NanumSquare@<span class="token se-code-number">1.0</span><span class="token se-code-operator">/</span>nanumsquare<span class="token se-code-punctuation">.</span>css<span class="token se-code-punctuation">)</span><span class="token se-code-punctuation">;</span>
-                                        #visual_box1 <span class="token se-code-punctuation">{</span><span class="token se-code-literal-property property">display</span><span class="token se-code-operator">:</span>grid<span class="token se-code-punctuation">;</span> <span class="token se-code-comment">/*grid-template-rows: repeat(2,max-content); row-gap: 1.2em; justify-items: center;*/</span> <span class="token se-code-literal-property property">display</span><span class="token se-code-operator">:</span> flex<span class="token se-code-punctuation">;</span> flex<span class="token se-code-operator">-</span>flow<span class="token se-code-operator">:</span> column nowrap<span class="token se-code-punctuation">;</span> justify<span class="token se-code-operator">-</span>content<span class="token se-code-operator">:</span> flex<span class="token se-code-operator">-</span>start<span class="token se-code-punctuation">;</span> background<span class="token se-code-operator">:</span> #3054a0<span class="token se-code-punctuation">;</span> <span class="token se-code-punctuation">}</span>
-                                        #visual_box1 <span class="token se-code-operator">&gt;</span> li <span class="token se-code-punctuation">{</span><span class="token se-code-literal-property property">background</span><span class="token se-code-operator">:</span> #3054a0<span class="token se-code-punctuation">;</span> <span class="token se-code-punctuation">}</span>
-                                        #visual_box1 li<span class="token se-code-operator">:</span>first<span class="token se-code-operator">-</span><span class="token se-code-keyword">of</span><span class="token se-code-operator">-</span>type <span class="token se-code-punctuation">{</span><span class="token se-code-literal-property property">display</span><span class="token se-code-operator">:</span> grid<span class="token se-code-punctuation">;</span> grid<span class="token se-code-operator">-</span>row<span class="token se-code-operator">:</span> <span class="token se-code-number">1</span><span class="token se-code-operator">/</span><span class="token se-code-number">2</span><span class="token se-code-punctuation">;</span> grid<span class="token se-code-operator">-</span>column<span class="token se-code-operator">:</span> none<span class="token se-code-punctuation">;</span> justify<span class="token se-code-operator">-</span>items<span class="token se-code-operator">:</span> center<span class="token se-code-punctuation">;</span> <span class="token se-code-comment">/*height: 38.44em;*/</span> <span class="token se-code-literal-property property">height</span><span class="token se-code-operator">:</span> 33em<span class="token se-code-punctuation">;</span> overflow<span class="token se-code-operator">:</span>hidden<span class="token se-code-punctuation">;</span> <span class="token se-code-punctuation">}</span>
-                                        #visual_box1 li<span class="token se-code-operator">:</span>last<span class="token se-code-operator">-</span><span class="token se-code-keyword">of</span><span class="token se-code-operator">-</span>type <span class="token se-code-punctuation">{</span><span class="token se-code-literal-property property">display</span><span class="token se-code-operator">:</span> grid<span class="token se-code-punctuation">;</span> align<span class="token se-code-operator">-</span>items<span class="token se-code-operator">:</span>start<span class="token se-code-punctuation">;</span> justify<span class="token se-code-operator">-</span>items<span class="token se-code-operator">:</span> center<span class="token se-code-punctuation">;</span> padding<span class="token se-code-operator">:</span> <span class="token se-code-number">0</span> <span class="token se-code-number">4</span><span class="token se-code-punctuation">.</span>06em 2em <span class="token se-code-number">4</span><span class="token se-code-punctuation">.</span>06em<span class="token se-code-punctuation">;</span>  <span class="token se-code-punctuation">}</span>
-                                        #visual_box1 li<span class="token se-code-operator">:</span>last<span class="token se-code-operator">-</span><span class="token se-code-keyword">of</span><span class="token se-code-operator">-</span>type h2 <span class="token se-code-punctuation">{</span>max<span class="token se-code-operator">-</span>width<span class="token se-code-operator">:</span> <span class="token se-code-number">90</span><span class="token se-code-operator">%</span><span class="token se-code-punctuation">;</span> color<span class="token se-code-operator">:</span> white<span class="token se-code-punctuation">;</span> font<span class="token se-code-operator">-</span>size<span class="token se-code-operator">:</span> <span class="token se-code-number">3</span><span class="token se-code-punctuation">.</span>13em<span class="token se-code-punctuation">;</span> line<span class="token se-code-operator">-</span>height<span class="token se-code-operator">:</span> <span class="token se-code-number">1.3</span><span class="token se-code-punctuation">;</span> font<span class="token se-code-operator">-</span>weight<span class="token se-code-operator">:</span> <span class="token se-code-number">800</span><span class="token se-code-punctuation">;</span> letter<span class="token se-code-operator">-</span>spacing<span class="token se-code-operator">:</span> <span class="token se-code-operator">-</span>1px<span class="token se-code-punctuation">;</span> text<span class="token se-code-operator">-</span>align<span class="token se-code-operator">:</span> center<span class="token se-code-punctuation">;</span> word<span class="token se-code-operator">-</span><span class="token se-code-keyword">break</span><span class="token se-code-operator">:</span> keep<span class="token se-code-operator">-</span>all<span class="token se-code-punctuation">;</span> font<span class="token se-code-operator">-</span>family<span class="token se-code-operator">:</span> <span class="token se-code-string">"NanumSquare"</span><span class="token se-code-punctuation">,</span> sans<span class="token se-code-operator">-</span>serif <span class="token se-code-operator">!</span>important<span class="token se-code-punctuation">;</span> <span class="token se-code-punctuation">}</span>
+                <div style="background:#888; color:#fff; max-width:850px;">
+                    <textarea rows="35" cols="75">
 
-                                        <span class="token se-code-operator">&lt;</span><span class="token se-code-operator">/</span>style<span class="token se-code-operator">&gt;</span>
+                        &lt;style&gt;
 
-                                        <span class="token se-code-operator">&lt;</span>ul id<span class="token se-code-operator">=</span><span class="token se-code-string">"visual_box1"</span><span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span>li<span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span>img src<span class="token se-code-operator">=</span><span class="token se-code-string">"https://file1.jobkorea.co.kr/Mng/2024/5/yspnl8008_44773837_240527.png"</span> alt<span class="token se-code-operator">=</span><span class="token se-code-string">"㈜영신피앤엘 배송사원 신입 및 경력채용"</span> title<span class="token se-code-operator">=</span><span class="token se-code-string">"㈜영신피앤엘 배송사원 신입 및 경력채용"</span><span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span><span class="token se-code-operator">/</span>li<span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span>li<span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span>h2<span class="token se-code-operator">&gt;</span>배송사원 신입 및 경력채용 배송사원 신입 및 경력채용 배송사원 신입 및 경력채용<span class="token se-code-operator">&lt;</span><span class="token se-code-operator">/</span>h2<span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span><span class="token se-code-operator">/</span>li<span class="token se-code-operator">&gt;</span>
-                                        <span class="token se-code-operator">&lt;</span><span class="token se-code-operator">/</span>ul<span class="token se-code-operator">&gt;</span>
-                                    </code>
-                                </pre>
-                        </div>
-                    </div>
+                            @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+                            #visual_box1 {display:grid; /*grid-template-rows: repeat(2,max-content); row-gap: 1.2em; justify-items: center;*/ display: flex; flex-flow: column nowrap; justify-content: flex-start; background: #3054a0; }
+                            #visual_box1 > li {background: #3054a0; }
+                            #visual_box1 li:first-of-type {display: grid; grid-row: 1/2; grid-column: none; justify-items: center; /*height: 38.44em;*/ height: 33em; overflow:hidden; }
+                            #visual_box1 li:last-of-type {display: grid; align-items:start; justify-items: center; padding: 0 4.06em 2em 4.06em;  }
+                            #visual_box1 li:last-of-type h2 {max-width: 90%; color: white; font-size: 3.13em; line-height: 1.3; font-weight: 800; letter-spacing: -1px; text-align: center; word-break: keep-all; font-family: "NanumSquare", sans-serif !important; }
+
+                        &lt;/style&gt;
+
+                        &lt;ul id="visual_box1"&gt;
+                            &lt;li&gt;
+                                &lt;img src="https://file1.jobkorea.co.kr/Mng/2024/5/yspnl8008_44773837_240527.png" alt="㈜영신피앤엘 배송사원 신입 및 경력채용" title="㈜영신피앤엘 배송사원 신입 및 경력채용"&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;h2&gt;배송사원 신입 및 경력채용 배송사원 신입 및 경력채용 배송사원 신입 및 경력채용&lt;/h2&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+
+                    </textarea>
+                </div>
             </li>
         </ul>
     </div>
