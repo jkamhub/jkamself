@@ -146,6 +146,7 @@ i {
 	grid-auto-flow: row;
 	row-gap: 3em;
 	padding: 0 3.13em 3.13em 3.13em;
+	overflow:hidden;
 }
 
 #content_box * {
