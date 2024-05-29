@@ -120,7 +120,8 @@
 		display: grid;
 		grid-auto-flow: row;
 		row-gap: 0.3em;
-		align-items: center;
+		align-content: center;
+    	align-items: start;
 	}
 	
 	.content_box > div > ul > li > h5 {
