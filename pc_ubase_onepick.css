@@ -20,7 +20,7 @@ li {list-style:none; }
 img {border:0 none; }
 a {text-decoration:none; }
 
-.DetailRecruitContent_detail-recruit-content__l5ktS .detail-recruit-content__content iframe {
+.Detail_job-detail__m7l8C > div:nth-of-type(6) > .DetailRecruitContent_detail-recruit-content__l5ktS > .detail-recruit-content__content > iframe {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
