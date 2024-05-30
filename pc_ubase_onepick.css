@@ -20,6 +20,14 @@ li {list-style:none; }
 img {border:0 none; }
 a {text-decoration:none; }
 
+.DetailRecruitContent_detail-recruit-content__l5ktS .detail-recruit-content__content iframe {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60rem !important;
+    resize: none;
+}
+
 .wrapbox * {word-break:keep-all; box-sizing:border-box; color:#000; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
 .wrapbox {background:#111aff; display:grid; grid-auto-flow:row; row-gap:5em; justify-items:stretch; padding:5em; margin-top:-2.5em; }
 .content_box {background:#fff; padding:7.19em 3.75em; display:grid; grid-auto-flow:row; row-gap:3.13em; border: 1.25em solid #b8ff00; }
