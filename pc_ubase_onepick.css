@@ -30,7 +30,7 @@ a {text-decoration:none; }
 .content_box > div > h2.stitle {font-size:7.08em; line-height:1.2em; font-weight:900; max-width:100%; overflow:hidden; }
 .content_box h2.stitle > span {color:#0007b6; font-weight:900; position:relative; z-index:1; max-width:100%; overflow:hidden; }
 .content_box h2.stitle > span:after {position:absolute; content:""; width:7.59em; height:0.8em; background:#b8ff00; left:0; bottom:0.22em; z-index:-1; clip-path:polygon(0 70%, 100% 0, 100% 100%, 0 100%); }
-.content_box > div:not(.tbox) {display:grid; grid-auto-flow:row; row-gap:2.3em; }
+.content_box > div:not(.tbox) {display:grid; grid-auto-flow:row; row-gap:2.3em; justify-content:center; }
 .content_box > div > h2.stitle > span:not(.tbox > h2.stitle > span) {font-size:0.53em; font-weight:700; }
 .content_box > div > h2.stitle > span:not(.tbox > h2.stitle > span):after {width:16em; clip-path:polygon(0 85%, 100% 20%, 100% 100%, 0 100%); }
 .vbox {display:block; width:100%; margin:0 auto; }
