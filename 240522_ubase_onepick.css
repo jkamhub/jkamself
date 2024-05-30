@@ -5,7 +5,7 @@
 
 @media only screen and (max-width: 961px) {
     #view_contents_wrap br {display:block; }
-    #view_contents_wrap .detail_wrap {margin-top:0px; }
+    #view_contents_wrap .wrapbox {margin-top:0px; }
 }
 
 
@@ -20,8 +20,8 @@ li {list-style:none; }
 img {border:0 none; }
 a {text-decoration:none; }
 
-.detail_wrap * {word-break:keep-all; box-sizing:border-box; color:#000; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
-.detail_wrap {background:#111aff; display:grid; grid-auto-flow:row; row-gap:5em; justify-items:stretch; padding:5em; margin-top:-2.5em; }
+.wrapbox * {word-break:keep-all; box-sizing:border-box; color:#000; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
+.wrapbox {background:#111aff; display:grid; grid-auto-flow:row; row-gap:5em; justify-items:stretch; padding:5em; margin-top:-2.5em; }
 .content_box {background:#fff; padding:7.19em 3.75em; display:grid; grid-auto-flow:row; row-gap:3.13em; border: 1.25em solid #b8ff00; }
 .tbox {display:grid; grid-template-rows:repeat(3,max-content); row-gap:1.88em; justify-items:center; }
 .tbox * {text-align:center; font-weight:700; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
