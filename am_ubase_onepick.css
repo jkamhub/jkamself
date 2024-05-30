@@ -12,9 +12,17 @@
         padding: 5%;
         align-content: space-between;
         justify-content: space-between;
+        margin-top:0;
     }
 
-
+.content_box {
+    background: #fff;
+    padding: 3%;
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    border: 0.75rem solid #b8ff00;
+}
 
 
 
