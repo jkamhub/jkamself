@@ -55,11 +55,13 @@ a {text-decoration: none; }
 
 .title_box {
 	display: grid;
-	/*justify-items: center;
-	align-items:center;*/
+	justify-items: center;
+	align-content:center;
 	background:#ff7a31;
 	color:#fff;
-	text-align:center; 
+	height:25rem;
+	text-align:center;
+	line-height:1.35;
 }
 
 .title_box h5 {font-size:1.875rem; }
@@ -110,9 +112,13 @@ a {text-decoration: none; }
 }
 
 .job_box01_content {
+	padding: 1.875rem 1.25rem;
 	display:flex;
 	flex-flow:row wrap;
 	column-gap:0.625rem;
+	grid-template-columns:9.375rem 1fr;
+	
+	
 }
 
 
@@ -123,10 +129,10 @@ a {text-decoration: none; }
 
 .job_box01_title {
 	display:flex;
-	flex-flow:row nowrap;
-	/*width:max-content;*/
-	padding: 1.875rem 0 0 1.25rem;
-	width:9.375rem;
+	flex-flow:column nowrap;
+	width:100%;
+	align-items:flex-start;
+	align-content:flex-start;
 }
 
 .job_box01_title > h5 {
@@ -145,7 +151,6 @@ a {text-decoration: none; }
 	display:grid;
 	grid-auto-flow:row;	
 	row-gap:1.875rem;
-	padding: 1.875rem 1.25rem;
 	width: 100%;
 }
 
