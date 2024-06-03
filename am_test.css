@@ -116,7 +116,7 @@ a {text-decoration: none; }
 .job_box01_content {
 	padding: 1.875rem 1.25rem;
 	display:flex;
-	flex-flow:row wrap;
+	flex-flow:row nowrap;
 	column-gap:0.625rem;
 	grid-template-columns:9.375rem 1fr;
 	
