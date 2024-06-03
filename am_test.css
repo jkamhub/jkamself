@@ -34,7 +34,7 @@ a {text-decoration: none; }
 	
 	.job_box01_title {
 		display:flex;
-		flex-flow:column nowrap;
+		flex-flow:column wrap;
 	}
 	
 	.job_box01_title h5,
