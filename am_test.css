@@ -32,7 +32,7 @@ a {text-decoration: none; }
 	
 	.job_box01_title {
 		display:flex;
-		flex-flow:row nowrap;
+		flex-flow:column nowrap;
 	}
 	
 	.job_box01_title h5,
@@ -129,7 +129,7 @@ a {text-decoration: none; }
 
 .job_box01_title {
 	display:flex;
-	flex-flow:column nowrap;
+	flex-flow:row nowrap;
 	width:100%;
 	align-items:flex-start;
 	align-content:flex-start;
