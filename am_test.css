@@ -22,7 +22,7 @@ a {text-decoration: none; }
 
 	.job_box01_content {
 		display:flex;
-		flex-flow:column nowrap;
+		flex-flow:column wrap;
 		column-gap: 0;
 		row-gap: 0.625rem;
 	}
@@ -118,7 +118,7 @@ a {text-decoration: none; }
 	display:flex;
 	flex-flow:row nowrap;
 	column-gap:0.625rem;
-	grid-template-columns:9.375rem 1fr;
+	/* grid-template-columns:9.375rem 1fr; */
 	
 	
 }
