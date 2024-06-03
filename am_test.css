@@ -21,6 +21,8 @@ a {text-decoration: none; }
 @media only screen and (max-width: 776px) {
 
 	.job_box01_content {
+		display:flex;
+		flex-flow:column nowrap;
 		column-gap: 0;
 		row-gap: 0.625rem;
 	}
