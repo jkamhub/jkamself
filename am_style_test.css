@@ -24,14 +24,37 @@ a {text-decoration: none; }
 
 }
 
+
 /* web css */
 
 .wrapbox {
-	max-width: 100%;
-	background: #ff7a31;
-	display: grid;
-	grid-auto-flow: row;
-	padding: 0.95%;
+    max-width: 100%;
+    background: #ff7a31;
+    display: grid;
+    grid-auto-flow: row;
+    padding: 0.95%;
+}
+
+.company_txt_box {
+    background: #fdd
+}
+
+.info_box {
+    background: #fff89e
+}
+
+.job_box01 {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 1rem
+}
+
+.job_box01_header {
+    background: #baffea
+}
+
+.job_box01_body {
+    background: #d1e8ff
 }
 
 .title_box {
