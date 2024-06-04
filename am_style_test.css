@@ -84,6 +84,7 @@ a {text-decoration: none; }
     row-gap: 0.5%;
     max-width: 100%;
 }
+/*
 
 #visual_box {
     display: grid;
@@ -116,6 +117,7 @@ a {text-decoration: none; }
     grid-column: none
 }
 
+/*
 #visual_box li:last-of-type * {
     text-shadow: 0 0 5px #22222280
 }
@@ -152,6 +154,7 @@ a {text-decoration: none; }
     text-align: left;
     font-family: NanumSquare !important
 }
+*/
 
 .info_box {
     display: grid;
