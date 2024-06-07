@@ -49,7 +49,6 @@ a, a:link {color:#ff501b; text-decoration: none; }
     display:grid;
     grid-auto-flow:row;
     row-gap:0.625rem;
-    margin:0 auto;
     padding:0;
     line-height: inherit;
 }
