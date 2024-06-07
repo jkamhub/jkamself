@@ -39,8 +39,29 @@ a, a:link {color:#ff501b; text-decoration: none; }
     width: 100%;
 }
 
-.regDetailView .tempArea .tempSec {
+.tempColor_1 {
     display:grid;
     grid-auto-flow:row;
     row-gap:1.563rem;
 }
+
+.regDetailView .tempArea .tempSec {
+    display:grid;
+    grid-auto-flow:row;
+    row-gap:0.625rem;
+    margin:0 auto;
+    padding:0;
+    line-height: inherit;
+}
+
+.regDetailView .tempArea .tempRecruit .txtWp {
+    padding:0 !important; 
+}
+
+
+
+
+
+
+
+
