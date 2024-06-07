@@ -18,11 +18,11 @@ img {border: 0 none; }
 a, a:link {color:#ff501b; text-decoration: none; }
 
 /* mobile css */
-@media screen and (max-width: 774px) {
+@media (max-width: 774px) {
 
     .regDetailView_1 {
-        width: 795px;
-        padding-top: 0;
+        transform: scale(1.239, 1.239);
+        transform-origin: top;
     }
 
 }
@@ -30,7 +30,7 @@ a, a:link {color:#ff501b; text-decoration: none; }
 /* web css */
 
 .regDetailView {
-    width: 815px;
+    width: 775px;
 }
 
 .regDetailView .tempArea {
