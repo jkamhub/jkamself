@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {font-size:100%; }
 li {list-style: none; }
 img {border: 0 none; }
 a, a:link {color:#ff501b; text-decoration: none; }
+hr {display:none; }
 
 /* mobile css */
 @media (max-width: 774px) {
@@ -28,6 +29,11 @@ a, a:link {color:#ff501b; text-decoration: none; }
 }
 
 /* web css */
+
+.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_ {
+    border-color: #fff;
+    borer-width: 1rem;
+}
 
 .regDetailView {
     width: 100%;
