@@ -30,9 +30,17 @@ a, a:link {color:#ff501b; text-decoration: none; }
 /* web css */
 
 .regDetailView {
-    width: 775px;
+    width: 100%;
+    margin:0;
+    padding:0;
 }
 
 .regDetailView .tempArea {
-    width: 775px;
+    width: 100%;
+}
+
+.regDetailView .tempArea .tempSec {
+    display:grid;
+    grid-auto-flow:row;
+    row-gap:1.563rem;
 }
