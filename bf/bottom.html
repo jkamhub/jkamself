@@ -1,0 +1,74 @@
+<script src="/resources/lib/jkmon/dist/jk.m.min.js"></script>
+<script src="/resources/js/common/dist/jk.common.js?v=202405211400"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//범위 : 홈페이지지원 적용된 버튼 전부
+		if (
+			$("[href*='/List_GI/Co_HomePage_Open.asp?']")
+			.length > 0
+		) {
+			$("[href*='/List_GI/Co_HomePage_Open.asp?']").on(
+				"click",
+				setIframeTopCookie
+			);
+		}
+	});
+
+	var setIframeTopCookie = function(e) {
+		// 상세요강 내 링크 클릭 시 앱스플라이어 호출
+		if (jk.util.apps.isApp()) {
+			jk.util.apps.sendFirebaseEventLog(
+				"name=job_apply_complete_homepage2"
+			);
+		}
+
+		if (top.location) {
+			// /List_GI/Co_HomePage_Open.asp 에서 referrer로 사용
+			setCookie(
+				"IframeTopHref",
+				top.location.href,
+				60,
+				"/",
+				"jobkorea.co.kr"
+			);
+			setCookie(
+				"IframeTopHostname",
+				top.location.hostname,
+				60,
+				"/",
+				"jobkorea.co.kr"
+			);
+		}
+
+		var target = $(e.currentTarget);
+		var prevUrl = target.attr("href");
+
+		var parentUrl = top.parent.location.href.split("?");
+		if (parentUrl.length > 1) {
+			$.each(
+				parentUrl[1].split("&"),
+				function(index, item) {
+					var key = item.split("=")[0];
+					var value = item.split("=")[1];
+					if (key == "logpath") {
+						prevUrl = prevUrl + "&logpath=" + value;
+					}
+					if (key == "sc") {
+						prevUrl = prevUrl + "&sc=" + value;
+					}
+				}
+			);
+		}
+
+		target.attr("href", prevUrl);
+
+		return true; //true여야 url실행됨.
+	};
+</script>
+<script src="//i.jobkorea.kr/content/javascript/mobile/module/libs/zoom/zoom.js?v=202405211400" type="text/javascript"></script>
+</div>
+</div>
+</div>
+</body>
+
+</html>
