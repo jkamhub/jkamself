@@ -18,10 +18,10 @@ img {border: 0 none; }
 a, a:link {color:#ff501b; text-decoration: none; }
 
 /* mobile css */
-@media screen and (max-width: 774px) {
+@media (max-width: 774px) {
 
     .regDetailView_1 {
-        width: 795px;
+        max-width: 795px;
         padding-top: 0;
     }
 
