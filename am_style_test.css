@@ -28,15 +28,19 @@ a, a:link {color:#ff501b; text-decoration: none; }
 }
 
 /* web css */
-.DetailRecruitContent_detail-recruit-content__l5ktS >
-hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_:first-of-type, {
-    border-color: transparent !important;
+.TitleForm_title-form__fcmlc.detail-recruit-content__title {
+    position:relative;
 }
-
-.DetailRecruitContent_detail-recruit-content__l5ktS >
-hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_:first-of-type:before {
-    border-color: transparent !important;
-    border-width: 0 0 1em !important;
+.TitleForm_title-form__fcmlc.detail-recruit-content__title:after {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: -1.05em;
+    left: 0px;
+    background: #fff;
+    width: 100%;
+    height: 1em;
+    z-index: 1;
 }
 
 .regDetailView {
@@ -67,7 +71,7 @@ hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_:first-of-type:before {
 
 .regDetailView .tempArea .tempRecruit .txtWp {
     padding:0 !important; 
-    
+
 }
 
 
