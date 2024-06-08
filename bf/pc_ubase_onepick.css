@@ -1,0 +1,68 @@
+@import url(https://jkamhub.github.io/css/font_stylesheet.css);
+
+
+@media only screen and (max-width: 961px) {
+    #view_contents_wrap br {display:block; }
+    #view_contents_wrap .wrapbox {margin-top:0px; }
+}
+
+
+/* basic css */
+
+* {font-family: "Noto Sans KR" !important;}
+
+html, body {width:100%;}
+body, a {font-size:12px; font-weight:500; letter-spacing:0px; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, button, p, table, th, td {padding:0; margin:0;}
+li {list-style:none; }
+img {border:0 none; }
+a {text-decoration:none; }
+
+.Detail_job-detail__m7l8C > div:nth-of-type(6) > .DetailRecruitContent_detail-recruit-content__l5ktS > .detail-recruit-content__content > iframe {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60rem !important;
+    resize: none;
+}
+
+.wrapbox * {word-break:keep-all; box-sizing:border-box; color:#000; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
+.wrapbox {background:#111aff; display:grid; grid-auto-flow:row; row-gap:5em; justify-items:stretch; padding:5em; margin-top:-2.5em; }
+.content_box {background:#fff; padding:7.19em 3.75em; display:grid; grid-auto-flow:row; row-gap:3.13em; border: 1.25em solid #b8ff00; }
+.tbox {display:grid; grid-template-rows:repeat(3,max-content); row-gap:1.88em; justify-items:center; }
+.tbox * {text-align:center; font-weight:700; font-family: "Noto Sans KR", Noto serif, sans-serif !important; /*font-family: "Pretendard Variable" !important;*/ }
+.tbox > h3 {background:#000; /*padding:0.5em 1.2em;*/ color:#fff; border-radius:0.5em; display:inline-block; font-size:3.33em; line-height:1.63em; width:9.75em; height:1.63em; }
+.tbox > h5 {font-size:2.92em; line-height:1em; font-weight:700; }
+.content_box > div > h2.stitle {font-size:7.08em; line-height:1.2em; font-weight:900; max-width:100%; overflow:hidden; }
+.content_box h2.stitle > span {color:#0007b6; font-weight:900; position:relative; z-index:1; max-width:100%; overflow:hidden; }
+.content_box h2.stitle > span:after {position:absolute; content:""; width:7.59em; height:0.8em; background:#b8ff00; left:0; bottom:0.22em; z-index:-1; clip-path:polygon(0 70%, 100% 0, 100% 100%, 0 100%); }
+.content_box > div:not(.tbox) {display:grid; grid-auto-flow:row; row-gap:2.3em; justify-content:center; }
+.content_box > div > h2.stitle > span:not(.tbox > h2.stitle > span) {font-size:0.53em; font-weight:700; }
+.content_box > div > h2.stitle > span:not(.tbox > h2.stitle > span):after {width:16em; clip-path:polygon(0 85%, 100% 20%, 100% 100%, 0 100%); }
+.vbox {display:block; width:100%; margin:0 auto; }
+.vbox > img {max-width:100%; }
+.content_box .ibox > ul, .content_box .pbox > ul {display:grid; grid-template-rows:repeat(4,max-content); row-gap:1.7rem; }
+.content_box > div > ul > li {display:grid; grid-template-columns:7.5em 1fr; column-gap:1.85em; align-items:center; }
+.content_box > div > ul > li > h5 {font-size:2em; line-height:1.5; align-self: start; font-weight:800; }
+.content_box > div > ul > li > p,
+.content_box > div > ul > li > div > p,
+.content_box > div > ul > li dl {font-size:16px; line-height:30px; }
+.content_box > div > ul > li dl > dt {font-size:1rem; line-height:2rem; vertical-align:middle}
+.content_box > div > ul > li dl > dd {font-size:1rem; line-height:2rem; }
+.content_box > div > ul > li dl > dd > b, .ibox div > p > b { font-weight: 900; display: inline-block; transform: scale(1.3); }
+
+.ibox ul li:first-of-type dl {display:grid; grid:repeat(2, max-content)/max-content 1fr; column-gap:1em; }
+.ibox ul li:first-of-type dl > dt:first-of-type,
+.ibox ul li:first-of-type dl > dd:first-of-type {font-weight:700; }
+.ibox ul li:nth-of-type(3) dl {display:grid; grid-auto-flow:row; }
+.ibox ul li:nth-of-type(3) dl span {background:#0007b6; color:#fff; display:inline-block; text-align:center; font-size:1.25em; line-height:1.5em; width:6.5em; height:1.5em; border-radius:0.5em; }
+
+.pbox ul li dl {display:grid; grid:repeat(2, max-content)/3.75em 1fr; column-gap:2em; }
+.pbox ul li dl * {letter-spacing:-1px; }
+.pbox ul li dl > dt {text-align:justify; position:relative; }
+.pbox ul li dl > dt:after {position:absolute; content: "|"; text-align:center; width:2em; bottom:0.05em; }
+.pbox ul li:first-of-type dl > dt,
+.pbox ul li:nth-of-type(2) dl > dt:first-of-type,
+.pbox ul li:nth-of-type(3) dl > dt:first-of-type {letter-spacing:0px;}
+.pbox ul li:last-of-type dl > dt:first-of-type {letter-spacing:-1.5px;}
+.pbox ul li dl > dd {letter-spacing:-.5px; }
