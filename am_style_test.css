@@ -29,7 +29,7 @@ a, a:link {color:#ff501b; text-decoration: none; }
 
 /* web css */
 
-hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_.Divider_orientation-horizontal__x13gE.variant-full.margin-none.gutter-0.detail-recruit-content__title-divider:first-of-type {
+hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_:first-of-type {
     border-color: #fff;
     border-width: 0.5em;
 }
@@ -44,7 +44,8 @@ hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_.Divider_orientation-hor
     width: 100%;
 }
 
-.tempColor_1 {
+.tempColor_1, .tempColor_2, .tempColor_3, .tempColor_4, .tempColor_5,
+.tempColor_6, .tempColor_7, .tempColor_8, .tempColor_9 {
     display:grid;
     grid-auto-flow:row;
     row-gap:1.563rem;
