@@ -29,8 +29,8 @@ a, a:link {color:#ff501b; text-decoration: none; }
 
 /* web css */
 .DetailRecruitContent_detail-recruit-content__l5ktS >
-hr.Divider_container__P3NRl.Divider_color-Gray200__Iy9L_:first-of-type {
-    border-color: #fff !important;
+hr:first-of-type {
+    border-color: transparent !important;
     border-width: 0.5em;
 }
 
