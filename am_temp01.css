@@ -28,5 +28,5 @@ div[id$="_wrap"]:not(#position_wrap) {background:#ffefea; height:10em; }
 .table01 > .th {border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ffad94; }
 /* .table01 > [class^="t"] {border-right:0.06rem solid #ffad94; } */
 .table01 > .tb {padding:1rem 0.3rem; }
-.table01 > .tb.border-end {border-end:0.06rem solid #ffad94; }
-.table01 > .tb.border-bottom {border-bottom:0.06rem solid #ff501b; }
+.table01 > .tb.border-end {border-right:0.06rem solid #ffad94 !important; }
+.table01 > .tb.border-bottom {border-bottom:0.06rem solid #ff501b !important; }
