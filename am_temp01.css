@@ -1,3 +1,5 @@
+h1~h6 {font-size: inherit;}
+
 #wrapbox { width:100%; display:grid; grid-auto-flow:row; row-gap:2.5rem; justify-items:center; justify-content:center; }
 
 div[id$="_wrap"] {display:grid; grid-auto-flow:row; row-gap:1.3rem; background:#bbb; width:100%; height:10em;}
@@ -8,8 +10,8 @@ div[id$="_wrap"] {display:grid; grid-auto-flow:row; row-gap:1.3rem; background:#
 .visual_wrap li:first-of-type {display:grid; justify-items:center; align-items:start; }
 .visual_wrap li:last-of-type {display:grid; grid-template-rows:repeat(2,max-content); row-gap:0.6rem; justify-items:center; justify-content:center; color:#222; }
 .visual_wrap li:last-of-type * { font-weight:800; font-family:"GmarketSansBold" !important; }
-.visual_wrap li:last-of-type h2 {font-size:2rem; line-height:2rem; }
-.visual_wrap li:last-of-type h5 {font-size:3rem; line-height:3rem; }
+.visual_wrap li:last-of-type h5 {font-size:2rem; line-height:2rem; }
+.visual_wrap li:last-of-type h2 {font-size:3rem; line-height:3rem; }
 
 
 
