@@ -8,8 +8,8 @@ div[id$="_wrap"] {display:grid; grid-auto-flow:row; row-gap:1.3rem; background:#
 .visual_wrap li:first-of-type {display:grid; justify-items:center; align-self:start; }
 .visual_wrap li:last-of-type {display:grid; grid-template-rows:repeat(2,max-content); row-gap:0.6rem; justify-items:center; justify-content:center; align-content: center; padding:1rem; background:#ffffff50; width:fit-content; height:max-content; color:#222; }
 .visual_wrap li:last-of-type * { text-align:center; font-weight:800; font-family:"GmarketSansBold" !important; }
-.visual_wrap li:last-of-type h5 {font-size:2em; line-height:2em; }
-.visual_wrap li:last-of-type h2 {font-size:3em; line-height:3em; }
+.visual_wrap li:last-of-type h5 {font-size:2em; line-height:1.2rem; }
+.visual_wrap li:last-of-type h2 {font-size:3em; line-height:1.3rem; }
 
 /* mobile css */
 @media (max-width: 774px) {
