@@ -19,7 +19,7 @@ div[id$="_wrap"] {display:grid; grid-auto-flow:row; row-gap:1.3rem; background:#
 
 .intro_wrap {text-align:justify; line-height:1.4em;}
 
-.wrap_title {display:flex; flex-flow:row nowrap; column-gap:0.5rem; font-size:2rem; font-weight:600; }
+.wrap_title {display:flex; flex-flow:row nowrap; column-gap:0.5rem; font-size:1.5rem; font-weight:600; }
 .wrap_title > i {font-size:2rem; color:#ff501b; }
 
 
