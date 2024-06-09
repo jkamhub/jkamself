@@ -26,7 +26,8 @@ div[id$="_wrap"]:not(#position_wrap) {background:#ffefea; height:10em; }
 .table01 {display:grid; grid:repeat(2,max-content)/20% repeat(2,1fr) 15%; }
 .table01 > .th {text-align:center; font-size:1.2rem; padding:0.6rem 0.3rem; }
 .table01 > .th {border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ff501b; }
-.table01 > [class^="t"] {display:grid; align-items:center; justify-items:center; }
+.table01 > [class^="t"] {display:grid; align-content:center; justify-content:center; }
 .table01 > .tb {padding:1rem 0.3rem; }
+.table01 > .th.border-end,
 .table01 > .tb.border-end {border-right:0.06rem solid #ffad94 !important; }
 .table01 > .tb.border-bottom {border-bottom:0.06rem solid #ff501b !important; }
