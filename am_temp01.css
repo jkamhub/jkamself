@@ -25,5 +25,5 @@ div[id$="_wrap"]:not(#position_wrap) {display:flex; flex-flow:column nowrap; row
 .table01 {display:grid; grid:repeat(2,max-content)/repeat(3,max-content) 1fr; }
 .table01 > .th {text-align:center; font-size:1.2rem; padding:0.6rem 0.3rem; }
 .table01 > .th {border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ffad94; }
-.table01 > [class^="t"] {border-right:0.06rem solid #ffad94; }
-.table01 > .tb {padding:0.6rem 0.3rem; }
+/* .table01 > [class^="t"] {border-right:0.06rem solid #ffad94; } */
+.table01 > .tb {padding:0.6rem 0.3rem; border-end-color:#ffad94; border-bottom-color:#ff501b; border-width:0.06rem; }
