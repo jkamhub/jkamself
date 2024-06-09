@@ -11,7 +11,7 @@ div[id$="_wrap"] {display:grid; grid-auto-flow:row; row-gap:1.3rem; background:#
 .visual_wrap li:last-of-type h5 {font-size:2rem; line-height:2rem; }
 .visual_wrap li:last-of-type h2 {font-size:3rem; line-height:3rem; }
 
-
+.intro_wrap {text-align:justify; line-height:1.4em;}
 
 
 
