@@ -24,7 +24,7 @@ div[id$="_wrap"]:not(#position_wrap) {background:#ffefea; height:10em; }
 .wrap_title > i {font-size:2rem; color:#ff501b; }
 
 .table01 {display:grid; grid:repeat(2,max-content)/20% repeat(2,1fr) 15%; }
-.table01 > .th {text-align:center; font-size:1.2rem; padding:0.6rem 0.3rem; }
+.table01 > .th {text-align:center; font-size:1.05rem; font-weight:600; padding:1rem 0.3rem; }
 .table01 > .th {border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ff501b; }
 .table01 > [class^="t"] {display:grid; align-content:center; justify-content:center; }
 .table01 > .tb {padding:1rem 0.3rem; }
