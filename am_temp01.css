@@ -18,7 +18,7 @@ div[id$="_wrap"]:not(#position_wrap, #note_wrap) {background:#ffefea; height:10e
     .visual_wrap li:last-of-type {font-size: 0.8rem; transform: scale(0.7); }
 }
 
-.intro_wrap {text-align:justify; line-height:1.4em;}
+.intro_wrap {text-align:justify; line-height:1.75;}
 
 .wrap_title {display:flex; flex-flow:row nowrap; column-gap:0.5rem; font-size:1.5rem; font-weight:600; align-items:center; }
 .wrap_title > i {font-size:2rem; color:#ff501b; }
