@@ -26,7 +26,9 @@ div[id$="_wrap"]:not(#position_wrap, #note_wrap) {background:#ffefea; height:10e
 .wrap_title > i {font-size:2rem; color:#ff501b; }
 
 .table01 {display:grid; grid:repeat(2,max-content)/20% repeat(2,1fr) 15%; border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ff501b; }
-.table01 > .th {text-align:center; font-size:1.05rem; font-weight:600; }
+.table01 > .th {text-align:center; font-size:1.05rem; font-weight:700; }
 .table01 > .th {border-bottom:0.06rem solid #ff501b; }
 .table01 > [class*="t"] {display:grid; align-content:center; justify-content:center; padding:1rem 0.3rem; border-right:0.06rem solid #ffe1d8; }
 .table01 > [class*="t"]:nth-child(4), .table01 > [class*="t"]:last-child {border-right:none; }
+.th:first-child {background:#ff501b; color:#fff; border-right:0.06rem solid #ff501b; }
+
