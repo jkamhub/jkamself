@@ -5,46 +5,162 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
     @import url(https://jkamhub.github.io/css/am_style.css);
-    
-    div[id$="box"] { width:100%; display:flex; flex-flow:column nowrap; row-gap:2.5rem; justify-items:center; justify-content:center; }
-    #contentbox {padding-inline:2.5rem; }
 
-    div[id$="_wrap"] {width:100%; display:flex; flex-flow:column nowrap; row-gap:1.3rem; width:100%; line-height:1.5; }
-    div[id$="_wrap"]:not(#position_wrap, #note_wrap) {background:#ffefea; height:10em; }
+    div[id$="box"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5rem;
+        justify-items: center;
+        justify-content: center;
+    }
 
-    .visual_wrap {width:100%; display:grid; grid-template-rows:repeat(2,max-content); justify-items:center; align-items:center; }
-    .visual_wrap li {grid-column:1/3; grid-row:1/3; }
-    .visual_wrap li:first-of-type {display:grid; justify-items:center; align-self:start; }
-    .visual_wrap li:last-of-type {display:grid; grid-template-rows:repeat(2,max-content); row-gap:0.6rem; justify-items:center; justify-content:center; align-content: center; padding:1rem; background:#ffffff50; width:fit-content; height:max-content; color:#222; }
-    .visual_wrap li:last-of-type * { text-align:center; line-height:1.1em; font-weight:800; font-family:"GmarketSansBold" !important; }
-    .visual_wrap li:last-of-type h5 {font-size:2em; }
-    .visual_wrap li:last-of-type h2 {font-size:3em; }
+    #contentbox {
+        padding-inline: 2.5rem;
+    }
+
+    div[id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 1.3rem;
+        width: 100%;
+        line-height: 1.5;
+    }
+
+    div[id$="_wrap"]:not(#position_wrap, #note_wrap) {
+        background: #ffefea;
+        height: 10em;
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .visual_wrap li {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .visual_wrap li:first-of-type {
+        display: grid;
+        justify-items: center;
+        align-self: start;
+    }
+
+    .visual_wrap li:last-of-type {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 0.6rem;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 1rem;
+        background: #ffffff50;
+        width: fit-content;
+        height: max-content;
+        color: #222;
+    }
+
+    .visual_wrap li:last-of-type * {
+        text-align: center;
+        line-height: 1.1em;
+        font-weight: 800;
+        font-family: "GmarketSansBold" !important;
+    }
+
+    .visual_wrap li:last-of-type h5 {
+        font-size: 2em;
+    }
+
+    .visual_wrap li:last-of-type h2 {
+        font-size: 3em;
+    }
 
 
-/* mobile css */
-@media (max-width: 774px) {
-    
-    #contentbox {padding-inline:1.25rem; }
-    /* .visual_wrap li:last-of-type { font-size: 0.7rem; transform: scale(0.7); }
+    /* mobile css */
+    @media (max-width: 774px) {
+
+        #contentbox {
+            padding-inline: 1.25rem;
+        }
+
+        /* .visual_wrap li:last-of-type { font-size: 0.7rem; transform: scale(0.7); }
     [class*="px-"] {padding:0 0 !important; } */
-    
-}
 
-.intro_wrap {text-align:justify; line-height:1.75;}
+    }
 
-.wrap_title {display:flex; flex-flow:row nowrap; column-gap:0.5rem; font-size:1.5rem; font-weight:600; align-items:center; }
-.wrap_title > i {font-size:2rem; color:#ff501b; }
+    .intro_wrap {
+        text-align: justify;
+        line-height: 1.75;
+    }
 
-.table01 {display:grid; grid:repeat(2,max-content)/20% repeat(2,1fr) 15%; border-top:0.13rem solid #ff501b; border-bottom:0.06rem solid #ff501b; }
-.table01 > .th {text-align:center; font-size:1.05rem; font-weight:700; }
-.table01 > .th {border-bottom:0.06rem solid #ff501b; }
-.table01 > [class*="t"] {display:grid; align-content:center; justify-content:center; padding:1rem 0.3rem; border-right:0.06rem solid #ffe1d8; }
-.table01 > [class*="t"]:nth-child(4), .table01 > [class*="t"]:last-child {border-right:none; }
-.th:first-child {background:#ff501b; color:#fff; border-right:0.06rem solid #ff501b; }
+    .wrap_title {
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        align-items: center;
+    }
 
-.list_tit {font-weight:650; }
+    .wrap_title>i {
+        font-size: 2rem;
+        color: #ff501b;
+    }
 
+    .table01 {
+        display: grid;
+        grid: repeat(2, max-content)/20% repeat(2, 1fr) 15%;
+        border-top: 0.13rem solid #ff501b;
+        border-bottom: 0.06rem solid #ff501b;
+    }
 
+    .table01>.th {
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+
+    .table01>.th {
+        border-bottom: 0.06rem solid #ff501b;
+    }
+
+    .table01>[class*="t"] {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        padding: 1rem 0.3rem;
+        border-right: 0.06rem solid #ffe1d8;
+    }
+
+    .table01>[class*="t"]:nth-child(4),
+    .table01>[class*="t"]:last-child {
+        border-right: none;
+    }
+
+    .th:first-child {
+        background: #ff501b;
+        color: #fff;
+        border-right: 0.06rem solid #ff501b;
+    }
+
+    .list_tit {
+        font-weight: 650;
+    }
+
+    .list {
+        margin-top:1rem;
+    }
+
+    .list > dt {
+        font-weight:650;
+        line-height:1.75rem;
+    }
 
 
 </style>
@@ -103,21 +219,25 @@
                 </li>
                 <li>
                     <h4>웹디자이너</h4>
-                    <ul class="list">
-                        <li>배너, 랜딩페이지, 카드뉴스등 온라인 매체 디자인</li>
-                        <li>게시물, 홍보물, 명함, 로고디자인</li>
-                    </ul>
-                    <ul class="list">
-                        <li class="list_tit mb-1 mt-4">[자격요건]</li>
-                        <li>학력 : 학력무관</li>
-                        <li>경력 : 경력 1년이상</li>
-                        <li class="list_tit">[스킬]</li>
-                        <li>Illustrator, Photoshop</li>
-                        <li>HTML, Adobe XD</li>
-                        <li class="list_tit mb-1 mt-4">[우대조건]</li>
-                        <li>전공자 우대</li>
-                        <li>디자인툴 (포토샵, 일러스트) 상급이용자</li>
-                    </ul>
+                    <dl class="list">
+                        <dd>배너, 랜딩페이지, 카드뉴스등 온라인 매체 디자인</dd>
+                        <dd>게시물, 홍보물, 명함, 로고디자인</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[자격요건]</dt>
+                        <dd>학력 : 학력무관</dd>
+                        <dd>경력 : 경력 1년이상</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[스킬]</dt>
+                        <dd>Illustrator, Photoshop</dd>
+                        <dd>HTML, Adobe XD</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[우대조건]</dt>
+                        <dd>전공자 우대</dd>
+                        <dd>디자인툴 (포토샵, 일러스트) 상급이용자</dd>
+                    </dl>
                     <h4>OO명</h4>
                 </li>
                 <li>
@@ -126,7 +246,7 @@
                         <li>사이트 유지보수 및 운영</li>
                         <li>UI/UX 설계 및 구현</li>
                     </ul>
-                    <ul>
+                    <ul class="">
                         <li class="list_tit mb-1 mt-4">[자격요건]</li>
                         <li>학력 : 학력무관</li>
                         <li>경력 : 경력무관</li>
