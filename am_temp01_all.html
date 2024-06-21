@@ -1,0 +1,286 @@
+<style>
+    @import url(https://jkamhub.github.io/css/am_style.css);
+    @import url(https://jkamhub.github.io/css/icofont/Duotone/icofont.min.css);
+    @media (max-width:774px) {
+        #visualbox .visual_wrap li:last-of-type {
+            transform: scale(.5);
+            transform-origin: 3rem;
+            padding: 0 0;
+            width: 100%
+        }
+
+        #contentbox .wrap_title {
+            color: #ec1b23
+        }
+
+        #position_wrap .table01 {
+            display: flex;
+            flex-flow: column wrap;
+            border: none
+        }
+
+        #position_wrap .table01>* {
+            width: 100%;
+            text-align: left;
+            padding: .25rem 0;
+            border: none;
+            font-weight: 500;
+            margin-left: 1rem
+        }
+
+        #position_wrap .table01>:nth-child(even) {
+            padding: 0 0 0 .5rem
+        }
+
+        #position_wrap .table01>h3 {
+            text-align: left;
+            background: 0 0;
+            color: #221e1f;
+            font-weight: 700;
+            position: relative;
+            margin-top: 1rem
+        }
+
+        #position_wrap .table01>h3:first-of-type {
+            margin-top: 0
+        }
+
+        #position_wrap .table01>h3:before {
+            content: "| ";
+            display: inline-block;
+            width: .7rem;
+            height: 1rem;
+            padding-let: .2rem
+        }
+
+        #position_wrap .table01>.list>dt {
+            font-size: 1rem;
+            color: #221e1f;
+            font-weight: 600;
+            padding: .5rem 0 .2rem 0;
+            font-family: "Pretendard Variable" !important
+        }
+    }
+
+    #wrapbox {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px
+    }
+
+    div[id$=box] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5rem;
+        justify-items: center;
+        justify-content: center
+    }
+
+    [id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: .6rem;
+        line-height: 1.75
+    }
+
+    div[id$="_wrap"]>:not(.wrap_title, .table01) {
+        margin-left: 1rem
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        align-items: center
+    }
+
+    .visual_wrap li {
+        grid-column: 1/3;
+        grid-row: 1/3
+    }
+
+    .visual_wrap li:first-of-type {
+        display: grid;
+        justify-items: center;
+        align-self: start
+    }
+
+    .visual_wrap li:last-of-type {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: .6rem;
+        align-content: center;
+        padding: 1rem 0 1rem 3rem;
+        height: max-content;
+        color: #fff;
+        width: 60%
+    }
+
+    .visual_wrap li:last-of-type * {
+        text-align: left;
+        line-height: 1.3em;
+        font-family: Godo, sans-serif !important;
+        letter-spacing: -.06rem
+    }
+
+    .visual_wrap li:last-of-type h5 {
+        font-size: 2rem;
+        font-weight: 500
+    }
+
+    .visual_wrap li:last-of-type h2 {
+        font-size: 2.7rem;
+        font-weight: 600
+    }
+
+    .wrap_title {
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: .5rem;
+        font-size: 1.5rem;
+        font-weight: 450;
+        align-items: center
+    }
+
+    .wrap_title>img {
+        max-width: 1.75rem
+    }
+
+    .table01 {
+        display: grid;
+        grid: repeat(2, max-content)/25% 1fr;
+        justify-content: center;
+        border-top: .13rem solid #ec1b23;
+        border-bottom: .06rem solid #ec1b23
+    }
+
+    .list:first-child {
+        margin-top: 0
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 1rem
+    }
+
+    .list>dt {
+        margin-left: .06rem;
+        font-size: 1.1rem;
+        line-height: 1.2em;
+        font-weight: 600;
+        color: #ec1b23;
+        font-family: Godo, sans-serif !important
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0
+    }
+
+    .table01>* {
+        padding: 1rem 1.2rem;
+        border-right: .06rem solid #e2e4e3
+    }
+
+    .table01>:last-child,
+    .table01>h3:last-of-type {
+        border-right: none
+    }
+
+    .table01>h3 {
+        grid-row: 1/2;
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border-bottom: .06rem solid #ec1b23;
+        background: #ec1b23;
+        color: #fff;
+        align-content: center
+    }
+
+    .table01>h4 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+        font-weight: 600;
+        align-content: center
+    }
+
+    .table01>h4:first-of-type {
+        border-bottom: .06rem solid #e2e4e3
+    }
+
+    .table01>.list {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-content: center
+    }
+
+    .table01>p {
+        grid-column: 2/3;
+        align-content: center
+    }
+</style>
+<div id="wrapbox">
+    <div id="visualbox">
+        <ul class="visual_wrap">
+            <li>
+                <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/wkuoal20111221.png"
+                    alt="(주)거성크루 [KT 건대역점] 중국인 판매사원 모집합니다." title="(주)거성크루 [KT 건대역점] 중국인 판매사원 모집합니다.">
+                </li>
+            <li>
+                <h5>(주)거성크루</h5>
+                <h2>[KT 건대역점] 중국인 판매사원 모집합니다.</h2>
+            </li>
+        </ul>
+    </div>
+    <div id="contentbox">
+        <p class="intro_wrap">KT 건대역점에서 함께하실<br>중국직원을 모집하고 있습니다.</p>
+        <div id="position_wrap">
+            <div class="wrap_title">
+                <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png" alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고">
+                모집부문
+            </div>
+            <div class="table01">
+                <h3>모집분야</h3>
+                <h4>휴대폰 판매 및 고객관리</h4>
+                <h3>자격요건 및 지원조건</h3>
+                <dl class="list">
+                    <dt>자격요건 : 중국어 가능자</dt>
+                    <dd>성별 : 무관</dd>
+                    <dd>연령 : 무관</dd>
+                    <dd>학력 : 무관</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="condition_wrap">
+            <div class="wrap_title"><img
+                    src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png"
+                    alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고"> 근무조건</div>
+            <dl class="list">
+                <dd><b>근무기간</b>: 1년이상 (협의가능)</dd>
+                <dd><b>근무요일</b>: 주 3 ~ 5일 / 협의가능</dd>
+                <dd><b>근무시간</b>: 10:00 ~ 18:00 / 휴게시간 : 60분</dd>
+                <dd><b>매장위치</b>: 서울시 광진구 동일로 20길 72 1층 KT 건대역점</dd>
+            </dl>
+        </div>
+        <div id="apply_wrap">
+            <div class="wrap_title"><img
+                    src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png"
+                    alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고"> 접수방법</div>
+            <dl class="list">
+                <dd>온라인지원, 간편문자지원, 전화연락</dd>
+            </dl>
+        </div>
+        <div id="note_wrap">
+            <p>"전화 문의 시 '알바몬에서 채용정보 보고 전화 드렸습니다.' 라고 하시면 빠른 문의가 가능합니다."</p>
+        </div>
+    </div>
+</div>
