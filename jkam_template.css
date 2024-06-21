@@ -1,0 +1,75 @@
+@charset "utf-8"; * {
+    font-family: Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,Helvetica Neue,Segoe UI,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif!important
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-Regular.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-Regular.subset.woff) format("woff")
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-SemiBold.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-SemiBold.subset.woff) format("woff")
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-Bold.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-Bold.subset.woff) format("woff")
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {font-weight:bold; }
+a {text-decoration:none; }
+
+body {margin:5em auto; }
+
+
+.wrap {width:max-content; margin:0 auto; background:#fff; }
+.wrap * {margin:0; padding:0; font-size:16px; line-height:1.5em; }
+.box {display:grid; grid-template-columns:1fr 960px; column-gap:50px; }
+.box dt {display:grid; grid-template-rows:repeat(3,max-content); row-gap:20px; }
+.box dt h2 {font:2.6em/1.5em Pretendard; color:#000; font-weight:bold; }
+.box dt h5 {font:0.9em/1.1em Pretendard; color:#002aff; }
+.box .sub {display:flex; flex-flow:row nowrap; column-gap:10px; }
+.box .sub > a {padding:10px; box-sizing:border-box; text-align:center; font:15px/15px Pretendard; color:#666; border:1px solid #666; }
+.box .sub > a:active {background:#002aff; color:#000; }
+.table01 {display:grid; grid-auto-flow:row; border-top:2px solid #000; box-sizing:border-box; background:#fff; }
+.table01 * {box-sizing:border-box; word-break:keep-all; text-align:left; color:#000; }
+.table01 > li {display:grid; grid-template-columns:repeat(2,0.8fr) 2.5fr 0.8fr; column-gap:20px; border-bottom:1px solid #cbcbcb; }
+.table01 li > h4, .table01 li > ul.tb01_job {padding:15px; }
+.table01 li:last-of-type h4, .table01 li > ul.tb01_job {padding:20px 15px; }
+.table01 li:first-of-type > h4, .table01 li:last-of-type > h4:last-of-type {font-weight:400; }
+.table01 li h4:nth-of-type(2), .table01 li h4:last-of-type {background:#f7f7f7; }
+.table01 li > ul.tb01_job {display:grid; grid-auto-flow:row; row-gap:1.5em; }
+.table01 li > ul.tb01_job li {display:flex; flex-flow:column wrap; }
+.table01 li > ul.tb01_job li > p {font-weight:400; padding-left:1.2em; position:relative; }
+.table01 li > ul.tb01_job li > p:before {position:absolute; content:"·"; font:1em/1.2em Pretendard; top:0.1em; left:0.5em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
