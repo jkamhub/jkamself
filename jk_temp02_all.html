@@ -2,7 +2,7 @@
     @import url(https://jkamhub.github.io/css/jk_style.css);
 
     /* mobile css */
-    @media only screen and (max-width: 961px) {
+    @media only screen and (max-width: 877px) {
 
         :root {
             transform: translateX(-0.01%);
@@ -265,26 +265,26 @@
     .welfare01 {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1.5rem;
     }
 
     .welfare01>li {
         display: grid;
-        grid-template-rows: 10rem 5rem;
+        grid-template-rows: repeat(2, max-content);
         font-size: 1.2rem;
         color: #127749;
         font-weight: 600;
         justify-items: center;
-        width: 22%;
+        width: calc(20.5% - 1.5rem);
         background: #fff;
         border: 0.06rem solid #253c5b;
         border-radius: 1.1rem;
     }
 
     .welfare01>li>img {
-        max-width: 50%;
-        align-self: center;
+        max-width: 40%;
+        padding-block: 1.8rem;
     }
 
     .welfare01>li>div {
@@ -334,15 +334,15 @@
     }
 
     .step02>li>img {
-        max-width: 40%;
-        padding-block: 1.8rem;
+        max-width: 42%;
+        padding-block: 2rem;
     }
 
     .step02>li>p {
         background: #253c5b;
         padding-block: 0.6rem;
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 500;
         color: #fff;
         text-align: center;
@@ -453,7 +453,7 @@
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar_icon.png" alt="노동절 휴무" title="노동절 휴무">
                     <div>
                         <p>노동절 휴무</p>
-                        <span>매년 5월 1일 휴무</span>
+                        <span>매년 5월 1일 휴무<br><br></span>
                     </div>
                 </li>
                 <li>
@@ -461,21 +461,21 @@
                         title="반차/연차제도">
                     <div>
                         <p>자유로운 휴가문화</p>
-                        <span>반차, 연차, 정기휴가까지</span>
+                        <span>반차, 연차, 정기휴가까지<br><br></span>
                     </div>
                 </li>
                 <li>
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/5start_icon.png" alt="주5일제" title="주5일제">
                     <div>
                         <p>주 5일제</p>
-                        <span>주 5일 근무</span>
+                        <span>주 5일 근무<br><br></span>
                     </div>
                 </li>
                 <li>
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/car_icon.png" alt="주차 지원" title="주차 지원">
                     <div>
                         <p>주차 지원</p>
-                        <span>주차 걱정 없이</span>
+                        <span>주차 걱정 없이<br><br></span>
                     </div>
                 </li>
                 <li>
