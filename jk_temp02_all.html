@@ -1,9 +1,30 @@
 <style>
     @import url(https://jkamhub.github.io/css/jk_style.css);
-    @import url(https://jkamhub.github.io/css/icofont/Duotone/icofont.min.css);
 
     /* mobile css */
     @media only screen and (max-width: 961px) {
+
+        :root {
+            transform: translateX(-0.01%);
+            font-size: 2.5rem;
+        }
+
+        #view_contents_wrap #wrapbox {
+            font-size: 46px;
+        }
+
+        #view_contents_wrap #wrapbox {
+            width: 99%
+        }
+
+
+        #view_contents_wrap div[id$="_wrap"] {
+            width: 99%;
+        }
+
+        #view_contents_wrap [id$="_wrap"]>.bf_dot {
+            margin-left: 0rem;
+        }
 
         #view_contents_wrap .visual_wrap {
             margin-top: 0px;
@@ -11,6 +32,78 @@
 
         #view_contents_wrap #contentbox {
             border: none;
+            padding: 2.5rem 0 3.5rem;
+        }
+
+        #position_wrap .table02 {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        #position_wrap .table02>li {
+            width: 100%;
+        }
+
+        #position_wrap .listwrap:nth-of-type(2),
+        #position_wrap .listwrap:nth-of-type(5) {
+            border-right: 0.06rem solid #253c5b;
+            border-bottom-left-radius: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        #position_wrap .listwrap:nth-of-type(3),
+        #position_wrap .listwrap:last-of-type {
+            border-left: 0.06rem solid #253c5b;
+            border-bottom-left-radius: 1rem;
+            border-top: none;
+        }
+
+        #welfare_wrap .welfare01 {
+            justify-content: center;
+            gap: 0.7rem;
+        }
+
+        #welfare_wrap .welfare01>li {
+            width: calc(27% - 1rem);
+            grid-template-rows: 5rem 2.5rem;
+            border-radius: 0.9rem;
+        }
+
+        #welfare_wrap .welfare01>li>div {
+            padding-inline: 0.2rem;
+            align-content: center;
+            border-bottom-left-radius: 0.8rem;
+            border-bottom-right-radius: 0.8rem;
+        }
+
+        #welfare_wrap .welfare01>li>div>p {
+            font-size: 0.9rem;
+            line-height: 1.1rem;
+            letter-spacing: -.7px;
+        }
+
+        #welfare_wrap .welfare01>li>div>span {
+            display: none;
+        }
+
+        #step_wrap .step02 {
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        #step_wrap .step02>li {
+            width: calc(34.7% - 1rem);
+        }
+
+        #step_wrap .step02>li>img {
+            max-width: 45%;
+            padding-block: 1.3rem;
+        }
+
+        #step_wrap .step02>li>p {
+            font-size: 1.1rem;
+            padding-block: 0.2rem;
         }
 
     }
@@ -27,7 +120,7 @@
         font-family: "NanumSquare", sans-serif !important;
     }
 
-    [id$="box"] {
+    [id$="box"]:not(#wrapbox) {
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
@@ -50,8 +143,30 @@
         line-height: 1.75;
     }
 
-    div[id$="_wrap"]>*:not(.wrap_title, .table02, .welfare01, .step02) {
-        margin-left: 1rem;
+    .list {
+        margin-top: 1.2rem;
+    }
+
+    .list:first-of-type {
+        margin-top: 0;
+    }
+
+    .list>dt {
+        font-weight: 600;
+        line-height: 1.9rem;
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
     }
 
     .bf_dot {
@@ -65,6 +180,10 @@
         font-weight: 700;
         top: 0;
         left: 0;
+    }
+
+    [id$="_wrap"]>.bf_dot {
+        margin-left: 1rem;
     }
 
     .visual_wrap {
@@ -95,11 +214,9 @@
     .table02 {
         display: grid;
         grid: repeat(4, max-content)/repeat(2, 1fr);
-        /* border-block: 0.06rem solid #253c5b; */
-        gap: 1rem 0;
     }
 
-    .table02>* {
+    .table02>li {
         padding: 1rem 1.2rem;
     }
 
@@ -120,18 +237,21 @@
         grid-row: 1/2;
     }
 
-    .subtit:last-of-type {
+    .subtit:nth-of-type(4) {
         grid-row: 3/4;
+        margin-top: 1.5rem;
     }
 
     .listwrap {
         border: 0.06rem solid #253c5b;
+        border-top: none;
     }
 
     .listwrap:nth-of-type(2),
     .listwrap:nth-of-type(5) {
         border-right: none;
         border-bottom-left-radius: 1rem;
+        grid-column: 1/2;
     }
 
     .listwrap:nth-of-type(3),
@@ -139,56 +259,19 @@
         border-left: none;
         border-color: #253c5b;
         border-bottom-right-radius: 1rem;
-    }
-
-    .table02.>li:nth-child(2),
-    .table02.>li:nth-child(4) {
         grid-column: 2/3;
     }
-
-    .table02.>li:nth-child(3),
-    .table02.>li:nth-child(5) {
-        grid-column: 3/4;
-    }
-
-    .list {
-        margin-top: 1.2rem;
-    }
-
-    .list:first-child {
-        margin-top: 0;
-    }
-
-    .list>dt {
-        font-weight: 600;
-        line-height: 1.9rem;
-    }
-
-    .list>dd {
-        position: relative;
-        padding-left: 1rem;
-    }
-
-    .list>dd:before {
-        position: absolute;
-        content: "ㆍ";
-        font-weight: 700;
-        top: 0;
-        left: 0;
-    }
-
 
     .welfare01 {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        gap: 1.3rem 1rem;
+        justify-content: space-between;
+        gap: 1.5rem;
     }
 
     .welfare01>li {
         display: grid;
         grid-template-rows: 10rem 5rem;
-        row-gap: 1rem;
         font-size: 1.2rem;
         color: #127749;
         font-weight: 600;
@@ -205,6 +288,8 @@
     }
 
     .welfare01>li>div {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
         background: #253c5b;
         padding-block: 0.5rem;
         width: 100%;
@@ -221,27 +306,26 @@
 
     .welfare01>li>div>span {
         font-size: 0.9rem;
-        line-height: 1.3em;
-        font-weight: 400;
+        line-height: 1.2em;
+        font-weight: 200;
         letter-spacing: 0;
     }
 
     #step_wrap {
-        row-gap: 1.2rem;
+        row-gap: 1.5rem;
     }
 
     .step02 {
         width: 100%;
         display: flex;
-        flex-flow: rowwrap;
+        flex-flow: row wrap;
         gap: 1.5rem;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .step02>li {
         display: grid;
         grid-template-rows: repeat(2, max-content);
-        row-gap: 1rem;
         justify-items: center;
         align-items: center;
         width: 17%;
@@ -251,12 +335,12 @@
 
     .step02>li>img {
         max-width: 40%;
-        padding-block: 1.5rem;
+        padding-block: 1.8rem;
     }
 
     .step02>li>p {
         background: #253c5b;
-        padding-block: 0.5rem;
+        padding-block: 0.6rem;
         width: 100%;
         font-size: 1rem;
         font-weight: 500;
@@ -269,7 +353,6 @@
     #step_wrap>p {
         margin: 0 auto;
     }
-    }
 </style>
 
 <div id="wrapbox">
@@ -281,7 +364,8 @@
     </div>
     <div id="contentbox">
         <p class="intro_wrap">
-            ㈜홈앤몰쇼핑은 2017년에 설립된 회사로 2022년 매출액 150억, 사원수 20명 규모의 중소기업입니다. 경기 고양시 덕양구 권율대로 685 (원흥동)에 위치하고 있으며 (주)한미양행 및 국내
+            ㈜홈앤몰쇼핑은 2017년에 설립된 회사로 2022년 매출액 150억, 사원수 20명 규모의 중소기업입니다. 경기 고양시 덕양구 권율대로 685 (원흥동)에 위치하고 있으며 (주)한미양행
+            및 국내
             유수의 제약사와 협업을 통하여 꾸준히 성장을 하고 있습니다.
         </p>
         <div id="position_wrap">
