@@ -1,0 +1,545 @@
+<style>
+    @import url(https://jkamhub.github.io/css/jk_style.css);
+    @import url(https://i.jobkorea.kr/deploy/mobile/dist/css/pages/corp/register/detailed_summary/detailed_summary-sv-202401171301.css);
+
+    /* mobile css */
+    @media only screen and (max-width: 961px) {
+        #view_contents_wrap {
+
+            [id$="_wrap"]>.bf_dot {
+                margin-left: 0em;
+            }
+
+
+            .wrap_title {
+                font-size: 1.25em;
+            }
+
+            .visual_wrap {
+                margin-top: 0px;
+            }
+
+            #contentbox {
+                border: none;
+                padding: 2.5em 0 3.5em;
+            }
+
+            #position_wrap .table02 {
+                display: flex;
+                flex-flow: column wrap;
+            }
+
+            #position_wrap .table02>li {
+                width: 100%;
+            }
+
+            #position_wrap .listwrap:nth-of-type(2),
+            #position_wrap .listwrap:nth-of-type(5) {
+                border-right: 0.06em solid #253c5b;
+                border-bottom-left-radius: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            #position_wrap .listwrap:nth-of-type(3),
+            #position_wrap .listwrap:last-of-type {
+                border-left: 0.06em solid #253c5b;
+                border-bottom-left-radius: 0.7em;
+                border-top: none;
+            }
+
+            #welfare_wrap .welfare01 {
+                justify-content: center;
+                gap: 0.7em;
+            }
+
+            #welfare_wrap .welfare01>li {
+                width: calc(27% - 1em);
+                grid-template-rows: 5em 1fr;
+                border-radius: 0.9em;
+            }
+
+            #welfare_wrap .welfare01>li>div {
+                padding-inline: 0.2em;
+                border-bottom-left-radius: 0.7em;
+                border-bottom-right-radius: 0.7em;
+            }
+
+            #welfare_wrap .welfare01>li>div>p {
+                font-size: 0.9em;
+                line-height: 1.1em;
+                letter-spacing: -.7px;
+            }
+
+            #welfare_wrap .welfare01>li>div>span {
+                display: none;
+            }
+
+            #step_wrap .step02 {
+                justify-content: center;
+                gap: 1em;
+            }
+
+            #step_wrap .step02>li {
+                grid-template-rows: 5em 1fr;
+                width: calc(34.7% - 1em);
+            }
+
+            #step_wrap .step02>li>img {
+                max-width: 45%;
+                padding-block: 1.3em;
+            }
+
+            #step_wrap .step02>li>p {
+                font-size: 1.1em;
+                padding-block: 0.2em;
+            }
+
+        }
+    }
+
+    #wrapbox {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px;
+    }
+
+    #wrapbox>* {
+        font-family: "NanumSquare", sans-serif !important;
+    }
+
+    [id$="box"]:not(#wrapbox) {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5em;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #contentbox {
+        padding: 2.5em 2.5em 3.5em;
+        border: 1px solid #e2e4e3;
+        border-top: none;
+    }
+
+    div[id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 1em;
+        line-height: 1.75;
+    }
+
+    .list {
+        margin-top: 1.2em;
+    }
+
+    .list:first-of-type {
+        margin-top: 0;
+    }
+
+    .list>dt {
+        font-weight: 600;
+        line-height: 1.9em;
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 1em;
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    .bf_dot {
+        position: relative;
+        padding-left: 1em;
+    }
+
+    .bf_dot:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    [id$="_wrap"]>.bf_dot {
+        margin-left: 1em;
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        justify-items: start;
+        align-items: center;
+        margin: -2.5em auto 0 auto;
+    }
+
+    .intro_wrap {
+        text-align: justify;
+    }
+
+    .wrap_title {
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: 0.5em;
+        font-size: 1.5em;
+        font-weight: 500;
+        align-items: start;
+    }
+
+    .wrap_title>img {
+        max-height: 1.5em;
+        width: auto;
+    }
+
+    .table02 {
+        display: grid;
+        grid: repeat(4, max-content)/repeat(2, 1fr);
+    }
+
+    .table02>li {
+        padding: 1em 1.2em;
+    }
+
+    .subtit {
+        font-size: 1.1em;
+        line-height: 1.3em;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+        background: #253c5b;
+        grid-column: 1/4;
+        padding-block: 1.2em;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
+    .subtit:first-of-type {
+        grid-row: 1/2;
+    }
+
+    .subtit:nth-of-type(4) {
+        grid-row: 3/4;
+        margin-top: 1.5em;
+    }
+
+    .listwrap {
+        border: 0.06em solid #253c5b;
+        border-top: none;
+    }
+
+    .listwrap:nth-of-type(2),
+    .listwrap:nth-of-type(5) {
+        border-right: none;
+        border-bottom-left-radius: 1em;
+        grid-column: 1/2;
+    }
+
+    .listwrap:nth-of-type(3),
+    .listwrap:nth-of-type(6) {
+        border-left: none;
+        border-color: #253c5b;
+        border-bottom-right-radius: 1em;
+        grid-column: 2/3;
+    }
+
+    .welfare01 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .welfare01>li {
+        display: grid;
+        grid-template-rows: 9.2em 1fr;
+        color: #127749;
+        font-weight: 600;
+        justify-items: center;
+        width: calc(20.5% - 1.5em);
+        background: #fff;
+        border: 0.06em solid #253c5b;
+        border-radius: 0.9em;
+    }
+
+    .welfare01>li>img {
+        max-width: 45%;
+        align-self: center;
+    }
+
+    .welfare01>li>div {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 0.2em;
+        align-content: center;
+        background: #253c5b;
+        padding-block: 0.5em;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        border-bottom-left-radius: 0.7em;
+        border-bottom-right-radius: 0.7em;
+    }
+
+    .welfare01>li>div>p {
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .welfare01>li>div>span {
+        font-size: 0.875em;
+        line-height: 1.1em;
+        font-weight: 200;
+        letter-spacing: 0;
+    }
+
+    #step_wrap {
+        row-gap: 1.5em;
+    }
+
+    .step02 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5em;
+        justify-content: space-between;
+    }
+
+    .step02>li {
+        display: grid;
+        grid-template-rows: 8em 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 17%;
+        border: 0.06em solid #253c5b;
+        border-radius: 0.9em;
+    }
+
+    .step02>li>img {
+        max-width: 42%;
+        padding-block: 2em;
+    }
+
+    .step02>li>p {
+        background: #253c5b;
+        padding-block: 0.6em;
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        border-bottom-left-radius: 0.7em;
+        border-bottom-right-radius: 0.7em;
+    }
+
+    #step_wrap>p {
+        margin: 0 auto;
+    }
+</style>
+<div id="wrapbox" class="tempate-detailed-summary-root mobile">
+    <div class="detailed-summary-header">
+        <div id="visualbox">
+            <div class="visual_wrap">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_01.png"
+                    alt="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집" title="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집">
+            </div>
+        </div>
+    </div>
+    <div class="detailed-summary-contents">
+        <div id="contentbox" class="detailed-summary-content">
+            <p class="intro_wrap">
+                ㈜홈앤몰쇼핑은 2017년에 설립된 회사로 2022년 매출액 150억, 사원수 20명 규모의 중소기업입니다. 경기 고양시 덕양구 권율대로 685 (원흥동)에 위치하고 있으며
+                (주)한미양행
+                및 국내
+                유수의 제약사와 협업을 통하여 꾸준히 성장을 하고 있습니다.
+            </p>
+            <div id="position_wrap">
+                <div class="wrap_title">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
+                        alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                    포지션 및 자격요건
+                </div>
+                <ul class="table02">
+                    <li class="subtit">
+                        BM (Brand Manager) (1명)
+                    </li>
+                    <li class="listwrap">
+                        <dl class="list">
+                            <dt>담당업무</dt>
+                            <dd>시장 환경 분석을 통한 인사이트 도출 및 IMC 전략수립</dd>
+                            <dd>연간/중장기 전략 수립</dd>
+                            <dd>포트폴리오 관리 및 신제품 개발</dd>
+                            <dd>Brand index 관리 및 시장조사 </dd>
+                        </dl>
+                    </li>
+                    <li class="listwrap">
+                        <dl class="list">
+                            <dt>자격요건</dt>
+                            <dd>경력 : 3년 이상</dd>
+                            <dd>마케팅 기획 및 브랜드 육성 경험 보유자</dd>
+                            <dd>브랜드 론칭 경험자</dd>
+                            <dd>건기식, 건강식품 제조 / 유통사 근무 경험</dd>
+                            <dd>기능성 원료 및 식품 관련 법규, 표시기준에 대한 지식보유</dd>
+                        </dl>
+                        <dl class="list">
+                            <dt>우대사항</dt>
+                            <dd>벨류체인 리더쉽 구축가능, 적극적인 성향</dd>
+                            <dd>건기식 이커머스 경험자, 네이버 SA 운영 경험</dd>
+                            <dd>엑셀, 데이터 지표관리, 분석 역량</dd>
+                            <dd>목표와 성과에 대한 욕심과 책임감 있으신 분</dd>
+                            <dd>장기근무 가능자</dd>
+                        </dl>
+                    </li>
+                    <li class="subtit">
+                        AMD (Assistant Merchandiser) (1명)
+                    </li>
+                    <li class="listwrap">
+                        <dl class="list">
+                            <dt>담당업무</dt>
+                            <dd>쇼핑몰 상품등록 및 수정</dd>
+                            <dd>상품 관리 / 협력사 관리 업무지원</dd>
+                            <dd> 프로모션, 기획전, 배너세팅 등 업무 지원</dd>
+                            <dd> MD 업무 지원 / 가격 관리</dd>
+                        </dl>
+                    </li>
+                    <li class="listwrap">
+                        <dl class="list">
+                            <dt>자격요건</dt>
+                            <dd>경력: 1년 이상 (유사 업무 포함)</dd>
+                            <dd>엑셀 가능</dd>
+                            <dd>파트너 scm/erp 활용 경험</dd>
+                        </dl>
+                        <dl class="list">
+                            <dt>우대사항</dt>
+                            <dd>복지몰/폐쇄몰/종합몰 등 관리운영 경험</dd>
+                            <dd>포토샵 가능</dd>
+                            <dd>적극적인 마인드 / 꼼꼼한 성격</dd>
+                            <dd>근거리 거주자</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div id="welfare_wrap">
+                <div class="wrap_title">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
+                        alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                    복리후생
+                </div>
+                <ul class="welfare01">
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon02.png"
+                            alt="4대보험" title="4대보험">
+                        <div>
+                            <p>4대 보험</p>
+                            <span>건강보험/고용보험/국민연금/산재보험</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar_icon.png" alt="노동절 휴무"
+                            title="노동절 휴무">
+                        <div>
+                            <p>노동절 휴무</p>
+                            <span>매년 5월 1일 휴무</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar02_icon.png" alt="반차/연차제도"
+                            title="반차/연차제도">
+                        <div>
+                            <p>자유로운 휴가문화</p>
+                            <span>반차, 연차, 정기휴가까지</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/5start_icon.png" alt="주5일제" title="주5일제">
+                        <div>
+                            <p>주 5일제</p>
+                            <span>주 5일 근무</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/car_icon.png" alt="주차 지원" title="주차 지원">
+                        <div>
+                            <p>주차 지원</p>
+                            <span>주차 걱정 없이</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon03.png" alt="퇴직금"
+                            title="퇴직금">
+                        <div>
+                            <p>퇴직금</p>
+                            <span>퇴직금 지원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/cookies_icon.png" alt="탕비실" title="탕비실">
+                        <div>
+                            <p>탕비실</p>
+                            <span>음료, 간식 제공</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/dinner_icon.png" alt="점심 식사 지원"
+                            title="점심 식사 지원">
+                        <div>
+                            <p>점심 식사 지원</p>
+                            <span>점심 식사 지원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="step_wrap">
+                <div class="wrap_title">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
+                        alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                    전형절차
+                </div>
+                <ul class="step02">
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/paper_icon02.png" alt="서류전형" title="서류전형">
+                        <p>서류 전형</p>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/interview_icon02.png" alt="1차면접" title="1차면접">
+                        <p>1차 면접</p>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/job_test_icon_01.png" alt="2차면접" title="2차면접">
+                        <p>2차 면접</p>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/meeting_icon.png" alt="임원면접" title="임원면접">
+                        <p>임원 면접</p>
+                    </li>
+                    <li>
+                        <img src="https://file1.jobkorea.co.kr/Mng/2024/6/presscard_icon.png" alt="최종합격" title="최종 합격">
+                        <p>최종합격</p>
+                    </li>
+                </ul>
+                <p>면접일정은 추후 통보됩니다.</p>
+            </div>
+            <div id="note_wrap">
+                <div class="wrap_title">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
+                        alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                    유의사항
+                </div>
+                <p class="bf_dot">허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
