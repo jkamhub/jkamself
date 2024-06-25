@@ -1,0 +1,588 @@
+<style>
+    @import url(https://jkamhub.github.io/css/jk_style.css);
+    @import url(https://i.jobkorea.kr/content/css/ver_2/jobs/detail.css);
+
+    /* mobile css */
+    @media only screen and (max-width: 961px) {
+        #view_contents_wrap {
+
+            .tempate-detailed-summary-root p {
+                position: relative;
+                font-size: 16px;
+                white-space: normal;
+            }
+
+            .mobile {
+                display: inline-block;
+            }
+
+            .pcweb {
+                display: none;
+            }
+
+            [id$="_wrap"]>.bf_dot {
+                margin-left: 0rem;
+            }
+
+            .wrap_title {
+                font-size: 1.25rem;
+            }
+
+            .visual_wrap {
+                margin-top: 0px;
+            }
+
+            .visual_wrap:after {
+                top: calc(2.5em + 4vw);
+                left: 2%;
+                width: 93vw;
+                height: 60vw;
+                border: 0.18rem solid #00000099;
+            }
+
+            .visual_wrap li:first-of-type {
+                width: 62%;
+                padding-left: 4.5%;
+                clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+            }
+
+            .visual_wrap li:first-of-type>img {
+                max-width: 3rem;
+                margin-left: 0.2rem;
+            }
+
+            .visual_wrap li h2 {
+                font-size: 1rem;
+            }
+
+            #contentbox {
+                border: none;
+                padding: 2.5em 0 0 0;
+            }
+
+            #position_wrap .table01 {
+                display: flex;
+                flex-flow: column wrap;
+                border-bottom: none;
+            }
+
+            #position_wrap .table01>li {
+                width: 100%;
+            }
+
+            #position_wrap .table01>li.htit {
+                display: none;
+            }
+
+            #position_wrap .table01>.subtit {
+                background: #2660ad;
+                color: #fff;
+                padding-block: 0.25rem;
+            }
+
+            #position_wrap .table01>.subtit:nth-of-type(8) {
+                margin-top: 1.5rem;
+            }
+
+
+            #position_wrap .table01>.listwrap:nth-of-type(6),
+            #position_wrap .table01>.listwrap:nth-of-type(9),
+            #position_wrap .table01>.listwrap:nth-of-type(7),
+            #position_wrap .table01>.listwrap:nth-of-type(10) {
+                border-right: none;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            #position_wrap .listwrap:nth-of-type(3),
+            #position_wrap .listwrap:last-of-type {
+                border-left: 0.06em solid #253c5b;
+                border-bottom-left-radius: 0.7rem;
+                border-top: none;
+            }
+
+            #welfare_wrap .welfare_3_item {
+                width: calc(53% - 20px);
+            }
+
+            #step_wrap .step03 {
+                flex-flow: row nowrap;
+                gap: 1rem;
+            }
+
+            #step_wrap .step03>li {
+                grid-template-rows: 3rem 1fr;
+                row-gap: 0.5rem;
+                width: calc(100% - 1.5rem);
+                padding: 0.5rem 1rem;
+            }
+
+            #step_wrap .step03>li>img {
+                max-height: 2.5rem;
+            }
+
+            #step_wrap .step03>li>p {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+    #wrapbox {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px;
+        margin: -2.5em auto 0 auto;
+    }
+
+    .tempate-detailed-summary-root {
+        position: relative;
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    [id$="box"]:not(#wrapbox) {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #contentbox {
+        padding: 3.5rem 3.5rem 1.5rem;
+        border: 1px solid #e2e4e3;
+        border-top: none;
+    }
+
+    div[id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 1rem;
+        line-height: 1.75;
+    }
+
+    .list {
+        margin-top: 1.2rem;
+    }
+
+    .list:first-of-type {
+        margin-top: 0;
+    }
+
+    .list>dt {
+        font-weight: 600;
+        line-height: 1.9rem;
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    .bf_dot {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .bf_dot:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    [id$="_wrap"]>.bf_dot {
+        margin-left: 1rem;
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        align-items: center;
+        position: relative;
+        border-inline: 1px solid #e2e4e3;
+    }
+
+    .visual_wrap:after {
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        width: 90%;
+        height: 84%;
+        border: 0.313rem solid #00000099;
+        content: "";
+    }
+
+    .visual_wrap li {
+        grid-column: 1/3;
+        grid-row: 1/3
+    }
+
+    .visual_wrap li:last-of-type {
+        display: grid;
+        justify-items: center;
+        align-self: start
+    }
+
+    .visual_wrap li:first-of-type {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 1.2rem;
+        align-content: center;
+        background: #fff;
+        width: 45%;
+        height: 100%;
+        position: relative;
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+        padding-left: 8%;
+    }
+
+    .visual_wrap li:first-of-type>img {
+        max-width: 6.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .visual_wrap li:first-of-type h2 {
+        font-size: 3rem;
+        line-height: 1.4em;
+        font-weight: 800;
+        font-family: "NanumSquare" !important;
+        color: #000;
+    }
+
+    .intro_wrap {
+        text-align: justify;
+    }
+
+    .wrap_title {
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    .wrap_title>img {
+        max-height: 1.3rem;
+        width: auto;
+    }
+
+
+    .table01 {
+        display: grid;
+        grid: repeat(3, max-content)/20% 33% 33% 1fr;
+        justify-content: center;
+        border-top: .13rem solid #2660ad;
+        border-bottom: .06rem solid #2660ad
+    }
+
+    .table01>* {
+        padding: 1rem 1.2rem;
+        border-right: .06rem solid #e2e4e3
+    }
+
+    .table01>.htit:nth-of-type(4),
+    .table01>li:last-of-type {
+        border-right: none;
+    }
+
+    .table01>.htit {
+        grid-row: 1/2;
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border-bottom: .06rem solid #2660ad;
+        background: #2660ad;
+        color: #fff;
+        align-content: center
+    }
+
+
+    .table01>.subtit {
+        border-bottom: .06rem solid #2660ad;
+        text-align: center;
+        font-weight: 600;
+        align-content: center;
+        grid-column: 1/2;
+    }
+
+    .table01>.subtit:nth-of-type(5) {
+        grid-row: 2/3;
+
+    }
+
+    .table01>.subtit:nth-of-type(6) {
+        grid-row: 3/4;
+    }
+
+    .table01>.listwrap {
+        border-right: .06rem solid #e2e4e3;
+        border-bottom: .06rem solid #2660ad;
+        text-align: left;
+        align-content: center;
+    }
+
+    .table01>.listwrap:nth-of-type(6),
+    .table01>.listwrap:nth-of-type(9) {
+        grid-column: 2/3;
+    }
+
+    .table01>.listwrap:nth-of-type(7),
+    .table01>.listwrap:nth-of-type(10) {
+        grid-column: 3/4;
+    }
+
+    .table01>li:last-of-type {
+        align-self: center;
+        grid-row: 2/4;
+        grid-column: 4/5;
+        text-align: center;
+    }
+
+    #welfare_wrap>.listWrap {
+        margin: 0 auto;
+    }
+
+    .welfare_3_type_box .welfare_3_item {
+        font-size: 1rem;
+        line-height: 1em;
+        font-weight: 500;
+        color: #000;
+        background: #fff;
+        border: 0.06em solid #e2e4e3;
+    }
+
+    #step_wrap {
+        row-gap: 1.5rem;
+    }
+
+    .step03 {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .step03>li {
+        display: grid;
+        grid-template-rows: 5rem 1fr;
+        row-gap: 0.5rem;
+        justify-items: center;
+        align-items: center;
+        width: 20%;
+        border: 0.06em solid #e2e4e3;
+        padding: 1rem;
+    }
+
+    .step03>li>img {
+        max-height: 3.5rem;
+        width: auto;
+        align-self: center;
+    }
+
+    .step03>li>p {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000;
+        text-align: center;
+        font-family: "NanumSquare" !important;
+    }
+
+    #step_wrap>p {
+        margin: 0 auto;
+    }
+</style>
+<div id="wrapbox" class="tempate-detailed-summary-root pc">
+    <div id="visualbox">
+        <ul class="visual_wrap">
+            <li>
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png" alt="小山(소산) 로고"
+                    title="小山(소산) 로고">
+                <h2>홀캡틴/홀서버 채용모집 (경력자우대)</h2>
+            </li>
+            <li>
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_001.png"
+                    alt="[小山] 홀캡틴/홀서버 채용모집 (경력자우대)" title="[小山] 홀캡틴/홀서버 채용모집 (경력자우대)">
+            </li>
+        </ul>
+    </div>
+    <div id="contentbox">
+        <p class="intro_wrap">
+            이촌동에서 재패니즈 다이닝 요리를 하고 있는 <b>소산</b>(코야마)입니다. 사업확장을 위하여 아래와 같이 홀서빙 사원 및 캡틴을 모집 하고 있습니다. 서비스가 즐겁고 주류에 관심이 많으신
+            분들 기다리고 있습니다. 함께 즐거운 매장으로 만들어 나가길 희망합니다. <span style="color:#2660ad;">20대 젊은 셰프</span>들로 <b
+                style="color:#2660ad;">활기차고 패기 넘치는 분위기</b>입니다. 무겁고 어려운 매장이 아닌 캐주얼하고 친근한 매장으로, 가족같은 분위기에서 함께 근무 하실 분들 많은
+            지원 부탁드립니다 ^^<br>
+            <b style="color:#2660ad;">성과급 지급과, 월 8회 휴무, 그리고 연차, 탄력적 근무 가능합니다.</b>
+        </p>
+        <div id="position_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="小山(소산) 채용공고 서브타이틀 로고" title="小山(소산) 채용공고 서브타이틀 로고">
+                모집부문
+            </div>
+            <ul class="table01">
+                <li class="htit">구분</li>
+                <li class="htit">주요업무</li>
+                <li class="htit">자격요건 및 우대사항</li>
+                <li class="htit">인원</li>
+                <li class="subtit">홀캡틴</li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt class="mobile">[주요업무]</dt>
+                        <dd>매장 서비스 운영 관리 및 교육</dd>
+                        <dd>영업준비(운영/마감/고객응대)</dd>
+                        <dd>홀서빙, 고객 주문 및 서비스 응대</dd>
+                    </dl>
+                </li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt>[자격요건]</dt>
+                        <dd>학력 : 학력무관</dd>
+                        <dd>경력 : 신입,경력</dd>
+                        <dd>주류관련 자격등 소지 必</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[우대사항]</dt>
+                        <dd>경력자 우대</dd>
+                        <dd>서비스 마인드를 갖춘자</dd>
+                    </dl>
+                    <dl class="list mobile">
+                        <dt>[인원]</dt>
+                        <dd>O명</dd>
+                    </dl>
+                </li>
+                <li class="subtit">홀서버</li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt class="mobile">[주요업무]</dt>
+                        <dd>홀서빙, 고객 주문 및 서비스 응대 </dd>
+                    </dl>
+                </li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt>[자격요건]</dt>
+                        <dd>학력 : 학력무관</dd>
+                        <dd>경력 : 신입,경력</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[우대사항]</dt>
+                        <dd>경력자 우대</dd>
+                        <dd>밝고 성실하신 분</dd>
+                        <dd>장기근무 가능자</dd>
+                    </dl>
+                    <dl class="list mobile">
+                        <dt>[인원]</dt>
+                        <dd>O명</dd>
+                    </dl>
+                </li>
+                <li class="pcweb">O명</li>
+            </ul>
+        </div>
+        <div id="condition_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="小山(소산) 채용공고 서브타이틀 로고" title="小山(소산) 채용공고 서브타이틀 로고">
+                근무조건
+            </div>
+            <dl class="list">
+                <dd>근무형태: 정규직 (수습1개월)</dd>
+                <dd>근무시간: 13:00~ (탄력적 근무 가능 / 협의)</dd>
+                <dd>휴게시간: 60분</dd>
+                <dd>근무요일: <b style="color:red ">월 8회 휴무, 연차 有</b></dd>
+            </dl>
+        </div>
+        <div id="welfare_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                복리후생
+            </div>
+            <div class="listWrap">
+                <div class="welfare_3 welfare_3_type_box">
+                    <div class="welfare_3_item welfare_3_item16">건강보험, 고용보험,<br>국민연금, 산재보험</div>
+                    <div class="welfare_3_item welfare_3_item55">연차제도</div>
+                    <div class="welfare_3_item welfare_3_item34">워크샵/MT</div>
+                    <div class="welfare_3_item welfare_3_item12">명절선물/명절상여</div>
+                    <div class="welfare_3_item welfare_3_item6">장기근속 포상</div>
+                    <div class="welfare_3_item welfare_3_item13">퇴직금</div>
+                    <div class="welfare_3_item welfare_3_item8">회식비 지원</div>
+                    <div class="welfare_3_item welfare_3_item2">점심 식사 지원</div>
+                </div>
+            </div>
+        </div>
+        <div id="note_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="小山(소산) 채용공고 서브타이틀 로고" title="小山(소산) 채용공고 서브타이틀 로고">
+                지원조건
+            </div>
+            <dl class="list">
+                <dd>성별 : 성별무관</dd>
+                <dd>연령 : 무관</dd>
+                <dd>학력 : 학력무관</dd>
+                <dd>우대조건 : 컴퓨터활용가능, 유사업무 경험, 인근거주</dd>
+            </dl>
+        </div>
+        <div id="apply_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="小山(소산) 채용공고 서브타이틀 로고" title="小山(소산) 채용공고 서브타이틀 로고">
+                접수방법
+            </div>
+            <dl class="list">
+                <dd>접수방법 : 온라인지원, 간편문자지원</dd>
+                <dt style="font-weight:400; ">※ 전화 문의 시 ‘잡코리아에서 채용정보 보고 전화 드렸습니다.’ 라고 하시면 빠른 문의가 가능합니다.
+                </dt>
+            </dl>
+        </div>
+        <div id="step_wrap">
+            <div class="wrap_title">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png"
+                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                전형절차
+            </div>
+            <ul class="step03">
+                <li>
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/file_9166055_240625_01.png
+                    " alt="서류전형" title="서류전형">
+                    <p>서류 전형</p>
+                </li>
+                <li>
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/intertview_5260480_240625_01.png" alt="1차면접"
+                        title="1차면접">
+                    <p>1차 면접</p>
+                </li>
+                <li>
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/card_1700811_240625_01.png" alt="최종합격"
+                        title="최종 합격">
+                    <p>최종합격</p>
+                </li>
+            </ul>
+            <p class="bf_dot">면접일정은 추후 통보됩니다.</p>
+        </div>
+    </div>
+    <img src="https://file1.jobkorea.co.kr/Mng/2021/10/sosan0420_1026_239.jpg" alt="[小山] 홀캡틴/홀서버 채용모집 (경력자우대)"
+        title="[小山] 홀캡틴/홀서버 채용모집 (경력자우대)">
+</div>
