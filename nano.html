@@ -1,0 +1,418 @@
+<style>
+    @import url(https:///jkamhub.github.io/css/jk_style.css);
+
+    #wrapbox {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 2.5rem;
+        justify-content: center;
+        align-items: start;
+    }
+
+    ul[id$="box"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 2.25rem;
+        text-align: left;
+    }
+
+    .logo_wrap {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        column-gap: 1.875rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo_wrap>img:nth-child(2) {
+        justify-self: start;
+        width: 7.5rem;
+    }
+
+    .title_wrap {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .title_wrap>h2 {
+        font-size: 2.5rem;
+        line-height: 1.5em;
+        text-align: center;
+        color: blue;
+        font-family: "Nanum Myeongjo", serif !important;
+    }
+
+    .title_wrap>h2>span {
+        color: red;
+        font-family: "Nanum Myeongjo", serif !important;
+    }
+
+    .course_wrap {
+        background: #fff url(https://file1.jobkorea.co.kr/Mng/2024/6/nnfc_44999053_steparw.png) center center no-repeat;
+        background-size: 100%;
+        display: grid;
+        grid-template-columns: 0.9fr 0.8fr 1fr;
+        column-gap: 5rem;
+        justify-content: space-between;
+        max-width: 55.313rem;
+        margin: 0 auto;
+        padding: 3rem 3.5rem 0 3.5rem;
+    }
+
+    .course_wrap>li {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 3rem;
+    }
+
+    .course_wrap>li:first-child {
+        margin-top: 4.5rem;
+        align-self: end;
+    }
+
+    .course_wrap>li:not(li:last-child)>b {
+        margin-right: 2rem;
+    }
+
+    .course_wrap>li:nth-child(2) {
+        margin-top: 2.2rem;
+    }
+
+    .course_wrap>li>b {
+        text-align: center;
+    }
+
+    .course_wrap>li>.list>dd {
+        font-weight: 700;
+        display: list-item;
+        list-style: disc;
+        list-style-position: outside;
+        padding-left: 0.2rem;
+    }
+
+    #contentbox {
+        padding-inline: 3rem;
+    }
+
+    #contentbox>li {
+        
+        margin-left:1rem;
+    }
+
+    #contentbox>li * {
+        font-family: "Nanum Myeongjo", serif !important;
+        color: #000;
+    }
+
+    #contentbox>li>h5 {
+        font-size: 1.5rem;
+        line-height: 2em;
+        font-weight: 600;
+        display:list-item;
+        list-style: "○";
+        padding-left:0.5rem;
+        margin-left:0.5rem;
+    }
+
+    #contentbox>li>p:not(p:last-child),
+    #contentbox>li>b,
+    #contentbox>li>p.txt {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        letter-spacing:-1px;
+        display: list-item;
+        list-style: "- ";
+        padding-left: 0.5em;
+        margin-left:0.5rem;
+    }
+
+    #contentbox>li>p:last-child:not(#contentbox>li>p.txt) {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+
+
+    #contentbox>li:first-child {
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 1rem;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .table00 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .table00>li {
+        display: grid;
+        grid-template-rows: 2.8rem 5.6rem 1fr;
+    }
+
+    #contentbox>li>.table00>li * {
+        font-family: "Pretendard Variable" !important;
+        margin-left:0;
+    }
+
+    #contentbox>li>.table00>li>* {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .table00>li:nth-child(2) {
+        border-inline: 0.06rem solid #000;
+    }
+
+    #contentbox>li>.table00>li>p:nth-child(2) {
+        font-size:1.2rem;
+        line-height:1.3;
+        border-block: 0.06rem solid #000;
+        align-content: center;
+    }
+
+    .table00>li>dl {
+        justify-self: center;
+        align-content:center;
+        margin:0 1.2rem !important;
+    }
+
+    .table00>li>dl>* {
+        font-weight: 400;
+        display: list-item;
+        text-align: left;
+    }
+
+    .table00>li>dl>dt {
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 0.2rem;
+    }
+
+    .table00>li>dl>dd {
+        list-style: "- ";
+        list-style-position: outside;
+        margin-left: 0.2rem;
+        padding-left: 0.3rem
+    }
+
+    #contentbox>li:nth-child(6)>a {
+        background: #1a5692;
+        width: max-content;
+        height: 3.8rem;
+        padding-inline: 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 0.8rem;
+        display: flex;
+        align-items: center;
+        margin: 2rem auto 0rem auto;
+        font-family: "Pretendard Variable" !important;
+    }
+
+    #contentbox>li:nth-child(7)>b:nth-child(3)>b>span {
+        color:red;
+    }
+
+    #contentbox>li:nth-child(7)>b:nth-child(3)>b>span>font {
+        font-size:1.5rem;
+        color:red;
+    }
+
+    #contentbox>li:nth-child(7)>b:nth-child(4)>a {
+        font-size:1.5rem !important;
+        color:red !important;
+    }
+
+    #contentbox>li:nth-child(7)>b:nth-child(4)>span {
+        font-size:0.9rem;
+    }
+
+    .contact_wrap {
+        display:flex;
+        flex-flow:column wrap;
+        align-items: center;
+        align-self: flex-end;
+        margin-right:3rem;
+        color: #000;
+        text-align:center;
+        font-size:1rem;
+        line-height: 1.4;
+        font-weight:600;
+        padding-bottom:5rem;
+    }
+
+    .contact_wrap h5 {
+        font-size: 1.5rem;
+        line-height:1.75;
+    }
+    
+    .contact_wrap h5,
+    .contact_wrap b,
+    .contact_wrap a {
+        font-family: "Nanum Myeongjo", serif !important;
+        color: #000 !important;        
+    }
+</style>
+
+<div id="wrapbox">
+    <ul id="visualbox">
+        <li class="logo_wrap">
+            <img src="https://file1.jobkorea.co.kr/Mng/2024/6/nnfc_44999053_01.png" alt="과학기술정보통신부 로고"
+                title="과학기술정보통신부 로고">
+            <img src="https://file1.jobkorea.co.kr/Mng/2024/6/nnfc_44999053_02.png" alt="대전광역시 로고" title="대전광역시 로고">
+            <img src="https://file1.jobkorea.co.kr/Mng/2024/6/nnfc_44999053_03.png" alt="나노종합기술원 로고" title="나노종합기술원 로고">
+        </li>
+        <li class="title_wrap">
+            <h2>
+                <span>나노전문인력양성 및 일자리지원사업</span><br>
+                20기 교육생 모집
+            </h2>
+            <ul class="course_wrap">
+                <li>
+                    <b>핵심 기반 과정<br>(2주)</b>
+                    <dl class="list">
+                        <dd>반도체 8대 공정 이론</dd>
+                        <dd>반도체 주요 장비 현장교육<br>(300mm 장비 포함)</dd>
+                    </dl>
+                </li>
+                <li>
+                    <b>특화 과정<br>(2주)</b>
+                    <dl class="list">
+                        <dd>1:1 멘토링 심화 실습</dd>
+                        <dd>현장 공정 Issue Project</dd>
+                    </dl>
+                </li>
+                <li>
+                    <b>전 주기 현장실습 과정<br>(7주)</b>
+                    <dl class="list">
+                        <dd>180nm 기반의 반도체소자 제작 실습</dd>
+                        <dd>반도체 소자, 공정, 분석 실무 교육을 위한 Process 이해</dd>
+                    </dl>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul id="contentbox">
+        <li>
+            <h5>교육과정</h5>
+            <ul class="table00">
+                <li>
+                    <p>1단계</p>
+                    <p>핵심 기반 과정<br>(2주)</p>
+                    <dl>
+                        <dt>FAB공정/분석실 장비순환교육 (1주)</dt>
+                        <dd>반도체 공정장비 조별 현장교육</dd>
+                        <dd>공정별 장비 기본지식습득</dd>
+                        <dt>이론교육 (1주)</dt>
+                        <dd>반도체 산업동향</dd>
+                        <dd>반도체 8대공정 및 소자 이론</dd>
+                        <dd>반도체 후공정</dd>
+                    </dl>
+                </li>
+                <li>
+                    <p>2단계</p>
+                    <p>특화 과정<br>(1:1 멘토링 과정)<br>(5주)</p>
+                    <dl>
+                        <dt>현장 실습형 1:1 멘토링</dt>
+                        <dd>FAB공정직무 및 업무 Process 이해</dd>
+                        <dd>Project 주제설정 및 실습</dd>
+                        <dt>멘토링을 통한 장비 심화 실습</dt>
+                        <dd>장비조작과 주요 Parameter 평가</dd>
+                        <dd>장비별 주요관리항목 습득</dd>
+                        <dt>장비 심화 (전문화) 실습</dt>
+                        <dd>장비 분해·조립</dd>
+                        <dt>PT 주제 발표</dd>
+                    </dl>
+                </li>
+                <li>
+                    <p>3단계</p>
+                    <p>전 주기 현장실습 과정<br>(7주)</p>
+                    <dl>
+                        <dt>반도체 소자 제작실습</dt>
+                        <dd>반도체소자 이론 및 토론</dd>
+                        <dd>Fab Process 및 공정 진행</dd>
+                        <dd>반도체 MOS Cap. 소자 제작 및 측정분석</dd>
+                        <dd>PT 발표 및 평가</dd>
+                    </dl>
+                </li>
+            </ul>
+            <p>※ 교육 커리큘럼은 교육운영 상황에 따라 변경될 수 있음</p>
+        </li>
+        <li>
+            <h5>교육기간 (2024. 8. 12 ~ 2024. 11. 22, 약 14주)</h5>
+            <p>핵심 기반 과정 : 2024년 8월 12일 ~ 2024년 8월 26일 (약 2주)</p>
+            <p>특화 과정 (1:1 멘토링 과정) : 2024년 8월 27일 ~ 2024년 9월 4일 (약 5주)</p>
+            <p>전 주기 현장실습 과정 : 2024년 9월 7일 ~ 2024년 11월 22일 (약 7주)</p>
+            <p>특화 과정 (1:1 멘토링 과정) : 2024년 8월 27일 ~ 2024년 9월 4일 (약 5주)</p>
+            <p>※ 상기 일정은 교육 운영 시 변경될 수 있음</p>
+        </li>
+        <li>
+            <h5>교육대상 및 정원 : 이공계 대졸(졸업예정자 포함) 미취업자 25명</h5>
+            <p>졸업예정자는 졸업학점을 이수한 졸업유예자로 본 교육일정 참여 및 취업에 지장이 없어야 함 (졸업예정자는 ‘25년 2월 졸업자에 한함)</p>
+            <p>본 사업은, 청년 미취업자를 대상으로 하는 사업임</p>
+            <p>나노종합기술원의 장기교육(2개월 이상)을 수료한 자는 중복 수혜를 받을 수 없음</p>
+            <p class="txt">
+                취약계층 가산점 부여 (아래 해당 항목 중 1개만 인정)<br>
+                ① 저소득층 ② 장애인 ③ 여성가장 ④ 6개월 이상 장기 구직자(졸업 후 6개월 이내 고용된 사실이 없는 자, 졸업유예는 미해당)
+            </p>
+        </li>
+        <li>
+            <h5>교육생 특전</h5>
+            <p>교육비 전액 무료(이론/실습 교육)</p>
+            <p>교재 제공</p>
+            <p>교육생 체제비 지급 (월 기준 50만원)</p>
+            <p>※ 교육생 체제비는 출석결과 반영하여 일할 계산하여 지급함</p>
+        </li>
+        <li>
+            <h5>교육장소</h5>
+            <p class="txt">KAIST부설 나노종합기술원 8F 미래반도체인재센터 (대전광역시 유성구 대학로 291)</p>
+        </li>
+        <li>
+            <h5>제출서류</h5>
+            <b>참가신청서, 자기소개서, 개인정보 이용동의서</b>
+            <b>성적증명, 인턴경력, 자격증, 수상경력, 외국어, 유관교육 이수, 취약계층 등 증빙서류 제출 필수 (미제출시 서류심사에서 인정하지 않음. 단, 인턴 및 수상경력 등은 반도체 유관분야에 한함)</b>
+            <b>자기소개서는 반드시 2페이지 이내 작성할 것 (글자크기 10~11pt, 기본서체)</b>
+            <b>제출서류는 ZIP 파일로 압축하거나 일정파일에 캡쳐본 저장하는 방법 활용</b>
+            <a href="#" title="참가신청서, 자기소개서, 개인정보 이용동의서 다운로드">제출서류 다운로드</a>
+        </li>
+        <li>
+            <h5>신청방법 및 전형일정</h5>
+            <b>신청기간 : 2024년 7월 1일(월) 9:00 ~ 7월 14일(일) 23:59까지</b>
+            <b>
+                <span>신청방법 : </span>
+                <b>
+                    나노종합기술원 [홈페이지/서비스/교육서비스/교육과정공지 또는 교육일정]에서 해당 교육과정명 Click → <span><font>‘모아폼’</font>을 통해 제출</span>
+                </b>
+            </b>
+            <b>
+                모아 폼 URL : <a href="https://moaform.com/q/btnMHb" title="모아폼 바로가기">https://moaform.com/q/btnMHb</a><br>
+            <span>(모아폼 접속은 해당 URL을 click 하거나, 홈페이지 하단부 [신청하기]를 click함)</span>
+            </b>
+            <p>서류발표 : 7월 17일(수) 17:00시 예정, 결과 개별 이메일 또는 교육 홈페이지 공지사항에 통보</p>
+            <p>면접일정 : 7월 23일(화) ~ 7월 24일(수), 다vs다 형식의 대면면접</p>
+            <p>합격자 발표 : 7월 26일(금) 17:00시 예정, 결과 개별 이메일 통보</p>
+            <p>※ 상기 일정은 기관 사정으로 변경될 수 있음</p>
+        </li>
+        <li>
+            <h5>참고사항</h5>
+            <p>제출 서류 내용이 거짓일 경우, 선발 취소 처리됨</p>
+            <p>본 교육은 취업을 위한 일자리지원사업으로 취업을 목표로 함을 반드시 인지</p>
+            <p>교육과정 중 취업이 확정된 자는 조기수료 처리 (수료처리 유예기간 5일 부여)</p>
+            <p class="txt"><b>숙식 미제공</b> (최종 합격 후 2주 준비기간 동안 숙소 등 조치 요망)</p>
+        </li>
+    </ul>
+    <div class="contact_wrap">
+        <h5>KAIST부설 나노종합기술원 미래반도체인재센터</h5>
+        <b>
+            담당자 강희오, 042-366-1530, <a href="mailto:kangheeoh@nnfc.re.kr" target="_blank" title="담당자 강희오 문의메일 보내기">kangheeoh@nnfc.re.kr</a><br>
+            조병진, 042-366-2097, <a href="mailto:resalecho@nnfc.re.kr" target="_blank" title="담당자 조병진 문의메일 보내기">resalecho@nnfc.re.kr</a>
+        </b>
+    </div>
+</div>
