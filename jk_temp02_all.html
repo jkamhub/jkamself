@@ -1,111 +1,111 @@
 <style>
     @import url(https://jkamhub.github.io/css/jk_style.css);
 
+
     /* mobile css */
-    @media only screen and (max-width: 877px) {
+    @media only screen and (max-width: 961px) {
+        #view_contents_wrap {
 
-        :root {
-            transform: translateX(-0.01%);
-            font-size: 2.5rem;
+            .tempate-detailed-summary-root p {
+                position: relative;
+                font-size: 16px;
+                white-space: normal;
+            }
+
+            [id$="_wrap"]>.bf_dot {
+                margin-left: 0rem;
+            }
+
+
+            .wrap_title {
+                font-size: 1.25rem;
+            }
+
+            .visual_wrap {
+                margin-top: 0px;
+            }
+
+            #contentbox {
+                border: none;
+                padding: 2.5em 0 0;
+            }
+
+            #position_wrap .table02 {
+                display: flex;
+                flex-flow: column wrap;
+            }
+
+            #position_wrap .table02>li {
+                width: 100%;
+            }
+
+            #position_wrap .listwrap:nth-of-type(2),
+            #position_wrap .listwrap:nth-of-type(5) {
+                border-right: 0.06em solid #253c5b;
+                border-bottom-left-radius: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            #position_wrap .listwrap:nth-of-type(3),
+            #position_wrap .listwrap:last-of-type {
+                border-left: 0.06em solid #253c5b;
+                border-bottom-left-radius: 0.7rem;
+                border-top: none;
+            }
+
+            #welfare_wrap .welfare01 {
+                justify-content: center;
+                gap: 0.7rem;
+            }
+
+            #welfare_wrap .welfare01>li {
+                width: calc(27% - 1rem);
+                grid-template-rows: 4.5rem 1fr;
+                border-radius: 0.9rem;
+            }
+
+            #welfare_wrap .welfare01>li>img {
+                max-height: 2.5rem;
+            }
+
+            #welfare_wrap .welfare01>li>div {
+                row-gap: 0;
+                padding: 0.2rem;
+                border-bottom-left-radius: 0.7rem;
+                border-bottom-right-radius: 0.7rem;
+            }
+
+            #welfare_wrap .welfare01>li>div>p {
+                font-size: 0.9rem;
+                line-height: 1.1rem;
+                letter-spacing: -.7px;
+            }
+
+            #welfare_wrap .welfare01>li>div>span {
+                display: none;
+            }
+
+            #step_wrap .step02 {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            #step_wrap .step02>li {
+                grid-template-rows: 5em 1fr;
+                width: calc(34.7% - 1em);
+            }
+
+            #step_wrap .step02>li>img {
+                max-height: 3rem
+            }
+
+            #step_wrap .step02>li>p {
+                font-size: 1rem;
+                padding-block: 0.2rem;
+            }
+
         }
-
-        #view_contents_wrap #wrapbox {
-            font-size: 46px;
-        }
-
-        #view_contents_wrap #wrapbox {
-            width: 99%
-        }
-
-
-        #view_contents_wrap div[id$="_wrap"] {
-            width: 99%;
-        }
-
-        #view_contents_wrap [id$="_wrap"]>.bf_dot {
-            margin-left: 0rem;
-        }
-
-        #view_contents_wrap .visual_wrap {
-            margin-top: 0px;
-        }
-
-        #view_contents_wrap #contentbox {
-            border: none;
-            padding: 2.5rem 0 3.5rem;
-        }
-
-        #position_wrap .table02 {
-            display: flex;
-            flex-flow: column wrap;
-        }
-
-        #position_wrap .table02>li {
-            width: 100%;
-        }
-
-        #position_wrap .listwrap:nth-of-type(2),
-        #position_wrap .listwrap:nth-of-type(5) {
-            border-right: 0.06rem solid #253c5b;
-            border-bottom-left-radius: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        #position_wrap .listwrap:nth-of-type(3),
-        #position_wrap .listwrap:last-of-type {
-            border-left: 0.06rem solid #253c5b;
-            border-bottom-left-radius: 1rem;
-            border-top: none;
-        }
-
-        #welfare_wrap .welfare01 {
-            justify-content: center;
-            gap: 0.7rem;
-        }
-
-        #welfare_wrap .welfare01>li {
-            width: calc(27% - 1rem);
-            grid-template-rows: 5rem 2.5rem;
-            border-radius: 0.9rem;
-        }
-
-        #welfare_wrap .welfare01>li>div {
-            padding-inline: 0.2rem;
-            align-content: center;
-            border-bottom-left-radius: 0.8rem;
-            border-bottom-right-radius: 0.8rem;
-        }
-
-        #welfare_wrap .welfare01>li>div>p {
-            font-size: 0.9rem;
-            line-height: 1.1rem;
-            letter-spacing: -.7px;
-        }
-
-        #welfare_wrap .welfare01>li>div>span {
-            display: none;
-        }
-
-        #step_wrap .step02 {
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        #step_wrap .step02>li {
-            width: calc(34.7% - 1rem);
-        }
-
-        #step_wrap .step02>li>img {
-            max-width: 45%;
-            padding-block: 1.3rem;
-        }
-
-        #step_wrap .step02>li>p {
-            font-size: 1.1rem;
-            padding-block: 0.2rem;
-        }
-
     }
 
     #wrapbox {
@@ -114,6 +114,12 @@
         color: #333;
         font-weight: 500;
         letter-spacing: -.5px;
+    }
+
+    .tempate-detailed-summary-root {
+        position: relative;
+        font-size: 16px;
+        white-space: normal;
     }
 
     #wrapbox>* {
@@ -130,7 +136,7 @@
     }
 
     #contentbox {
-        padding: 2.5rem 2.5rem 3.5rem;
+        padding: 3.5em 3.5em 5em;
         border: 1px solid #e2e4e3;
         border-top: none;
     }
@@ -208,7 +214,8 @@
     }
 
     .wrap_title>img {
-        max-width: 6rem;
+        max-height: 1.5em;
+        width: auto;
     }
 
     .table02 {
@@ -217,12 +224,12 @@
     }
 
     .table02>li {
-        padding: 1rem 1.2rem;
+        padding: 1em 1.2rem;
     }
 
     .subtit {
-        font-size: 1.2rem;
-        line-height: 1.3em;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
         font-weight: 500;
         text-align: center;
         color: #fff;
@@ -243,7 +250,7 @@
     }
 
     .listwrap {
-        border: 0.06rem solid #253c5b;
+        border: 0.06em solid #253c5b;
         border-top: none;
     }
 
@@ -271,42 +278,45 @@
 
     .welfare01>li {
         display: grid;
-        grid-template-rows: repeat(2, max-content);
-        font-size: 1.2rem;
-        color: #127749;
+        grid-template-rows: 7.5em 1fr;
         font-weight: 600;
         justify-items: center;
-        width: calc(20.5% - 1.5rem);
+        width: calc(20.5% - 1.5em);
         background: #fff;
-        border: 0.06rem solid #253c5b;
-        border-radius: 1.1rem;
+        border: 0.06em solid #253c5b;
+        border-radius: 0.9rem;
     }
 
     .welfare01>li>img {
-        max-width: 40%;
-        padding-block: 1.8rem;
+        max-height: 3.3rem;
+        width: auto;
+        align-self: center;
     }
 
     .welfare01>li>div {
         display: grid;
         grid-template-rows: repeat(2, max-content);
+        row-gap: 0.2rem;
+        align-content: center;
         background: #253c5b;
         padding-block: 0.5rem;
         width: 100%;
         color: #fff;
         text-align: center;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
     }
 
     .welfare01>li>div>p {
         font-size: 1rem;
-        font-weight: 500;
+        line-height: 1em;
+        font-weight: 400;
+        color: #fff;
     }
 
     .welfare01>li>div>span {
-        font-size: 0.9rem;
-        line-height: 1.2em;
+        font-size: 0.875rem;
+        line-height: 1.1rem;
         font-weight: 200;
         letter-spacing: 0;
     }
@@ -325,41 +335,40 @@
 
     .step02>li {
         display: grid;
-        grid-template-rows: repeat(2, max-content);
+        grid-template-rows: 8rem 1fr;
         justify-items: center;
         align-items: center;
         width: 17%;
-        border: 0.06rem solid #253c5b;
-        border-radius: 1.1rem;
+        border: 0.06em solid #253c5b;
+        border-radius: 0.9rem;
     }
 
     .step02>li>img {
-        max-width: 42%;
-        padding-block: 2rem;
+        max-height: 3.5rem;
+        width: auto;
+        align-self: center;
     }
 
     .step02>li>p {
         background: #253c5b;
         padding-block: 0.6rem;
         width: 100%;
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 300;
         color: #fff;
         text-align: center;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
     }
 
     #step_wrap>p {
         margin: 0 auto;
     }
 </style>
-
-<div id="wrapbox">
+<div id="wrapbox" class="tempate-detailed-summary-root pc">
     <div id="visualbox">
         <div class="visual_wrap">
-            <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_01.png"
-                alt="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집" title="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집">
+            <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_01.png" alt="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집" title="㈜홈앤몰쇼핑 한미생활건강 온라인 BM / AMD 채용 모집">
         </div>
     </div>
     <div id="contentbox">
@@ -370,8 +379,7 @@
         </p>
         <div id="position_wrap">
             <div class="wrap_title">
-                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
-                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png" alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
                 포지션 및 자격요건
             </div>
             <ul class="table02">
@@ -436,14 +444,12 @@
         </div>
         <div id="welfare_wrap">
             <div class="wrap_title">
-                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
-                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png" alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
                 복리후생
             </div>
             <ul class="welfare01">
                 <li>
-                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon02.png" alt="4대보험"
-                        title="4대보험">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon02.png" alt="4대보험" title="4대보험">
                     <div>
                         <p>4대 보험</p>
                         <span>건강보험/고용보험/국민연금/산재보험</span>
@@ -453,34 +459,32 @@
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar_icon.png" alt="노동절 휴무" title="노동절 휴무">
                     <div>
                         <p>노동절 휴무</p>
-                        <span>매년 5월 1일 휴무<br><br></span>
+                        <span>매년 5월 1일 휴무</span>
                     </div>
                 </li>
                 <li>
-                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar02_icon.png" alt="반차/연차제도"
-                        title="반차/연차제도">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/calendar02_icon.png" alt="반차/연차제도" title="반차/연차제도">
                     <div>
                         <p>자유로운 휴가문화</p>
-                        <span>반차, 연차, 정기휴가까지<br><br></span>
+                        <span>반차, 연차, 정기휴가까지</span>
                     </div>
                 </li>
                 <li>
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/5start_icon.png" alt="주5일제" title="주5일제">
                     <div>
                         <p>주 5일제</p>
-                        <span>주 5일 근무<br><br></span>
+                        <span>주 5일 근무</span>
                     </div>
                 </li>
                 <li>
                     <img src="https://file1.jobkorea.co.kr/Mng/2024/6/car_icon.png" alt="주차 지원" title="주차 지원">
                     <div>
                         <p>주차 지원</p>
-                        <span>주차 걱정 없이<br><br></span>
+                        <span>주차 걱정 없이</span>
                     </div>
                 </li>
                 <li>
-                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon03.png" alt="퇴직금"
-                        title="퇴직금">
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hynt0705_44836456_240604_icon03.png" alt="퇴직금" title="퇴직금">
                     <div>
                         <p>퇴직금</p>
                         <span>퇴직금 지원</span>
@@ -504,8 +508,7 @@
         </div>
         <div id="step_wrap">
             <div class="wrap_title">
-                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
-                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png" alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
                 전형절차
             </div>
             <ul class="step02">
@@ -534,8 +537,7 @@
         </div>
         <div id="note_wrap">
             <div class="wrap_title">
-                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png"
-                    alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
+                <img src="https://file1.jobkorea.co.kr/Mng/2024/6/hnm7701_44903522_240621_logo.png" alt="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고" title="㈜홈앤몰쇼핑 채용공고 서브타이틀 로고">
                 유의사항
             </div>
             <p class="bf_dot">허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>

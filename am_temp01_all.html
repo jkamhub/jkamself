@@ -1,6 +1,5 @@
 <style>
     @import url(https://jkamhub.github.io/css/am_style.css);
-    @import url(https://jkamhub.github.io/css/icofont/Duotone/icofont.min.css);
     @media (max-width:774px) {
         #visualbox .visual_wrap li:last-of-type {
             transform: scale(.5);
@@ -184,6 +183,14 @@
         left: 0
     }
 
+    .table01 {
+        display: grid;
+        grid: repeat(2, max-content)/25% 1fr;
+        justify-content: center;
+        border-top: .13rem solid #ec1b23;
+        border-bottom: .06rem solid #ec1b23
+    }
+
     .table01>* {
         padding: 1rem 1.2rem;
         border-right: .06rem solid #e2e4e3
@@ -223,10 +230,7 @@
         align-content: center
     }
 
-    .table01>p {
-        grid-column: 2/3;
-        align-content: center
-    }
+
 </style>
 <div id="wrapbox">
     <div id="visualbox">
@@ -234,7 +238,7 @@
             <li>
                 <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/wkuoal20111221.png"
                     alt="(주)거성크루 [KT 건대역점] 중국인 판매사원 모집합니다." title="(주)거성크루 [KT 건대역점] 중국인 판매사원 모집합니다.">
-                </li>
+            </li>
             <li>
                 <h5>(주)거성크루</h5>
                 <h2>[KT 건대역점] 중국인 판매사원 모집합니다.</h2>
@@ -245,25 +249,31 @@
         <p class="intro_wrap">KT 건대역점에서 함께하실<br>중국직원을 모집하고 있습니다.</p>
         <div id="position_wrap">
             <div class="wrap_title">
-                <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png" alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고">
+                <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png"
+                    alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고">
                 모집부문
             </div>
-            <div class="table01">
-                <h3>모집분야</h3>
-                <h4>휴대폰 판매 및 고객관리</h4>
-                <h3>자격요건 및 지원조건</h3>
-                <dl class="list">
-                    <dt>자격요건 : 중국어 가능자</dt>
-                    <dd>성별 : 무관</dd>
-                    <dd>연령 : 무관</dd>
-                    <dd>학력 : 무관</dd>
-                </dl>
-            </div>
+            <ul class="table01">
+                <li class="htit">
+                    모집분야
+                </li>
+                <li class="listwrap">휴대폰 판매 및 고객관리</li>
+                <li class="htit">자격요건 및 지원조건</li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt>자격요건 : 중국어 가능자</dt>
+                        <dd>성별 : 무관</dd>
+                        <dd>연령 : 무관</dd>
+                        <dd>학력 : 무관</dd>
+                    </dl>
+                </li>
+            </ul>
         </div>
         <div id="condition_wrap">
-            <div class="wrap_title"><img
-                    src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png"
-                    alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고"> 근무조건</div>
+            <div class="wrap_title">
+                <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/06/img/qyyxdx20105141.png" alt="(주)거성크루 채용공고 서브타이틀 로고" title="(주)거성크루 채용공고 서브타이틀 로고">
+                근무조건
+            </div>
             <dl class="list">
                 <dd><b>근무기간</b>: 1년이상 (협의가능)</dd>
                 <dd><b>근무요일</b>: 주 3 ~ 5일 / 협의가능</dd>
