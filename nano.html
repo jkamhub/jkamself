@@ -1,6 +1,14 @@
 <style>
     @import url(https:///jkamhub.github.io/css/jk_style.css);
 
+
+    @media only screen and (max-width: 961px) {
+        #view_contents_wrap #wrapbox {
+            border: none;
+            margin-top: 0;
+        }
+    }
+
     #wrapbox {
         width: 100%;
         display: flex;
@@ -8,6 +16,8 @@
         row-gap: 2.5rem;
         justify-content: center;
         align-items: start;
+        border: 1px solid #e2e4e3;
+        margin: -2.5em auto 0 auto;
     }
 
     ul[id$="box"] {
@@ -98,8 +108,8 @@
     }
 
     #contentbox>li {
-        
-        margin-left:1rem;
+
+        margin-left: 1rem;
     }
 
     #contentbox>li * {
@@ -111,10 +121,10 @@
         font-size: 1.5rem;
         line-height: 2em;
         font-weight: 600;
-        display:list-item;
+        display: list-item;
         list-style: "○";
-        padding-left:0.5rem;
-        margin-left:0.5rem;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     #contentbox>li>p:not(p:last-child),
@@ -122,11 +132,11 @@
     #contentbox>li>p.txt {
         font-size: 1.2rem;
         line-height: 1.6;
-        letter-spacing:-1px;
+        letter-spacing: -1px;
         display: list-item;
         list-style: "- ";
         padding-left: 0.5em;
-        margin-left:0.5rem;
+        margin-left: 0.5rem;
     }
 
     #contentbox>li>p:last-child:not(#contentbox>li>p.txt) {
@@ -155,7 +165,7 @@
 
     #contentbox>li>.table00>li * {
         font-family: "Pretendard Variable" !important;
-        margin-left:0;
+        margin-left: 0;
     }
 
     #contentbox>li>.table00>li>* {
@@ -170,16 +180,16 @@
     }
 
     #contentbox>li>.table00>li>p:nth-child(2) {
-        font-size:1.2rem;
-        line-height:1.3;
+        font-size: 1.2rem;
+        line-height: 1.3;
         border-block: 0.06rem solid #000;
         align-content: center;
     }
 
     .table00>li>dl {
         justify-self: center;
-        align-content:center;
-        margin:0 1.2rem !important;
+        align-content: center;
+        margin: 0 1.2rem !important;
     }
 
     .table00>li>dl>* {
@@ -217,47 +227,47 @@
     }
 
     #contentbox>li:nth-child(7)>b:nth-child(3)>b>span {
-        color:red;
+        color: red;
     }
 
     #contentbox>li:nth-child(7)>b:nth-child(3)>b>span>font {
-        font-size:1.5rem;
-        color:red;
+        font-size: 1.5rem;
+        color: red;
     }
 
     #contentbox>li:nth-child(7)>b:nth-child(4)>a {
-        font-size:1.5rem !important;
-        color:red !important;
+        font-size: 1.5rem !important;
+        color: red !important;
     }
 
     #contentbox>li:nth-child(7)>b:nth-child(4)>span {
-        font-size:0.9rem;
+        font-size: 0.9rem;
     }
 
     .contact_wrap {
-        display:flex;
-        flex-flow:column wrap;
+        display: flex;
+        flex-flow: column wrap;
         align-items: center;
         align-self: flex-end;
-        margin-right:3rem;
+        margin-right: 3rem;
         color: #000;
-        text-align:center;
-        font-size:1rem;
+        text-align: center;
+        font-size: 1rem;
         line-height: 1.4;
-        font-weight:600;
-        padding-bottom:5rem;
+        font-weight: 600;
+        padding-bottom: 5rem;
     }
 
     .contact_wrap h5 {
         font-size: 1.5rem;
-        line-height:1.75;
+        line-height: 1.75;
     }
-    
+
     .contact_wrap h5,
     .contact_wrap b,
     .contact_wrap a {
         font-family: "Nanum Myeongjo", serif !important;
-        color: #000 !important;        
+        color: #000 !important;
     }
 </style>
 
@@ -328,7 +338,8 @@
                         <dd>장비별 주요관리항목 습득</dd>
                         <dt>장비 심화 (전문화) 실습</dt>
                         <dd>장비 분해·조립</dd>
-                        <dt>PT 주제 발표</dd>
+                        <dt>PT 주제 발표
+                        </dt>
                     </dl>
                 </li>
                 <li>
@@ -377,7 +388,8 @@
         <li>
             <h5>제출서류</h5>
             <b>참가신청서, 자기소개서, 개인정보 이용동의서</b>
-            <b>성적증명, 인턴경력, 자격증, 수상경력, 외국어, 유관교육 이수, 취약계층 등 증빙서류 제출 필수 (미제출시 서류심사에서 인정하지 않음. 단, 인턴 및 수상경력 등은 반도체 유관분야에 한함)</b>
+            <b>성적증명, 인턴경력, 자격증, 수상경력, 외국어, 유관교육 이수, 취약계층 등 증빙서류 제출 필수 (미제출시 서류심사에서 인정하지 않음. 단, 인턴 및 수상경력 등은 반도체 유관분야에
+                한함)</b>
             <b>자기소개서는 반드시 2페이지 이내 작성할 것 (글자크기 10~11pt, 기본서체)</b>
             <b>제출서류는 ZIP 파일로 압축하거나 일정파일에 캡쳐본 저장하는 방법 활용</b>
             <a href="#" target="_blank" title="참가신청서, 자기소개서, 개인정보 이용동의서 다운로드">제출서류 다운로드</a>
@@ -388,12 +400,14 @@
             <b>
                 <span>신청방법 : </span>
                 <b>
-                    나노종합기술원 [홈페이지/서비스/교육서비스/교육과정공지 또는 교육일정]에서 해당 교육과정명 Click → <span><font>‘모아폼’</font>을 통해 제출</span>
+                    나노종합기술원 [홈페이지/서비스/교육서비스/교육과정공지 또는 교육일정]에서 해당 교육과정명 Click → <span><span>‘모아폼’</span>을 통해 제출</span>
                 </b>
             </b>
             <b>
-                모아 폼 URL : <a href="https://moaform.com/q/btnMHb" target="_blank" title="모아폼 바로가기">https://moaform.com/q/btnMHb</a><br>
-            <span>(모아폼 접속은 해당 URL을 click 하거나, 홈페이지 하단부 [신청하기]를 click함)</span>
+                모아 폼 URL : <a
+                    href="http://www.jobkorea.co.kr/List_GI/Co_HomePage_Open.asp?home=https%3A//moaform.com/q/btnMHb&amp;GI_No=47254745"
+                    target="_blank" title="모아폼 바로가기">https://moaform.com/q/btnMHb</a><br>
+                <span>(모아폼 접속은 해당 URL을 click 하거나, 홈페이지 하단부 [신청하기]를 click함)</span>
             </b>
             <p>서류발표 : 7월 17일(수) 17:00시 예정, 결과 개별 이메일 또는 교육 홈페이지 공지사항에 통보</p>
             <p>면접일정 : 7월 23일(화) ~ 7월 24일(수), 다vs다 형식의 대면면접</p>
@@ -411,8 +425,10 @@
     <div class="contact_wrap">
         <h5>KAIST부설 나노종합기술원 미래반도체인재센터</h5>
         <b>
-            담당자 강희오, 042-366-1530, <a href="mailto:kangheeoh@nnfc.re.kr" target="_blank" title="담당자 강희오 문의메일 보내기">kangheeoh@nnfc.re.kr</a><br>
-            조병진, 042-366-2097, <a href="mailto:resalecho@nnfc.re.kr" target="_blank" title="담당자 조병진 문의메일 보내기">resalecho@nnfc.re.kr</a>
+            담당자 강희오, 042-366-1530, <a href="mailto:kangheeoh@nnfc.re.kr" target="_blank"
+                title="담당자 강희오 문의메일 보내기">kangheeoh@nnfc.re.kr</a><br>
+            조병진, 042-366-2097, <a href="mailto:resalecho@nnfc.re.kr" target="_blank"
+                title="담당자 조병진 문의메일 보내기">resalecho@nnfc.re.kr</a>
         </b>
     </div>
 </div>
