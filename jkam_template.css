@@ -28,6 +28,24 @@ a {text-decoration:none; }
 
 body {margin:5em auto; }
 
+/* 버튼 */
+
+#button_hv01 {
+    display: block;
+    width: fit-content;
+    padding: 0.9rem 2rem;
+    background: #131313;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    font-family: "Chosunilbo_myungjo" !important;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+
 
 .wrap {width:max-content; margin:0 auto; background:#fff; }
 .wrap * {margin:0; padding:0; font-size:16px; line-height:1.5em; }
@@ -49,6 +67,17 @@ body {margin:5em auto; }
 .table01 li > ul.tb01_job li {display:flex; flex-flow:column wrap; }
 .table01 li > ul.tb01_job li > p {font-weight:400; padding-left:1.2em; position:relative; }
 .table01 li > ul.tb01_job li > p:before {position:absolute; content:"·"; font:1em/1.2em Pretendard; top:0.1em; left:0.5em; }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
