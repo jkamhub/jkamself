@@ -29,21 +29,18 @@
             }
 
             .visual_wrap {
+                border: 1px solid #e2e4e3;
                 margin-top: 0px;
+                height: max-content;
             }
 
             .visual_wrap:after {
-                top: calc(2.5em + 4vw);
-                left: 2%;
-                width: 93vw;
-                height: 60vw;
                 border: 0.18rem solid #00000099;
             }
 
-            .visual_wrap li:first-of-type {
-                width: 62%;
-                padding-left: 4.5%;
-                clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+            .visual_wrap li {
+                height: 14.75rem;
+                overflow: clip;
             }
 
             .visual_wrap li:first-of-type>img {
@@ -57,13 +54,13 @@
 
             #contentbox {
                 border: none;
-                padding: 2.5em 0 0 0;
+                padding: 2.5em 0 1em 0;
             }
 
             #position_wrap .table01 {
                 display: flex;
                 flex-flow: column wrap;
-                border-bottom: none;
+                border-block: none;
             }
 
             #position_wrap .table01>li {
@@ -77,28 +74,17 @@
             #position_wrap .table01>.subtit {
                 background: #2660ad;
                 color: #fff;
-                padding-block: 0.25rem;
+                padding-block: 0.5rem;
             }
 
-            #position_wrap .table01>.subtit:nth-of-type(8) {
+            #position_wrap .table01>.subtit:not(.subtit.strt) {
                 margin-top: 1.5rem;
             }
 
-
-            #position_wrap .table01>.listwrap:nth-of-type(6),
-            #position_wrap .table01>.listwrap:nth-of-type(9),
-            #position_wrap .table01>.listwrap:nth-of-type(7),
-            #position_wrap .table01>.listwrap:nth-of-type(10) {
+            #position_wrap .table01>.listwrap {
                 border-right: none;
                 border-bottom: none;
                 padding-bottom: 0;
-            }
-
-            #position_wrap .listwrap:nth-of-type(3),
-            #position_wrap .listwrap:last-of-type {
-                border-left: 0.06em solid #253c5b;
-                border-bottom-left-radius: 0.7rem;
-                border-top: none;
             }
 
             #welfare_wrap .welfare_3_item {
@@ -134,7 +120,6 @@
         color: #333;
         font-weight: 500;
         letter-spacing: -.5px;
-        margin: -2.5em auto 0 auto;
     }
 
     .tempate-detailed-summary-root {
@@ -219,17 +204,33 @@
         grid-template-rows: repeat(2, max-content);
         align-items: center;
         position: relative;
-        border-inline: 1px solid #e2e4e3;
+        border: 1px solid #e2e4e3;
+        height: 48.75rem;
+        overflow: clip;
+    }
+
+    .visual_wrap:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 58%;
+        height: 101%;
+        background: #fff;
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+        z-index: 1;
     }
 
     .visual_wrap:after {
         position: absolute;
-        top: 8%;
-        left: 5%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 90%;
         height: 84%;
         border: 0.313rem solid #00000099;
         content: "";
+        z-index: 2;
     }
 
     .visual_wrap li {
@@ -240,20 +241,22 @@
     .visual_wrap li:last-of-type {
         display: grid;
         justify-items: center;
-        align-self: start
+        align-content: center;
     }
+
 
     .visual_wrap li:first-of-type {
         display: grid;
         grid-template-rows: repeat(2, max-content);
         row-gap: 1.2rem;
         align-content: center;
-        background: #fff;
         width: 45%;
         height: 100%;
-        position: relative;
-        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
         padding-left: 8%;
+        position: relative;
+        z-index: 10;
+        height: 48.75rem;
+        overflow: clip;
     }
 
     .visual_wrap li:first-of-type>img {
@@ -262,8 +265,8 @@
     }
 
     .visual_wrap li:first-of-type h2 {
-        font-size: 3rem;
-        line-height: 1.4em;
+        font-size: 2.7rem;
+        line-height: 1.3em;
         font-weight: 800;
         font-family: "NanumSquare" !important;
         color: #000;
@@ -317,6 +320,10 @@
         align-content: center
     }
 
+    .table01>.subtit.btm,
+    .table01>.listwrap.btm {
+        border-bottom: none;
+    }
 
     .table01>.subtit {
         border-bottom: .06rem solid #2660ad;
@@ -326,9 +333,10 @@
         grid-column: 1/2;
     }
 
+
+
     .table01>.subtit:nth-of-type(5) {
         grid-row: 2/3;
-
     }
 
     .table01>.subtit:nth-of-type(6) {
@@ -420,7 +428,7 @@
             <li>
                 <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_logo.png" alt="小山(소산) 로고"
                     title="小山(소산) 로고">
-                <h2>홀캡틴/홀서버 채용모집 (경력자우대)</h2>
+                <h2>홀매니저/홀서빙/주방직원 구합니다.(경력자우대)</h2>
             </li>
             <li>
                 <img src="https://file1.jobkorea.co.kr/Mng/2024/6/sosan0420_44984705_001.png"
@@ -447,7 +455,7 @@
                 <li class="htit">주요업무</li>
                 <li class="htit">자격요건 및 우대사항</li>
                 <li class="htit">인원</li>
-                <li class="subtit">홀캡틴</li>
+                <li class="subtit strt">홀캡틴</li>
                 <li class="listwrap">
                     <dl class="list">
                         <dt class="mobile">[주요업무]</dt>
@@ -461,12 +469,12 @@
                         <dt>[자격요건]</dt>
                         <dd>학력 : 학력무관</dd>
                         <dd>경력 : 신입,경력</dd>
-                        <dd>주류관련 자격등 소지 必</dd>
                     </dl>
                     <dl class="list">
                         <dt>[우대사항]</dt>
                         <dd>경력자 우대</dd>
                         <dd>서비스 마인드를 갖춘자</dd>
+                        <dd>주류 자격증 소지자<br></dd>
                     </dl>
                     <dl class="list mobile">
                         <dt>[인원]</dt>
@@ -491,6 +499,30 @@
                         <dd>경력자 우대</dd>
                         <dd>밝고 성실하신 분</dd>
                         <dd>장기근무 가능자</dd>
+                    </dl>
+                    <dl class="list mobile">
+                        <dt>[인원]</dt>
+                        <dd>O명</dd>
+                    </dl>
+                </li>
+                <li class="subtit btm">주방직원</li>
+                <li class="listwrap btm">
+                    <dl class="list">
+                        <dt class="mobile">[주요업무]</dt>
+                        <dd>조리</dd>
+                        <dd>주방 식자재, 기물 및 위생 관리 </dd>
+                        <dd>식자재 발주 관리</dd>
+                    </dl>
+                </li>
+                <li class="listwrap btm">
+                    <dl class="list">
+                        <dt>[자격요건]</dt>
+                        <dd>학력 : 학력무관</dd>
+                        <dd>경력 : 신입, 경력</dd>
+                    </dl>
+                    <dl class="list">
+                        <dt>[우대사항]</dt>
+                        <dd>경력자 우대</dd>
                     </dl>
                     <dl class="list mobile">
                         <dt>[인원]</dt>
