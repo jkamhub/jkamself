@@ -1,28 +1,3 @@
-@charset "utf-8"; * {
-    font-family: Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,Helvetica Neue,Segoe UI,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif!important
-}
-
-@font-face {
-    font-family: Pretendard;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Pretendard Regular"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-Regular.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-Regular.subset.woff) format("woff")
-}
-
-@font-face {
-    font-family: Pretendard;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Pretendard SemiBold"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-SemiBold.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-SemiBold.subset.woff) format("woff")
-}
-
-@font-face {
-    font-family: Pretendard;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Pretendard Bold"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff2-subset/Pretendard-Bold.subset.woff2) format("woff2"),url(https://i.jobkorea.kr/content/webfont/pretendard/woff-subset/Pretendard-Bold.subset.woff) format("woff")
-}
-
 h1, h2, h3, h4, h5, h6, b, strong {font-weight:bold; }
 a {text-decoration:none; }
 
