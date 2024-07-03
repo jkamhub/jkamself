@@ -1,7 +1,5 @@
 <style>
     @import url(https:///jkamhub.github.io/css/jk_style.css);
-    @import url(https:///jkamhub.github.io/css/jk_css_compatibility.css);
-
 
     @media only screen and (max-width: 961px) {
         #view_contents_wrap #visual_box {
@@ -10,125 +8,131 @@
     }
 
     #visual_box {
-        display: block;
-        margin: 0 auto;
-        border: 1px solid #e2e4e3;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
         position: relative;
     }
 
-    #visual_box>.visual_title {
+    #visual_box li:first-child {
+        position: relative;
+        z-index: 1;
+        overflow: clip;
+        border-top: 0.3rem solid #1f2d5d;
+    }
+
+    #visual_box h2 {
         display: grid;
-        grid-template-rows: repeat(2, max-content);
-        row-gap: 3.5rem;
-        width: calc(100% - 17.5rem);
-        height: calc(100% - 7.5rem);
+        align-content: center;
         position: absolute;
-        top: 50%;
-        left: 2.5rem;
-        transform: translateY(-50%);
-    }
-
-    #visual_box>.visual_title>img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 9rem;
-        padding: 1rem;
-        background-color: #fff;
-        border-radius: 0.7rem;
-    }
-
-    #visual_box>.visual_title>h2 {
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff80;
         font-size: 3rem;
         line-height: 1.3em;
-        font-weight: 800;
-        color: #fff;
-        text-align: left;
-        text-shadow: 0.19rem 0.3rem 0 #009b3e;
-        font-family: "BMDOHYEON" !important;
+        color: #1f2d5d;
+        text-align: center;
+        font-family: "GmarketSansMedium" !important;
+    }
+
+    #visual_box h2 span {
+        font-size: 2.625rem;
+        font-family: "GmarketSansLight" !important;
+        color: #1f2d5d;
+    }
+
+    #visual_box h2 span:after {
+        width: 15rem;
+        height: 0.06rem;
+        background-color: #1f2d5d;
+        display: block;
+        margin: -0.5rem auto 1.5rem auto;
+        content: "";
+    }
+
+    #visual_box li:first-child img {
+        filter: blur(0.19rem);
     }
 </style>
 
 <div id="secDetailRead" class="detailType_1 titleType">
     <div id="wrap">
         <div id="container">
-            <div class="detailHeader artTopDesc">
+            <div class="detailHeader">
                 <div id="visual_box">
-                    <div class="visual_title">
-                        <img src="https://ubase.co.kr/img/pc_logo.png"
-                            alt="유베이스 TEST 공고 입니다 / 지원하지마세요" title="[유베이스] TEST 공고 입니다 / 지원하지마세요">
-                        <h2>
-                            [수입육유통]<br>납품관리 및 배송 정규직 채용
-                        </h2>
-                    </div>
-                    <img src="https://file1.jobkorea.co.kr/Mng/2024/7/meathangil_45032462_240701_01.jpg"
-                        alt="TEST 공고 입니다 / 지원하지마세요">
+                    <h2>
+                        기계, 전기, 전자기기 유지보수<br>경력자 모집
+                    </h2>
+                    <img src="https://file1.jobkorea.co.kr/Mng/2024/7/kl1218kl_45050674_240703_02.png"
+                        alt="코리아런드리 기계, 전기, 전자기기 유지보수 경력자 모집" title="코리아런드리 기계, 전기, 전자기기 유지보수 경력자 모집">
+                    </li>
                     <div class="blind">
-                        <h1 class="hd_1"><strong>유베이스</strong> TEST 공고 입니다 / 지원하지마세요</h1>
+                        <h1 class="hd_1"><strong>코리아런드리</strong> 기계, 전기, 전자기기 유지보수 경력자 모집</h1>
                     </div>
-                </div>
-                <p class="desc">
-                    유베이스는 1999년에 설립된 회사로 자본금 219억 3,575만원, 매출액 4,267억 9,459만원, 사원수 10,679명 규모의 중견기업입니다. 서울 용산구 원효로90길 11 (원효로1가, 용산더프라임)에 위치하고 있으며, 콜센타.아웃소싱.기타 인력업사업을 하고 있습니다.
-                </p>
-                <div class="blind">
-                    <h1 class="hd_1"><strong>유베이스</strong> TEST 공고 입니다 / 지원하지마세요</h1>
                 </div>
             </div>
             <div class="secDetailWrap">
                 <div class="artTplDetail artRecruit newTemp">
                     <div class="artTplInner">
                         <h3 class="hd_3">
-                            <span class="titBulA titBul_10"><span
-                                    style="background-color: #009b3e; margin-top: 0.19rem;"></span></span>
-                            <span class="tit">채용분야</span>
+                            <span class="titBul"><img
+                                    src="https://file1.jobkorea.co.kr/Mng/2024/7/kl1218kl_45050674_240703_logo.png"
+                                    alt="" style="max-width: 5.625rem; margin-top:0; "></span>
+                            <span class="tit">모집분야 및 자격요건</span>
                         </h3>
-                        <div class="tbDetailWrap tbDetailType_2">
+                        <div class="tbDetailWrap tbDetailType_6"
+                            style="border-top-color:#1f2d5d; border-bottom-color:#1f2d5d">
                             <table>
                                 <caption><span class="blind">채용분야 정보</span></caption>
                                 <colgroup>
-                                    <col width="15%">
-                                    <col width="37%">
+                                    <col width="25%">
+                                    <col width="25%">
+                                    <col width="20%">
                                     <col width="*">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="cell_1 ct"
-                                            style="background-color: #009b3e; color: #fff;">
+                                        <th class="cell_1" style="background-color:#1f2d5d; color: #fff;">
                                             모집부문
                                         </th>
-                                        <th scope="col" class="cell_2 ct"
-                                            style="background-color: #009b3e; color: #fff;">
-                                            담당업무 및 우대사항</th>
-                                        <th scope="col" class="cell_3 ct"
-                                            style="background-color: #009b3e; color: #fff;">
-                                            근무조건</th>
+                                        <th class="cell_2">담당업무</th>
+                                        <th class="cell_3">자격요건</th>
+                                        <th class="cell_4">우대사항</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="cell_1 ct"><strong>유통업무</strong> <span class="br">( 1명 )</span></td>
-                                        <td class="cell_2">
-                                            <dl class="dlList icnBul_1">
+                                    <tr style="border-top-color:#1f2d5d">
+                                        <td class="cell_1 ct">
+                                            <strong>기계, 전기, 전자기기 유지보수 경력자 모집</strong> <span class="br">( 정규직 ○명 )</span>
+                                        </td>
+                                        <td class="cell_2 lt">
+                                            <dl class="dlList">
                                                 <dt><b>[담당업무]</b></dt>
-                                                <dd>거래처배송 (오토바이 운전)</dd>
-                                                <dd>상품 입출고 (창고 방문시 1톤트럭 운전)</dd>
-                                            </dl>
-                                            <dl class="dlList icnBul_1">
-                                                <dt><b>[우대사항]</b></dt>
-                                                <dd>운전가능자</dd>
-                                            </dl>
-                                            <dl class="dlList icnBul_1">
-                                                <dt><b>[자격요건]</b></dt>
-                                                <dd>학력 : 무관</dd>
-                                                <dd>경력 : 무관</dd>
+                                                <dd>세탁장비, 부수장비 설치 및 유지 보수</dd>
                                             </dl>
                                         </td>
-                                        <td class="cell_3">
-                                            <ul class="ulList icnBul_1">
-                                                <li>주 5일 근무 (08:30~17:30)</li>
-                                                <li>한달에 1회 토요일근무(9:00~11:00) (시간외수당 지급)</li>
-                                                <li>월 급여 OOO만원</li>
-                                            </ul>
+                                        <td class="cell_3 lt">
+                                            <dl class="dlList">
+                                                <dt><b>[자격요건]</b></dt>
+                                                <dd>학력사항 : 무관</dd>
+                                                <dd>경력사항 : 3년 이상</dd>
+                                                <dd>자격증 : 1종 보통 운전면허 필수</dd>
+                                            </dl>
+                                        </td>
+                                        <td class="cell_4 lt">
+                                            <dl class="dlList">
+                                                <dt><b>[우대사항]</b></dt>
+                                                <dd>기계 전기 전자 기기 관련 기술보유자 우대</dd>
+                                                <dd>자동판매기, 키오스크 유지보수 유경험자 우대</dd>
+                                                <dd>인테리어 공사 유경험자 우대</dd>
+                                                <dd>해당 자격증 소지자 우대</dd>
+                                                <dd>PC활용 우수자 우대</dd>
+                                                <dd>매사에 적극적이며 성실한 자</dd>
+                                                <dd>긍정적인 마인드 소지자</dd>
+                                                <dd>해외여행 결격사유 없는 자</dd>
+                                            </dl>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -137,39 +141,43 @@
                     </div>
                 </div>
                 <div class="artTplDetail artDetailStep">
-                    <div class="artTplInner listWrap">
+                    <div class="artTplInner">
                         <h3 class="hd_3">
-                            <span class="titBulA titBul_10"><span
-                                    style="background-color: #009b3e; margin-top: 0.19rem;"></span></span>
+                            <span class="titBul"><img
+                                    src="https://file1.jobkorea.co.kr/Mng/2024/7/kl1218kl_45050674_240703_logo.png"
+                                    alt="" style="max-width: 5.625rem; margin-top:0; "></span>
                             <span class="tit">전형절차</span>
                         </h3>
-
-                        <div class="detStep detStep_19 expose-both">
+                        <div class="detStep detStep_15">
                             <div class="detStep_content">
                                 <ol class="detStep_list">
-                                    <li class="detStep_item">
-                                        <p class="step_name">서류전형</p>
+                                    <li class="detStep_item detStep_item-step1" style="border-color: #1f2d5d;">
+                                        <i class="icon" aria-hidden="true"></i>
+                                        <div class="step_name">서류전형</div>
                                     </li>
-                                    <li class="detStep_item">
-                                        <p class="step_name">면접</p>
+                                    <li class="detStep_item detStep_item-step2" style="border-color: #1f2d5d;">
+                                        <i class="icon" aria-hidden="true"></i>
+                                        <div class="step_name">면접</div>
                                     </li>
-                                    <li class="detStep_item finish" style="background-color: #009b3e;">
-                                        <p class="step_name">합격</p>
+                                    <li class="detStep_item detStep_item-step5"
+                                        style="border-color: #1f2d5d; background-color: #1f2d5d;">
+                                        <i class="icon" aria-hidden="true"></i>
+                                        <div class="step_name">최종합격</div>
                                     </li>
                                 </ol>
                             </div>
                         </div>
-                        <p class="desc">면접일정은 추후 통보됩니다.</p>
                     </div>
                 </div>
                 <div class="artTplDetail">
                     <div class="artTplInner listWrap">
                         <h3 class="hd_3">
-                            <span class="titBulA titBul_10"><span
-                                    style="background-color: #009b3e; margin-top: 0.19rem;"></span></span>
+                            <span class="titBul"><img
+                                    src="https://file1.jobkorea.co.kr/Mng/2024/7/kl1218kl_45050674_240703_logo.png"
+                                    alt="" style="max-width: 5.625rem; margin-top:0; "></span>
                             <span class="tit">유의사항</span>
                         </h3>
-                        <p class="desc star">허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>
+                        <p class="desc">허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>
                     </div>
                 </div>
             </div>
