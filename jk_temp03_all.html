@@ -182,16 +182,13 @@
     }
 
     .bf_dot {
-        position: relative;
         padding-left: 1rem;
     }
 
     .bf_dot:before {
-        position: absolute;
         content: "ㆍ";
         font-weight: 700;
-        top: 0;
-        left: 0;
+        display: inline-block;
     }
 
     [id$="_wrap"]>.bf_dot {
