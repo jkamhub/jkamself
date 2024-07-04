@@ -1,0 +1,400 @@
+<style>
+    @charset "utf-8";
+
+    /* basic css */
+    * {
+        word-break: keep-all;
+        box-sizing: border-box;
+        font-family: "Pretendard Variable" !important;
+    }
+
+    @font-face {
+        font-family: "Pretendard Variable";
+        font-weight: 45 920;
+        font-style: normal;
+        font-display: swap;
+        src: url(https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/woff2/PretendardVariable.woff2) format("woff2-variations")
+    }
+
+    html,
+    body {
+        width: 100%;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.75em;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px;
+    }
+
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    fieldset,
+    input,
+    textarea,
+    button,
+    p,
+    table,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 100%;
+    }
+
+    ol,
+    ul,
+    li {
+        margin: 0 0;
+        padding: 0 0;
+        list-style: none;
+    }
+
+    img {
+        border: 0;
+        width: 100%;
+    }
+
+    a,
+    a:link,
+    a:active,
+    a:visited,
+    a:hover {
+        font-size: 1rem;
+        color: #ff501b;
+        text-decoration: none;
+    }
+
+
+    /* mobile css */
+    @media (max-width: 774px) {
+        #detail-content {
+
+            [id$="_wrap"]>.bf_dot {
+                margin-left: 0rem;
+            }
+
+            .wrap_title {
+                font-size: 1.25rem;
+            }
+
+            .visual_wrap {
+                margin-top: 0px;
+            }
+
+            #contents_box {
+                border: none;
+                padding: 2.5em 0 0;
+            }
+
+            #position_wrap .table02 {
+                display: flex;
+                flex-flow: column wrap;
+
+            }
+
+            #position_wrap .table02>li {
+                width: 100%;
+            }
+
+            #position_wrap .listwrap:nth-child(2) {
+                border-right: 0.06em solid #4b90e2;
+                border-bottom-left-radius: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            #position_wrap .listwrap:last-child {
+                border-left: 0.06em solid #4b90e2;
+                padding-left: 1.2rem;
+                border-bottom-left-radius: 0.7rem;
+                border-top: none;
+            }
+
+        }
+    }
+
+    #allbox {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px;
+    }
+
+    [id$="_box"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #contents_box {
+        padding: 3.5em 3.5em 5em;
+        border: 1px solid #e2e4e3;
+        border-top: none;
+    }
+
+    div[id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 1rem;
+        line-height: 1.75;
+    }
+
+    .list {
+        margin-top: 1.2rem;
+    }
+
+    .list:first-of-type {
+        margin-top: 0;
+    }
+
+    .list>dt {
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 1.9em;
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    .bf_dot {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+
+    .bf_dot:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0;
+    }
+
+    [id$="_wrap"]>.bf_dot {
+        margin-left: 1rem;
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        justify-items: start;
+        align-items: center;
+    }
+
+    .intro_wrap {
+        text-align: justify;
+    }
+
+    @font-face {
+        font-family: IcoFont;
+        font-weight: 400;
+        font-style: Regular;
+        src: url(https://jkamhub.github.io/css/icofont/Duotone/fonts/icofont.woff2) format("woff2"), url(https://jkamhub.github.io/css/icofont/Duotone/fonts/icofont.woff) format("woff")
+    }
+
+    [class*=" icofont-"].icofont-duotone,
+    [class^=icofont-].icofont-duotone {
+        position: relative;
+    }
+
+    [class*=" icofont-"],
+    [class^=icofont-] {
+        font-family: IcoFont !important;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        line-height: 1;
+        -webkit-font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .icofont-duotone.icofont-duplicate:before {
+        content: "\13d10";
+    }
+
+    [class*=" icofont-"].icofont-duotone:after,
+    [class^=icofont-].icofont-duotone:after {
+        opacity: .4;
+    }
+
+    .icofont-duotone.icofont-duplicate:after {
+        content: "\13d0f";
+    }
+
+    [class*=" icofont-"].icofont-duotone:before,
+    [class^=icofont-].icofont-duotone:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .wrap_title {
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: 0.5rem;
+        font-size: 1.5em;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    .wrap_title>i {
+        font-size: 2rem;
+        color: #4b90e2;
+    }
+
+    .table02 {
+        display: grid;
+        grid: repeat(2, max-content)/repeat(2, 1fr);
+    }
+
+    .table02>li {
+        padding: 1em 1.2rem;
+    }
+
+    .subtit {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        background: #4b90e2;
+        grid-column: 1/4;
+        padding-block: 1.2rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .subtit {
+        grid-row: 1/2;
+    }
+
+    .listwrap {
+        border: 0.06em solid #4b90e2;
+        border-top: none;
+    }
+
+    .listwrap:nth-child(2) {
+        border-right: none;
+        border-bottom-left-radius: 1rem;
+        grid-column: 1/2;
+    }
+
+    .listwrap:last-child {
+        border-left: none;
+        padding-left: none;
+        border-color: #4b90e2;
+        border-bottom-right-radius: 1rem;
+        grid-column: 2/3;
+    }
+</style>
+<div id="allbox">
+    <div id="visual_box">
+        <div class="visual_wrap">
+            <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/07/img/cvkcxl03180313.png"
+                alt="달바미스트 조립/포장/대규모 사원모집" title="달바미스트 조립/포장/대규모 사원모집">
+        </div>
+    </div>
+    <div id="contents_box">
+        <p class="intro_wrap">
+            텃새없는 장기근무(정규직) 가능한 달바미스트 조립,포장 업체입니다.<br>
+            절대 직원분들에게 막대하지않습니다.<br>
+            다른곳에서 상처 받으셨던 분들 여기서 치유 중 ≫_≪ 많은 지원 부탁합니다.
+        </p>
+        <div id="position_wrap">
+            <div class="wrap_title">
+                <i class="icofont-duotone icofont-duplicate"></i>
+                모집부문
+            </div>
+            <ul class="table02">
+                <li class="subtit">
+                    조립 포장부서 [남성티오 마감]
+                </li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt>담당업무</dt>
+                        <dd>입·좌식 병행 업무 !</dd>
+                        <dd>달바 미스트 캡닫기,박스접기 스티커붙이기 등등 단순 업무</dd>
+                        <dd>캡닫는 기계 있고 혹시라도 캡닫기 할 경우 2~3시간 마다 교체해서 업무</dd>
+                        <dd>피로도 적절히 맞춰드립니다.</dd>
+                    </dl>
+                </li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dt>근무조건</dt>
+                        <dd>근무기간: 1년이상 (협의가능)</dd>
+                        <dd>근무요일: 월~금 (잔업,특근 많음) / <b>잔·업특근 자율</b> 희망자만 진행 !</dd>
+                        <dd>근무시간: 09:00 ~ 18:00 / 휴게시간 80분</dd>
+                        <dd>복리후생: 만근수당, 야간근로수당, 휴일근로수당, 장기근속수당, 연장근로수당, 중식 제공</dd>
+                        <dd>주휴,국공휴일 유급 / 급여일:15일 <b>(매주가불가능)</b></dd>
+                        <dd>근무복은 자율 현장에서 마스크 착용 (마스크 직접 챙겨서 오세요)</dd>
+                        <dd style="color:#e74b3c;"><b>경력자분들은 다른데 근무하다 오셔서 적응 하시고 다들 만족해 하시며 근무 잘 하고계십니다. 텃새 없습니다.</b>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div id="apply_wrap">
+            <div class="wrap_title">
+                <i class="icofont-duotone icofont-duplicate"></i>
+                접수방법
+            </div>
+            <dl class="list">
+                <dd>접수방법: 온라인지원, 간편문자지원</dd>
+                <dd>문자지원-010-9351-6341 (미스트/성함/나이/성별/거주지)</dd>
+                <dd>문자 지원해주시면 안내가 빠릅니다.</dd>
+                <dd>많은 지원 부탁드립니다.</dd>
+            </dl>
+        </div>
+        <div id="note_wrap">
+            <div class="wrap_title">
+                <i class="icofont-duotone icofont-duplicate"></i>
+                유의사항
+            </div>
+            <p class="bf_dot">허위사실이 발견될 경우 채용이 취소될 수 있습니다.</p>
+        </div>
+    </div>
+</div>
