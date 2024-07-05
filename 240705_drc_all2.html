@@ -1,0 +1,436 @@
+<style>
+    @charset "utf-8";
+
+    * {
+        word-break: keep-all;
+        box-sizing: border-box;
+        font-family: "Pretendard Variable" !important
+    }
+
+    @font-face {
+        font-family: "Pretendard Variable";
+        font-weight: 45 920;
+        font-style: normal;
+        font-display: swap;
+        src: url(https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/woff2/PretendardVariable.woff2) format("woff2-variations")
+    }
+
+    body,
+    html {
+        width: 100%
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.75em;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: -.5px
+    }
+
+    body,
+    button,
+    dd,
+    div,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    li,
+    ol,
+    p,
+    table,
+    td,
+    textarea,
+    th,
+    ul {
+        margin: 0;
+        padding: 0
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 100%
+    }
+
+    li,
+    ol,
+    ul {
+        margin: 0 0;
+        padding: 0 0;
+        list-style: none
+    }
+
+    img {
+        border: 0;
+        width: 100%
+    }
+
+    a,
+    a:active,
+    a:hover,
+    a:link,
+    a:visited {
+        font-size: 1rem;
+        color: #ff501b;
+        text-decoration: none
+    }
+
+    @media (max-width:774px) {
+        #detail-content #contents_box {
+            border: none;
+            padding: 2rem .7rem
+        }
+
+        #detail-content .list>dt {
+            font-size: 1.1rem;
+            line-height: 1.5em
+        }
+
+        #detail-content .list>dd,
+        #detail-content .list>dd * {
+            padding-left: 1.3rem;
+            font-size: 1rem
+        }
+
+        #detail-content [id$="_wrap"] * {
+            font-size: 1rem
+        }
+
+        #detail-content .round_bg {
+            padding: 2rem 1rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 0 .5rem #0ab178
+        }
+
+        #detail-content div[id$="_wrap"] {
+            row-gap: 1.5rem;
+            border-radius: 1rem
+        }
+
+        #detail-content .intro_wrap {
+            margin-top: 0;
+            font-size: 1.2rem;
+            line-height: 1.3em;
+            padding: 2rem 1rem
+        }
+
+        #detail-content #location_wrap {
+            margin-bottom: 0
+        }
+
+        #detail-content #location_wrap>p {
+            font-size: 1.2rem !important;
+            padding-inline: 1.75rem
+        }
+
+        #detail-content .wrap_title_cover {
+            font-size: 1.4rem;
+            padding-inline: 1rem
+        }
+
+        #detail-content .visual_wrap {
+            margin-top: 0
+        }
+
+        #detail-content #position_wrap .table01 {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        #detail-content #position_wrap .table01>li {
+            width: 100%;
+            padding: 0.7rem 0;
+            border: none
+        }
+
+        #detail-content #position_wrap .table01>li.htit {
+            display: none;
+        }
+
+        #detail-content #position_wrap .table01>li.subtit {
+            background: #0067ff;
+            color: #fff;
+            padding: 0.7rem;
+        }
+
+        #detail-content #position_wrap .table01>li:nth-child(1),
+        #detail-content #position_wrap .table01>li:nth-child(2),
+        #detail-content #position_wrap .table01>li:nth-child(5) {
+            border-right: none;
+        }
+
+        #detail-content #position_wrap .table01>li:nth-child(5),
+        #detail-content #position_wrap .table01>li:nth-child(6) {
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+
+    #allbox {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #222;
+        font-weight: 500;
+        letter-spacing: -.5px
+    }
+
+    [id$="_box"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2.5rem;
+        justify-items: center;
+        justify-content: center
+    }
+
+    #contents_box {
+        padding: 3.5em 3.5em 5em;
+        background: url(https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/07/img/jpqlxp05131506.png) center repeat-y;
+        background-size: 100%
+    }
+
+    .list {
+        margin-top: 1.2rem
+    }
+
+    .list:first-of-type {
+        margin-top: 0
+    }
+
+    .list>dt {
+        font-weight: 600;
+        font-size: 1.65rem;
+        line-height: 1.9em;
+        color: #36b48d
+    }
+
+    .list>dd {
+        position: relative;
+        padding-left: 2rem
+    }
+
+    .list>dd:before {
+        position: absolute;
+        content: "ㆍ";
+        font-weight: 700;
+        top: 0;
+        left: 0
+    }
+
+    .visual_wrap {
+        width: 100%;
+        display: grid;
+        justify-items: start;
+        align-items: center
+    }
+
+    .round_bg {
+        padding: 3rem 2rem;
+        background-color: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 1rem #0ab178
+    }
+
+    div[id$="_wrap"] {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 2rem;
+        line-height: 1.75
+    }
+
+    @font-face {
+        font-family: yg-jalnan;
+        src: url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff) format("woff")
+    }
+
+    [id$="_wrap"] * {
+        font-family: yg-jalnan !important;
+        font-size: 1.5rem
+    }
+
+    .intro_wrap {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 1.5em;
+        font-family: yg-jalnan !important;
+        margin-top: 2rem;
+        padding: 3rem
+    }
+
+    #location_wrap {
+        margin-bottom: 2rem
+    }
+
+    #location_wrap>p {
+        display: flex;
+        flex-flow: column wrap;
+        padding-block: 2rem;
+        align-content: center;
+        font-size: 2.5rem !important;
+        line-height: 1.5em
+    }
+
+    .wrap_title_cover {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1.5rem;
+        border-radius: 2rem;
+        font-size: 2.5rem;
+        line-height: 2em;
+        font-weight: 700;
+        color: #fff !important;
+        font-family: yg-jalnan !important;
+        background-color: #0067ff;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: -1rem 0 1rem #ffffff63, 0 -1rem 1rem #ffffff63, 1rem 0 1rem #ffffff63, 0 1rem 1rem #ffffff63;
+        letter-spacing: .06rem
+    }
+
+    .table01 {
+        display: grid;
+        grid: repeat(3, max-content)/35% 65%;
+        padding: 3.5rem 2rem;
+    }
+
+    .table01>li {
+        padding: 1em 1.2rem;
+        justify-content: center;
+    }
+
+    .htit {
+        font-size: 1.5rem;
+        line-height: 2em;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        background-color: #0067ff;
+        grid-row: 1/2
+    }
+
+    .subtit {
+        grid-column: 1/2;
+        align-content: center;
+    }
+
+    .listwrap {
+        grid-column: 2/3;
+    }
+
+    .subtit {
+        text-align: center;
+    }
+
+    .table01>li:nth-child(1),
+    .table01>li:nth-child(2),
+    .table01>li:nth-child(5) {
+        border-right: .06rem solid #bbbbbb80
+    }
+
+    .table01>li:nth-child(5),
+    .table01>li:nth-child(6) {
+        border-top: .06rem solid #bbbbbb80;
+        border-bottom: .13rem solid #0067ff
+    }
+</style>
+<div id="allbox">
+    <div id="visual_box">
+        <div class="visual_wrap"><img
+                src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/07/img/eewajj05131744.png"
+                alt="디알씨 신입, 경력 판매사 모집/10-15시 파트타임 가능/+인센티브+/주 5일" title="디알씨 신입, 경력 판매사 모집/10-15시 파트타임 가능/+인센티브+/주 5일">
+        </div>
+    </div>
+    <div id="contents_box">
+        <p class="intro_wrap round_bg">
+            안녕하세요 KT종로점 입니다.
+            <br><br>
+            저희 회사 는 누적가입자 5만명 매장운영 22개 매장 운영중으로 튼튼한 기반으로 성장해 나가고 있는 회사입니다^^*
+            <br><br>
+            취업이 힘든요즘 경쟁력 있는 kt에서 근무 해보시는건 어떨까요!?
+            <br><br>
+            그동안 수많은 시행착오를 겪으며 많은 노하우들을 전수 해드립니다. 부담없이 재미있게 근무하실분 원해요.
+            <br><br>
+            현재 파트타임 알바, KT 경력직 or 신입판매사 구인중입니다. 급여 인센은 조정협의 가능하오니 많은 지원 부탁드려요.
+            <br><br>
+            ❤❤❤최대한 근무자의 편의에 맞게 시간 및 근무일자 조율 가능합니다.
+        </p>
+        <div id="location_wrap">
+            <div class="wrap_title_cover">근무 가능 매장 주소</div>
+            <p class="round_bg">
+                1. 서울 종로구 종로5가 90 1층 KT대리점<br>
+                2. 서울 종로구 종로3가 114<br>
+                3. 서울 종로구 종로 72 1층 KT (종각점, 종각역 15번출구 앞)
+            </p>
+        </div>
+        <div id="position_wrap">
+            <div class="wrap_title_cover">모집부문</div>
+            <ul class="table01 round_bg">
+                <li class="htit">모집분야</li>
+                <li class="subtit">정직원A 파트</li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dd>월급 220만원 (기본지급) 및 추가 인센티브 제공</dd>
+                        <dd>월 ~ 금 9:00 ~ 18:00</dd>
+                        <dd>판매건수 상관없이 지급합니다.</dd>
+                        <dd>휴게시간 보장 (1시간 식사시간 외 틈틈히 휴게시간 있습니다.)</dd>
+                    </dl>
+                </li>
+                <li class="htit">담당업무 및 자격요건</li>
+                <li class="subtit">파트타임 알바</li>
+                <li class="listwrap">
+                    <dl class="list">
+                        <dd>월급 130만원</dd>
+                        <dd>월 ~ 금 10:00 ~ 15:00</dd>
+                        <dd>휴게시간 보장 (근무 중 틈틈히 휴게시간 있습니다.)</dd>
+                        <dd>초보 환영, 외국인 가능</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div id="condition_wrap">
+            <div class="wrap_title_cover">근무조건</div>
+            <dl class="list round_bg">
+                <dd>근무기간 : 6개월 ~ 1년</dd>
+                <dd>근무요일 : 요일 협의 / 주 5일</dd>
+                <dd>근무시간 : 정직원 09:00 ~ 18:00 / 파트타임 10:00 ~ 15:00</dd>
+                <dd>복리후생 : 국민연금, 고용보험, 산재보험, 건강보험</dd>
+            </dl>
+        </div>
+        <div id="requirement_wrap">
+            <div class="wrap_title_cover">지원조건</div>
+            <dl class="list round_bg">
+                <dd>성별 : 무관</dd>
+                <dd>연령 : 무관</dd>
+                <dd>학력 : 무관</dd>
+                <dd>우대조건 : 유사업무 경험, 인근 거주</dd>
+            </dl>
+        </div>
+        <div id="apply_wrap">
+            <div class="wrap_title_cover">접수방법</div>
+            <dl class="list round_bg">
+                <dd>온라인지원, 간편문자지원, 전화연락, 바로방문</dd>
+            </dl>
+        </div>
+        <div id="contact_wrap">
+            <div class="wrap_title_cover">담당자 정보</div>
+            <dl class="list round_bg">
+                <dd>담당자명 : 김민구</dd>
+                <dd>전화번호 : 010-9998-2340</dd>
+            </dl>
+        </div>
+    </div>
+</div>
