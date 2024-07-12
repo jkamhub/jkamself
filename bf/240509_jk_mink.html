@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>잡코리아 - 채용공고</title>
+    <link rel="stylesheet" href="https://i.jobkorea.kr/content/css/ver_2/common-sv-202403271945.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/personal/pages/recruit/view/view.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/personal/common/gnb.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/components/modal.css">
+</head>
+
+<body id="secLgi" class="lgiSubRead">
+    <!--// GNB 시작//-->
+    <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
+        <div id="header">
+            <!--신입공채 메뉴일경우 클래스 start-sub 추가 -->
+            <!-- // headInner -->
+            <div class="headInner">
+                <h1 class="jkLogo" onclick="GA_Event('공통_PC', '헤더', '잡코리아로고');">
+                    <a href="https://www.jobkorea.co.kr">
+                        <img height="78" src="https://file2.jobkorea.co.kr/Net/Mng/Image/LogoImage?FN=2024/04/5월 로고_1_1.png" alt="JOBKOREA">
+                    </a>
+                </h1>
+                <!-- // search -->
+                <div class="search" id="searchWrap">
+                    <h2 class="skip">검색</h2>
+                    <form name="global_seek" id="AKCFrm" autocomplete="off" action="/Search/" onsubmit="return GoMainTotalSearch();" target="_self">
+                        <fieldset>
+                            <legend>Smart Match 통합검색</legend>
+                            <div class="smKey">
+                                <input type="text" id="stext" title="검색어 입력" name="stext" placeholder="" maxlength="30">
+                                <input type="submit" value="검색" class="submit spGnb" id="common_search_btn" onclick="GA_Event('공통_PC', '검색', '검색_' + document.getElementById('stext').value);">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- search // -->
+                <!-- // 배너 영역 -->
+                <div class="headBann">
+                    <strong class="skip">잡코리아 주요 서비스</strong>
+                    <div class="bannBxAlignRow">
+                        <a href="https://www.albamon.com" target="_blank" title="새창 열림" class="bann-logo bann-albamon" onclick="GA_Event('공통_PC', '헤더', '배너_알바몬');">알바몬</a>
+                        <a href="https://www.gamejob.co.kr" target="_blank" title="새창 열림" class="bann-logo bann-gamejob" onclick="GA_Event('공통_PC', '헤더', '배너_게임잡');">게임잡</a>
+                        <a href="https://www.ninehire.com/" target="_blank" title="새창 열림" class="bann-logo bann-ninehire" onclick="GA_Event('공통_PC', '헤더', '배너_나인하이어');">나인하이어</a>
+                    </div>
+                </div>
+            </div>
+            <!-- headInner // -->
+            <div id="headNavBar" class="headNavBar dev-headNavBar">
+                <div class="navInner dev-navInner">
+
+                    <div class="jkNavArea dev-jkNavArea">
+                        <h2 class="skip">주요서비스</h2>
+                        <ul class="serviceNav dev-serviceNav">
+                            <!-- 메뉴 활성화 클래스 navFixed 마우스 오버시 active 클래스 추가 -->
+                            <li id="gnbGi" class="navItem gnbGi-fixed">
+                                <a href="https://www.jobkorea.co.kr/recruit/joblist?menucode=local&amp;localorder=1" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '채용정보');"><span class="spNav"><span class="txIr">채용정보</span></span></a>
+                            </li>
+                            <li class="navItem onepick" id="onepick">
+                                <a href="/OnePick/JobList" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '합격축하금 채용관');"><span class="spNav">원픽</span></a>
+                            </li>
+                            <li id="gnbStart" class="navItem start ">
+                                <a href="https://www.jobkorea.co.kr/starter/" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '공채정보');"><span class="spNav"><span class="txIr">공채정보</span></span></a>
+                            </li>
+                            <li id="gnbHh" class="navItem hh ">
+                                <a href="https://www.jobkorea.co.kr/headhunting/home" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '헤드헌팅');"><span class="spNav"><span class="txIr">헤드헌팅</span></span></a>
+                            </li>
+                            <li id="gnbSalary" class="navItem salary ">
+                                <a href="https://www.jobkorea.co.kr/Review/Home" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '기업·연봉');">
+                                    <span class="spNav"><span class="txIr">기업·연봉</span></span></a>
+                            </li>
+                            <li id="futurelab" class="navItem futurelab ">
+                                <a href="https://www.jobkorea.co.kr/starter/passassay" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '커리어');">
+                                    <span class="spNav"><span class="txIr">커리어</span></span></a>
+                            </li>
+                            <li id="gnbQna" class="navItem qna ">
+                                <a href="https://www.jobkorea.co.kr/User/Qstn/Index" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '취업톡톡');">
+                                    <span class="spNav"><span class="txIr">취업톡톡</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- my 홈일경우 클래스 myPage -->
+                        <ul id="devMyPage" class="userNav">
+                            <ul class="userNav">
+                                <li class="userNav-item login">
+                                    <a href="/Login/Login_Tot.asp?rDBName=GG&amp;re_url=/" class="txt-button login-button" onclick="GA_Event('공통_PC', 'gnb', '로그인');">로그인</a>
+                                </li>
+                                <li class="userNav-item join">
+                                    <a href="/Join/M_Regist" class="txt-button join-button" onclick="GA_Event('공통_PC', 'gnb', '회원가입');">회원가입</a>
+                                </li>
+                                <li class="userNav-item corp">
+                                    <a href="/Corp/Index" target="_blank" onclick="GA_Event('공통_PC', 'gnb', '기업회원 홈');"><span class="spGnb">기업서비스</span></a>
+                                    <div class="lyMyArea">
+                                        <div class="myInner">
+                                            <div class="lyRow">
+                                                <div class="btnRowWrap">
+                                                    <a href="/Login/Login_Tot.asp?rDBName=GI" onclick="GA_Event('공통_PC', 'gnb', '기업회원 로그인');">기업회원 로그인</a>
+                                                </div>
+                                            </div>
+                                            <div class="myLists">
+                                                <ul>
+                                                    <li><a href="/Corp/Main" onclick="GA_Event('공통_PC', 'gnb', '기업회원 홈');"><span class="tx">기업회원 홈</span></a></li>
+                                                    <li><a href="/Yocruit/Mng/GI_Reg" onclick="GA_Event('공통_PC', 'gnb', '공고등록');"><span class="tx">공고등록</span></a></li>
+                                                    <li><a href="/Corp/GiMng/List" onclick="GA_Event('공통_PC', 'gnb', '공고·지원자 관리');"><span class="tx">공고·지원자 관리</span></a></li>
+                                                    <li><a href="/Corp/Person/Find" onclick="GA_Event('공통_PC', 'gnb', '인재정보');"><span class="tx">인재정보</span></a></li>
+                                                    <li><a href="/OnePick/Intro" onclick="GA_Event('공통_PC', 'gnb', '원픽서비스 안내');"><span class="tx">원픽서비스 안내</span></a></li>
+                                                    <li><a href="/service/company/option" onclick="GA_Event('공통_PC', 'gnb', '기업회원 서비스 안내');"><span class="tx">기업회원 서비스 안내</span></a></li>
+                                                    <li><a href="/service/headhunting/platinum" onclick="GA_Event('공통_PC', 'gnb', '서치펌 서비스 안내');"><span class="tx">서치펌 서비스 안내</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="icnArr spGnb"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// GNB 끝 //-->
+    <!--// 채용공고 시작 //-->
+    <div id="wrap">
+        <section id="container">
+            <h1 class="tpl_hd_1">
+                <span class="blind">㈜송도국제정상어학원</span> 채용정보
+            </h1>
+            <section class="secReadSummary">
+                <h2 class="hd_2 blind">요약정보</h2>
+                <div class="readSumWrap clear">
+                    <article class="artReadJobSum">
+                        <div class="sumTit">
+                            <h3 class="hd_3">
+                                <div class="header">
+                                    <span class="coName">
+                                        ㈜송도국제정상어학원
+                                    </span>
+                                    <div class="ico-certify">
+                                        <span class="blind">기업인증 완료</span>
+                                    </div>
+                                    <div class="item favorite">
+                                        <button type="button" class="girBtn girBtn_2 girBtnFav  devFavor5_12204971" onclick="GA_Event('공고_PC', '채용정보', '관심_' + ($(this).hasClass('girBtnFavOn')?'해제':'등록') + '_㈜송도국제정상어학원');go_favor('12204971');"><span>관심기업</span></button>
+                                        <div class="tooltip-box-wrap  open">
+                                            <p class="txt">관심기업 추가하고 <em>채용소식 받기</em></p>
+                                            <button type="button" class="btn-tooltip-close"><span class="skip">닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                송도정상어학원 영어교사 [초/중/고등부] 채용모집
+                            </h3>
+                        </div>
+                        <div class="tbRow clear">
+                            <div class="tbCol ">
+                                <h4 class="hd_4">지원자격</h4>
+                                <dl class="tbList">
+                                    <dt>경력</dt>
+                                    <dd>
+                                        <strong class="col_1">신입·경력</strong>
+                                    </dd>
+                                    <dt>학력</dt>
+                                    <dd>
+                                        <strong class="col_1">대졸이상</strong>
+                                    </dd>
+                                    <dt>스킬</dt>
+                                    <dd>
+                                        영어
+                                    </dd>
+                                    <dt>핵심역량</dt>
+                                    <dd>
+                                        <strong>계획성, </strong>
+                                        <strong>성실성, </strong>
+                                        <strong>성취지향성, </strong>
+                                        꼼꼼함, 윤리의식, 적응성, 성장지향성
+                                    </dd>
+                                    <dt>우대</dt>
+                                    <dd>
+                                        <dl id="dlPref" class="tbAdd tbPref">
+                                            <dt>기본우대</dt>
+                                            <dd>
+                                                <span class="pref">영어가능자</span>
+                                                <div id="popupPref" class="tplLyWrap devTplLyClick divNotScrap">
+                                                    <button class="girBtnTy girBtnMore devTplLyBtn" type="button"><span class="blind">더보기</span></button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbCol ">
+                                <h4 class="hd_4">근무조건</h4>
+                                <dl class="tbList">
+                                    <dt>고용형태</dt>
+                                    <dd>
+                                        <ul class="addList">
+
+                                            <li>
+                                                <strong class="col_1">정규직</strong> 수습기간협의 <span class="tahoma"></span>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dt>급여</dt>
+                                    <dd>
+                                        <em class="dotum">연봉</em> <span class="tahoma">4,000~5,500</span>만원
+                                        - 면접 후 결정 경력에 따라 5500만원 이상가능
+                                    </dd>
+                                    <dt>지역</dt>
+                                    <dd>
+                                        <a href="https://www.jobkorea.co.kr/List_GI/GI_Area_List.asp?AreaNo=K080&amp;AllStat=1" target="_blank" title="새창" onclick="javascript:go_Area_List('K080',1); return false;">인천시 연수구</a>
+                                        , <a href="https://www.jobkorea.co.kr/List_GI/GI_Area_List.asp?AreaNo=K000&amp;AllStat=1" target="_blank" title="새창" onclick="javascript:go_Area_List('K000',1); return false;">인천전지역</a>
+                                        <button type="button" class="girBtn girBtn_3 girBtnMap" onclick="$('html, body').stop().animate({ scrollTop: $('#secReadWork').offset().top - 70 }, 500);"><span>지도</span></button>
+                                    </dd>
+                                    <dt>시간</dt>
+                                    <dd>
+                                        주<span class="tahoma">5</span>일
+                                        (월~금)
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbCol tbCoInfo">
+                                <h4 class="hd_4">기업정보</h4>
+
+                                <div class="tbLogo">
+                                    <div class="logo">
+                                        <p>
+                                            <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" onclick="GA_Event('공고_PC', '기업정보상단', '기업로고_㈜송도국제정상어학원');"><img src="http://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2013/6/2b7vt005Rt_vK2b2b2kt0btYtIg_tt.JPG" id="cologo" name="cologo" alt="㈜송도국제정상어학원" onload="go_logo_size(this, 100, 40);" width="100" height="40"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <dl class="tbList">
+
+                                    <dt>산업(업종)</dt>
+                                    <dd>
+                                        <text>일반 교과 학원</text>
+                                    </dd>
+                                    <dt>사원수</dt>
+                                    <dd>
+                                        <span class="tahoma">50</span>명
+                                    </dd>
+                                    <dt>설립년도</dt>
+                                    <dd>
+                                        <text>
+                                            <span class="tahoma">2010</span>년 (<span class="tahoma">15</span>년차)
+                                        </text>
+                                    </dd>
+                                    <dt>기업형태</dt>
+                                    <dd>
+                                        중소기업
+                                        (비상장)
+                                    </dd>
+
+                                </dl>
+                                <div class="coBtn">
+                                    <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보상단', '기업정보_㈜송도국제정상어학원');"><span>기업정보</span></a>
+                                    <a href="/Recruit/Co_Read/12204971/CoRecruitLink" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보상단', '진행중인채용보기_㈜송도국제정상어학원');"><span>진행중인 채용보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="sumBtn">
+                    <button type="button" class="girBtn tplBtn_1 tplBtnOrg girBtnOrg devOnlineApplyBtn" onclick="go_OnPass('', '', '');GI_Click_Cnt('','E01');;GA_Event('공고_PC', '공고지원상단', '즉시지원');" id="devApplyBtn">
+                        <span>즉시지원</span>
+                    </button>
+                    <button type="button" class="girBtn girBtn_1 girBtnScr devScrap144616260  " onclick="GA_Event('공고_PC','공고지원상단','스크랩_' + ($('.devScrap144616260').hasClass('girBtnScrOn')?'해제':'등록') + '_㈜송도국제정상어학원_㈜송도국제정상어학원송도정상어학원 영어교사 [초/중/고등부] 채용모집');go_scrap(46910105, 44616260, 'pppto', 'C');" data-brazeinfo="송도정상어학원 영어교사 [초/중/고등부] 채용모집|44616260|46910105|2024-05-07|2024-06-06|㈜송도국제정상어학원|12204971"><span>스크랩</span></button>
+                </div>
+            </section>
+            <div id="detailArea" class="divDetailWrap ">
+                <div id="menuContainer" class="devTplTabBx">
+                    <div id="topMenu" class="tplTabBx readTabBx">
+                        <ul class="tplTab clear">
+                            <li data-target="tab01" class=""><button type="button" onclick="GA_Event('공고_PC', '상세보기', '상세요강');"><span>상세요강</span></button></li>
+                            <li data-target="tab02" class="on"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '접수기간/방법');"><span>접수기간/방법</span></button></li>
+                            <li data-target="tab03"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '생생인담톡');"><span>생생인담톡 <em class="tahoma devIndamTalkComCnt">(0)</em></span></button></li>
+                            <li data-target="tab04"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '기업정보');"><span>기업정보</span></button></li>
+                        </ul>
+                        <div class="recmdTheme"><a href="https://www.jobkorea.co.kr/Theme/Edu?rv=1" target="_blank" onclick="GA_Event('공고_PC', '상세보기', '교육 직무채용관'); ">교육 직무채용관<i class="girBtn girArrRBtn01"></i></a></div>
+                    </div>
+                </div>
+                <section id="tab01" class="secReadDetail">
+                    <h2 class="hd_2 blind">상세요강</h2>
+                    <article class="artReadReason">
+                        <h3 class="hd_3 blind">이 기업에 입사해야 하는 이유</h3>
+                        <ul class="reason">
+                            <li class="icn_8">지원자의 실제 역량을 중요시하는 <strong>열린 채용 실시!</strong> (포트폴리오 검토)</li>
+                            <li class="icn_1">관심기업으로 <strong>221명 이상 찜한</strong> 선망받는 기업</li>
+                            <li class="icn_2">적극적으로 인재를 채용하기 위한 서비스 이용 중 - <strong>연락 올 확률 높음!</strong></li>
+                            <li class="icn_4"><strong>설립 15년차</strong> 안정된 회사</li>
+                            <li class="icn_12">4대보험 가입정보 - <strong>국민연금, 건강보험, 고용보험, 산재보험
+                                </strong></li>
+                        </ul>
+                    </article>
+                    <article class="artReadDetail">
+                        <h3 class="hd_3 blind">상세요강 정보</h3>
+                        <div style="width:960px; background-color:aqua;">
+                            <!--// 여기서부터 넣어주세요. -->
+
+                            <div style="margin: 0px auto; background:#fff; display:grid; grid-auto-flow:row; row-gap:5em; boz-sizing:border-box; border: 1px solid #e1e3e4; border-top:none; ">
+        <div style="background:#003cff url(https://i.jobkorea.kr/content/images/corp/register/template/top_case5.png) center center no-repeat; background-size:cover; box-sizing:border-box; display:flex; align-items:center; justify-items:center; min-height:25em;">
+            <h3 style="font-size:3.7em; color:#333; font-weight:bold; text-align:center; word-break:keep-all; ">
+                [유망 바이오 상장사] 재무·회계 팀장 결산세무·회계 내/외부 감사대응
+            </h3>
+        </div>
+        <div style="display:grid; grid-auto-flow:row; row-gap:2em; background-color:#f9eaea; box-sizing:border-box; padding: 0 2.5em 4em 2.5em; ">
+            <div style="display:grid; grid-template-rows:repeat(2,max-content); row-gap:1em;width:100%; margin:0 auto;">
+                <h4 style="font-size:1.75em; line-height:2em; margin:0px; text-align:left; word-break:keep-all; color:#003cff; border-bottom:1px solid #003cff; ">
+                    <span></span>
+                    포지션 및 자격요건
+                </h4>
+                <ul style="display:flex; flex-flow:row wrap; list-style:none; column-gap:1.5em; margin:0px; padding:0px; ">
+                    <li style="font-size:1.2em; line-height:1.2em; font-weight:bold; margin:0px; ">재무·회계 팀장</li>
+                    <li style="font-size:1em; line-height:1.2em; ">
+                        <dl>
+                            <dt style="font-size:1em; line-height:1.2em; ">관련직무경력</dt>
+                            <dd style="padding-left:0.7em; font-size:1em; line-height:1.2em; ">· 10~14년내외</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="wrap_break_recruit">
+            <table width="860" border="0px" cellspacing="0px" cellpadding="0px" align="center">
+                <tbody>
+                    <tr style="background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 214, 227)); ">
+                        <td valign="top" style="background: url(&quot;//www.saraminimage.co.kr/recruit/bbs_recruit8/38_b_redbg_230705.png&quot;) 0px 0px no-repeat; ">
+
+                            <table width="100%" border="0px" align="center" cellspacing="0px">
+                                <tbody>
+                                    <tr>
+                                        <td height="35px"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="padding: 0px 45px; ">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; color: rgb(255, 255, 255); ">
+
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="24" colspan="2" valign="top">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="70%" height="65px"></td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td height="45" colspan="2" align="center" style="font-size: 34px; line-height: 50px; letter-spacing: -4px; color: rgb(85, 85, 85); "><b>대주산업㈜</b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="15px"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="2" align="center" style="line-height: 60px; letter-spacing: -4px; color: rgb(34, 34, 34); "><b>
+                                                                <span style="font-size: 50px; color: rgb(34, 34, 34); ">2024년 </span></b><span style="font-size: 50px; color: rgb(237, 103, 89); "><b>각 부문별<font color="#08f8fa"></font></b></span><b><span style="font-size: 50px; color: rgb(34, 34, 34); "> 직원채용</span></b><br>
+                                                            <b style="color: rgb(237, 103, 89); font-size: 37px; ">(물류, 마케팅 CS, 재무회계, 비서총무,<br>
+                                                                전략기획, 생산 엔지니어, 영업)</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30" colspan="2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 20px; line-height: 26px; letter-spacing: -1px; color: rgb(85, 85, 85); "><b>2024. 05. 09 ~ 05. 31</b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10" colspan="2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30" colspan="2" valign="top"></td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15" bgcolor="#ED6759"></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="65" bgcolor="#FFFFFF"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td><b>대주산업</b>은 1962년 창립 이래, 지난 반세기동안 양축 산업의 선도 기업으로서 축산 한국의 선진화에 기여해왔습니다.<br>
+                                            이후 축산뿐만 아니라 반려동물 사업에 대한 지속적인 투자와 시장의 변화를 주도하는 신제품 연구를 지속해온 결과, <br>
+                                            사료 생산 전문 기업으로 자리매김하였습니다.<br>
+                                            대주산업은 생명과 직결된 식품을 다루는 제조사로서 정직한 제품을 생산하기 위해 자체적으로 철저한 위생 관리를 <br>
+                                            시행하고 있으며, 매년 ISO9001 HACCP 등의 각종 인증을 높은 점수로 통과 하였습니다.<br>
+                                            <br>
+                                            지식경영, 선진경영, 고객중심 경영을 모토로 미래 성장을 지향해 끊임없이 진화하며, <br>
+                                            다양한 시도를 통해 고객과 함께 발전하는 대주산업이 되도록 하겠습니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                        <td style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 25px; letter-spacing: -2px; color: rgb(224, 59, 59); ">모집부문</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table width="100%" align="center" cellpadding="10px" style="border-spacing: 0px; border-collapse: collapse; font-size: 15px; letter-spacing: -1px; line-height: 25px; color: rgb(34, 34, 34); ">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="57" align="center" bgcolor="#e03b3b" style="border-style: solid; border-color: rgb(204, 204, 204); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; border-width: 0px; padding: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; text-align: center; color: rgb(255, 255, 255); " scope="col"> <b>채용부서</b></th>
+                                                        <th width="58" align="center" bgcolor="#e03b3b" style="border-style: solid; border-color: rgb(204, 204, 204); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; border-width: 0px; padding: 10px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; text-align: center; color: rgb(255, 255, 255); " scope="col"> <b>직무</b></th>
+                                                        <th width="238" align="center" bgcolor="#e03b3b" style="border-style: solid; border-color: rgb(204, 204, 204); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; border-width: 0px; padding: 10px; text-align: center; color: rgb(255, 255, 255); " scope="col"> <b>담당업무</b></th>
+                                                        <th width="258" align="center" bgcolor="#e03b3b" style="border-style: solid; border-color: rgb(204, 204, 204); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; border-width: 0px; padding: 10px; text-align: center; color: rgb(255, 255, 255); " scope="col"> <b>자격요건</b></th>
+                                                        <th width="45" align="center" bgcolor="#e03b3b" style="border-style: solid; border-color: rgb(204, 204, 204); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; border-width: 0px; padding: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; text-align: center; color: rgb(255, 255, 255); " scope="col"><b>근무지<font color="#2fc99e"></font></b></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>물류팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>물류<br>
+                                                                관리<br>
+                                                                및<br>
+                                                                데이터<br>
+                                                                분석</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍB2B/B2C 거래처 및 입출고 관리<br>
+                                                            ㆍ재고 및 운반비 관리/마감<br>
+                                                            ㆍ데이터 수집 및 분석, 보고서 작성</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 대리급<br>
+                                                            ㆍ물류 전반적인 실무 경력 5년 이상, <br>
+                                                            &nbsp;&nbsp; 대리급<br>
+                                                            ㆍ엑셀 중급이상<br>
+                                                            &nbsp;&nbsp; (10만 라인이상 매칭/분석)<br>
+                                                            ㆍPPT 중급이상<br>
+                                                            &nbsp;&nbsp; (그래프 및 엑셀 삽입 활용)<br>
+                                                            ㆍWMS 운영 경험자<br>
+                                                            &nbsp;&nbsp; (주문~출고전반, 정산/마감)<br>
+                                                            ㆍ엑셀/PPT 작성양식 제출 가능자<br>
+                                                            &nbsp;&nbsp; (1차 면접시)<br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ3PL 운영 및 인원관리 경험자<br>
+                                                            ㆍ엑셀 고급 및 VBA 활용 가능자<br>
+                                                            ㆍ회계/생산/구매 업무 경험자 <br>
+                                                            ㆍ화장품 및 의류 B2C 운영 경험자<br>
+                                                            ㆍ지게차 운전가능자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "> 인천</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>마케팅팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>CS</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ제품에 대한 이해를 <br>
+                                                            &nbsp;&nbsp; 바탕으로 VOC 대응<br>
+                                                            ㆍ반품/교환 프로세스별 대응<br>
+                                                            ㆍ고객 불편사항 및 만족도 개선 <br>
+                                                            ㆍFAQ 관리 및 <br>
+                                                            &nbsp;&nbsp; 고객 응대 매뉴얼 작성<br>
+                                                            ㆍ제품 후기 및 VOC 모니터링<br>
+                                                            ㆍ경쟁사 시장조사<br>
+                                                            ㆍ자사몰 주문 관리<br>
+                                                            ㆍ 그 외 전반적인 CS 업무</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 신입~대리급<br>
+                                                            ㆍ고객 서비스 운영업무 경험 혹은<br>
+                                                            &nbsp;&nbsp;
+                                                            고객센터 근무 경험자 <br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ반려동물에 대한 이해도 보유자 <br>
+                                                            ㆍ서비스 마인드 보유자 <br>
+                                                            ㆍ원만한 커뮤니케이션 스킬 보유자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "> 서울 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>재무<br>
+                                                                회계팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자금<br>
+                                                                담당</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ자금관리 전반<br>
+                                                            ㆍ자금일보 및 <br>
+                                                            &nbsp;&nbsp; 자금계획서 작성 및 보고<br>
+                                                            ㆍ부가세 및 원천세 신고<br>
+                                                            ㆍ경비관리 프로그램 전반 관리</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 사원~대리급 (2~6년)<br>
+                                                            ㆍ자금수지작성경험자<br>
+                                                            ㆍ수출입회계 경험자(구매승인서 기반)<br>
+                                                            ㆍ부가가치세 신고 및 원천세 신고경험자<br>
+                                                            ㆍ더존 erp 사용 가능자<br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ경비관리 프로그램<br>
+                                                            &nbsp;&nbsp; (비즈플레이,스팬딧) 사용경험자<br>
+                                                            ㆍ제조업 회계 경험자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "> 서울</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>비서<br>
+                                                                총무팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>총무</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ부동산 관리 등 관련 업무<br>
+                                                            ㆍ일반 총무 업무 <br>
+                                                            ㆍ대표이사 수명 업무</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 과장~차장급<br>
+                                                            ㆍ관련 직무 수행자<br>
+                                                            ㆍ부동산 계약 관련 지식 보유자<br>
+                                                            ㆍ대관업무 경험자</td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "> 서울</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>전략<br>
+                                                                기획팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>사업<br>
+                                                                기획</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ산업환경 분석 및 인사이트 도출<br>
+                                                            ㆍ신규 사업 발굴 및 타당성 검토<br>
+                                                            ㆍ기존 사업 신규 서비스 전략 수집 및<br>
+                                                            &nbsp;&nbsp;
+                                                            손익분석 <br>
+                                                            ㆍ전략적 파트너십 기획 및 추진</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 대리~과장급<br>
+                                                            ㆍ신규 사업 기획 및 <br>
+                                                            &nbsp;&nbsp;
+                                                            전략기획 경력 3년 이상<br>
+                                                            ㆍ전략 보고서 등 기획 문서 작성 경험자<br>
+                                                            ㆍ해외 출장 가능자<br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ영어능통자 <br>
+                                                            ㆍ펫 산업 관련 경험 보유자<br>
+                                                            ㆍ중견기업 이상 근무자<br>
+                                                            ㆍ제조업 경력자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">서울</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>장항생산<br>
+                                                                1팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>엔지니어</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ공장 설비 이력 관리 업무<br>
+                                                            ㆍ신규설비 검토 및 <br>
+                                                            &nbsp;&nbsp; 기존설비 개선 검토 업무</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 대리~과장급<br>
+                                                            ㆍ4년제 전기 관련학과 졸업자<br>
+                                                            ㆍ전기기사 자격증 보유자로 <br>
+                                                            &nbsp;&nbsp;
+                                                            제조공장 실무 3년 이상 경력자 <br>
+                                                            ㆍ캐드 자격증을 보유하고, <br>
+                                                            &nbsp;&nbsp;
+                                                            캐드작업을 할 수 있는자<br>
+                                                            ㆍ설비 도면 검토, P&amp;ID 관리 가능자<br>
+                                                            ㆍ외국 엔지니어 대응을 위한 <br>
+                                                            &nbsp;&nbsp;
+                                                            영어 회화 가능자<br>
+                                                            ㆍ컴퓨터 활용 문서 작성 가능자<br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ생산라인 자동화 경력자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">장항</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>펫영업팀</b></td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>펫 사료<br>
+                                                                영업</b></td>
+                                                        <td bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">ㆍ펫 사료 제품 대리점 영업 및<br>
+                                                            &nbsp;&nbsp;
+                                                            스페셜티 제품 영업)</td>
+                                                        <td align="left" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; "><b>자격요건</b><br>
+                                                            ㆍ경력 : 사원~대리급<br>
+                                                            ㆍ관련업무 경험자 <br>
+                                                            ㆍ유통영업 경험자<br>
+                                                            ㆍ경력 2년 이상<br>
+                                                            <b><br>
+                                                                우대사항</b><br>
+                                                            ㆍ펫사료영업 및 <br>
+                                                            &nbsp;&nbsp;
+                                                            반려동물 관련 업무 수행자<br>
+                                                            ㆍ제조업, 식품업계 경험자 <br>
+                                                            ㆍ동물병원 영업 경험자
+                                                        </td>
+                                                        <td align="center" bgcolor="#FFFFFF" style="border-width: 0px 0px 1px; border-style: solid; border-color: rgb(224, 59, 59); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">서울</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#e03b3b">
+                        <td height="65" bgcolor="#ffffff"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 28px; letter-spacing: -2px; color: rgb(237, 103, 89); ">근무조건 </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ㆍ근무형태 : 정규직<br>
+                                            ㆍ근무일시 : 주 5일(월~금) 오전 8시 30분~오후 5시 30분<br>
+                                            ㆍ급여 : 면접 후 결정<br>
+                                            ㆍ근무지역<br>
+                                            　- 서울 본사 : 서울시 광진구 천호대로 549, 20층<br>
+                                            　- 인천 공장 : 인천시 동구 염전로 32<br>
+                                            　- 장항 공장 : 충청남도 서천군 장항읍 장항공단길 59</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 25px; letter-spacing: -2px; color: rgb(237, 103, 89); "> 복리후생</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table width="100%" align="center" cellpadding="10px" style="border-spacing: 0px; border-collapse: collapse; font-size: 15px; letter-spacing: -1px; line-height: 25px; color: rgb(34, 34, 34); ">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon59.png" alt="아이콘"></td>
+                                                        <td valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>지원금/보험</b><br>
+                                                            건강검진, 각종 경조사 지원</td>
+                                                        <td align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon55.png" alt="아이콘"></td>
+                                                        <td valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>급여제도</b><br>
+                                                            퇴직연금, 인센티브제, 우수사원포상, 퇴직금, <br>
+                                                            야근수당, 휴일(특근)수당, 연차수당, 4대 보험<br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon54.png" alt="아이콘"></td>
+                                                        <td valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>선물</b><br>
+                                                            명절선물/귀향비</td>
+                                                        <td align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon47.png" alt="아이콘"></td>
+                                                        <td valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>교육/생활</b><br>
+                                                            우수사원시상식, 음료제공(차, 커피)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="65" align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon32.png" alt="아이콘"></td>
+                                                        <td width="201" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>조직문화<br>
+                                                            </b>회식강요 안함, 자유복장, <br>
+                                                            자유로운 연차사용<br></td>
+                                                        <td width="65" align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon58.png" alt="아이콘"></td>
+                                                        <td width="347" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>출퇴근<font color="#4bdbfa"></font></b><br>
+                                                            주 52시간제 준수<br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><img src="https://www.saraminimage.co.kr/recruit/bbs_recruit2/sy20_b_icon19.png" alt="아이콘"></td>
+                                                        <td colspan="2" valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); "><b>리프레시</b><br>
+                                                            연차, 여름휴가, 경조휴가제, 반차, 산전 후 <br>
+                                                            휴가, 육아휴직, 남성출산휴가</td>
+                                                        <td valign="middle" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; border: 0px solid rgb(204, 204, 204); ">&nbsp;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 28px; letter-spacing: -2px; color: rgb(237, 103, 89); ">전형절차 <font color="#6ad776"></font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 62px; ">
+                                            <table width="100%" align="center" cellpadding="10px" style="border-spacing: 0px; border-collapse: collapse; font-size: 15px; letter-spacing: -1px; line-height: 25px; color: rgb(255, 255, 255); ">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="100" height="100" align="center" bgcolor="#e03b3b" style="border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 14px; letter-spacing: 0px; line-height: 25px; padding: 10px; border-radius: 15px; ">STEP1<br>
+                                                            <b style="font-size: 19px; ">서류전형</b>
+                                                        </td>
+                                                        <td width="28" style="border-width: 0px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">&nbsp;</td>
+                                                        <td width="100" align="center" bgcolor="#e03b3b" style="border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 14px; letter-spacing: 0px; line-height: 25px; padding: 10px; border-radius: 15px; ">STEP2<br>
+                                                            <b style="font-size: 19px; ">1차면접</b>
+                                                        </td>
+                                                        <td width="28" style="border-width: 0px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">&nbsp;</td>
+                                                        <td width="100" align="center" bgcolor="#e03b3b" style="border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 14px; letter-spacing: 0px; line-height: 25px; padding: 10px; border-radius: 15px; ">STEP3<br>
+                                                            <b style="font-size: 19px; ">2차면접</b>
+                                                        </td>
+                                                        <td width="28" style="border-width: 0px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; padding: 10px; ">&nbsp;</td>
+                                                        <td width="100" align="center" bgcolor="#c93535" style="border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255); font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 14px; letter-spacing: 0px; line-height: 25px; padding: 10px; border-radius: 15px; ">STEP4<br>
+                                                            <b style="font-size: 19px; ">최종합격</b>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 25px; letter-spacing: -2px; color: rgb(237, 103, 89); "> 제출서류</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> ㆍ이력서, 자기소개서</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 25px; letter-spacing: -2px; color: rgb(237, 103, 89); "> 접수기간 및 방법 </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> ㆍ접수기간 : <span style="color: rgb(255, 103, 0); letter-spacing: normal; "><b>2024년 05월 31일까지 </b></span><br>
+                                            ㆍ접수방법 : <span style="color: rgb(0, 76, 255); "><b>사람인 온라인 입사지원</b></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 28px; letter-spacing: -2px; color: rgb(237, 103, 89); ">문의사항</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ㆍ담당자 : 강혜원(전략기획팀)<br>
+                                            ㆍ연락처 : 02-6416-7207</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 0px 45px; ">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 15px; line-height: 25px; letter-spacing: -1px; ">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: &quot;malgun gothic&quot;, &quot;맑은 고딕&quot;; font-size: 28px; line-height: 28px; letter-spacing: -2px; color: rgb(237, 103, 89); ">유의사항</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ㆍ입사지원 서류에 허위사실이 발견될 경우, 채용확정 이후라도 채용이 취소될 수 있습니다.<br>
+                                            ㆍ모집분야별로 마감일이 상이할 수 있으니 유의하시길 바랍니다.<br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="65" bgcolor="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td align="right" bgcolor="#FFFFFF"> <img src="https://www.saraminimage.co.kr/recruit/bbs_recruit/watermark_gray.png" alt="Designed by saramin" align="right" style="padding: 0px 45px; "></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+                            <!--// 여기까지 넣어주세요. -->
+                        </div>
+                    </article>
+                    <div class="btnDetail">
+                        <div class="tplIcn tplIcnPit dotum">채용정보에 잘못된 내용이 있을 경우 <a class="girLinkReport" href="/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260" target="_blank">문의</a>해주세요.</div>
+                    </div>
+                </section>
+                <section id="tab02" class="secReadApply">
+                    <h2 class="hd_2">접수기간/방법</h2>
+                    <div class="divReadBx clear devMakeSameHeight">
+                        <article class="artReadPeriod" style="height: 211px;">
+                            <h3 class="hd_3 blind">접수기간</h3>
+                            <div>
+                                <dl class="time">
+                                    <dt class="girIcn icnTime">남은시간</dt>
+                                    <dd class="devRemainCount"><span class="tahoma">30</span>일 <span class="tahoma">10:11:22</span></dd>
+                                </dl>
+                                <dl class="date">
+                                    <dt>시작일</dt>
+                                    <dd><span class="tahoma">2024.05.07</span>(화)</dd>
+                                    <dt>마감일</dt>
+                                    <dd><span class="tahoma">2024.06.06</span>(목)</dd>
+                                </dl>
+                                <p class="deadline">
+                                </p>
+                                <div class="carlendar devTplLyClick">
+                                    <p class="btnCar"><button id="btnCalendar" type="button" class="girBtn girBtnCar devTplLyBtn"><span>달력보기</span></button></p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="artReadHow" style="height: 211px;">
+                            <h3 class="hd_3 blind">접수방법</h3>
+                            <div class="tbOline">
+                                <div class="btn">
+                                    <button type="button" class="girBtn tplBtn_1 tplBtnOrg girBtnOrg devOnlineApplyBtn" onclick="go_OnPass('', '', '');GI_Click_Cnt('','E02');;GA_Event('공고_PC', '공고지원하단', '즉시지원');" id="devApplyBtn"><span>즉시지원</span></button>
+                                    <button type="button" class="girBtn girBtn_1 girBtnBdOrg" onclick="lay_Booking_Open2('44616260', '1', '1'); GI_Click_Cnt('', 'E13');GA_Event('공고_PC', '공고지원하단', '안심 지원 예약');"><span>안심 지원 예약</span></button>
+
+                                </div>
+                            </div>
+                            <div class="tbRow tbRsm tbCase">
+                                <dl>
+                                    <dt>지원양식</dt>
+                                    <dd class="devTplLyClick">
+                                        <strong>잡코리아 이력서 양식</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbRow">
+                                <dl>
+                                    <dt>모집분야</dt>
+                                    <dd>
+
+                                        <a href="#Apply" onclick="javascript:go_OnPass('초등부', '', '');return false;">초등부</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('중등부_활용', '', '');return false;">중등부_활용</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('중등부_성과', '', '');return false;">중등부_성과</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('고등부', '', '');return false;">고등부</a>
+                                    </dd>
+                                    <dt>모집인원</dt>
+                                    <dd><span class="tahoma">○</span>명</dd>
+                                </dl>
+                            </div>
+                            <div class="tbRow tbEtc">
+                                <dl>
+                                    <dt class="blind">기타</dt>
+                                    <dd>
+                                        포트폴리오 첨부희망
+                                    </dd>
+
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="manager">
+                        <dl>
+                            <dt>인사 담당자</dt>
+                            <dd>
+                                홍회정 </dd>
+                            <dt>부서명</dt>
+                            <dd>
+                                인사과
+                            </dd>
+                            <dd class="devTplLyClick">
+                                <button type="button" class="girBtn girBtn_3 devTplLyBtn"><span>연락처 확인</span></button>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p class="textEnd">마감일은 기업의 사정으로 인해 조기 마감 또는 변경될 수 있습니다.</p>
+                </section>
+                <div id="INDAMTalk">
+                    <section id="tab03" class="secReadHrTalk">
+                        <!-- 생생인담톡 -->
+                        <h2 class="hd_2">생생인담톡 <em class="num tahoma devIndamTalkComCnt">(0)</em></h2>
+                        <article class="artReadQuestion devTplLyClick">
+                            <p>
+                                <button type="button" id="toggleIndamQstnLayer" class="girBtn girBtn_6 girBtnQuestion"><span>인사담당자에게 질문하기</span></button>
+                            </p>
+                        </article>
+                        <article class="artReadHrTalk divReadBx">
+                            <h3 class="hd_3 blind">생생인담톡 리스트</h3>
+                            <dl class="manager girIcn">
+                                <dt>인사담당자 한마디</dt>
+                                <dd>㈜송도국제정상어학원 채용정보에 관심 가져주셔서 감사합니다.
+                                    많은 지원 부탁 드립니다.</dd>
+                            </dl>
+                            <!-- 리스트 -->
+                            <div id="INDAMTalkList">
+                                <div class="talkList" data-searchtype="1" data-cnt="0">
+                                    <!--[개발] 질문이 없는 경우 .tplHide 추가 -->
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <section id="tab04" class="secReadCoInfo ">
+                    <h2 class="hd_2">기업정보</h2>
+                    <article class="artReadCoInfo divReadBx">
+                        <h3 class="hd_3 blind">요약정보</h3>
+                        <div class="tbRow clear">
+                            <div class="tbCol coLogo ">
+                                <p class="logo">
+                                    <a href="https://www.jobkorea.co.kr/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" onclick="GA_Event('공고_PC', '기업정보하단', '기업로고_㈜송도국제정상어학원');"><img src="http://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2013/6/2b7vt005Rt_vK2b2b2kt0btYtIg_tt.JPG" id="cologo" name="cologo" alt="㈜송도국제정상어학원" onload="go_logo_size(this, 180, 72);" width="180" height="72"></a>
+                                </p>
+                            </div>
+                            <div class="tbCol coInfo">
+                                <h4 class="hd_4">㈜송도국제정상어학원</h4>
+                                <p class="coBtn">
+                                    <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보하단', '기업정보_㈜송도국제정상어학원');"><span>기업정보</span></a>
+                                    <button type="button" class="girBtn girBtn_2 girBtnFav  devFavor5_12204971" onclick="GA_Event('공고_PC', '기업정보하단', '관심_' + ($(this).hasClass('girBtnFavOn')?'해제':'등록') + '_㈜송도국제정상어학원');go_favor('12204971');"><span><strong class="tahoma devFavorCnt">221</strong>관심기업</span></button>
+                                    <a href="/Recruit/Salary/12204971" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보하단', '연봉정보_㈜송도국제정상어학원');"><span>연봉정보</span></a>
+                                </p>
+                                <dl class="tbList">
+                                    <dt>산업</dt>
+                                    <dd>
+                                        <text>일반 교과 학원</text>
+                                    </dd>
+                                    <dt>사원수</dt>
+                                    <dd>
+                                        <span class="tahoma">50</span>명
+                                    </dd>
+                                    <dt>설립</dt>
+                                    <dd>
+                                        <span class="tahoma">2010</span>년 (<span class="tahoma">15</span>년차)
+                                    </dd>
+                                    <dt>기업형태</dt>
+                                    <dd>
+                                        중소기업
+                                        (비상장)
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="artReadStrategy">
+                    </article>
+                </section>
+                <section class="secReadWork" id="secReadWork">
+                    <h2 class="hd_2">근무환경</h2>
+                    <article class="artReadWork divReadBx">
+                        <h3 class="hd_3 blind">근무환경 정보</h3>
+                        <div class="address">
+                            <strong id="mapDtl" class="girIcn">인천 연수구 송도동 3-1번지 밀레니엄빌딩 5층</strong>
+                            <a href="https://maps.naver.com/?mapMode=0&amp;dlevel=12&amp;pinTitle=%e3%88%9c%ec%86%a1%eb%8f%84%ea%b5%ad%ec%a0%9c%ec%a0%95%ec%83%81%ec%96%b4%ed%95%99%ec%9b%90&amp;lat=37.3957028907164&amp;lng=126.650924558912" target="_blank" title="새창" class="btnMapApiS"><span>지도보기</span></a> <!-- 지도 api 이슈로 버튼 추가 -->
+                        </div>
+                        <div class="location">
+                            <div class="tbRow">
+                                <dl>
+                                    <dt>복리후생</dt>
+                                    <dd>
+                                        <dl>
+                                            <dt>보상·수당·지원</dt>
+                                            <dd>인센티브</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기타</dt>
+                                            <dd>여름휴가, 분기별 특별휴일</dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="secReadCoKey">
+                    <h2 class="hd_2 girIcn">관련 키워드</h2>
+                    <article id="artKeywordSearch" class="artReadCoKey divReadBx clear">
+                        <ul class="list extendBx">
+                            <li><button onclick="window.open( 'https://www.jobkorea.co.kr/Theme/Edu?rv=1','_blank')" type="button" class="btnTheme" title="새창">교육 직무채용관</button></li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000345', '_blank'); GA_Event('공고_PC', '관련키워드', '학교·특수학교교사');" type="button" formtarget="_blank" title="'새창'">학교·특수학교교사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000345&amp;dkwrd=10003451850', '_blank'); GA_Event('공고_PC', '관련키워드', '영어');" type="button" formtarget="_blank" title="'새창'">영어</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347', '_blank'); GA_Event('공고_PC', '관련키워드', '학원강사');" type="button" formtarget="_blank" title="'새창'">학원강사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347&amp;dkwrd=10003472066', '_blank'); GA_Event('공고_PC', '관련키워드', '입시학원');" type="button" formtarget="_blank" title="'새창'">입시학원</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347&amp;dkwrd=100034747674997', '_blank'); GA_Event('공고_PC', '관련키워드', '일반학원');" type="button" formtarget="_blank" title="'새창'">일반학원</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000348', '_blank'); GA_Event('공고_PC', '관련키워드', '외국어강사');" type="button" formtarget="_blank" title="'새창'">외국어강사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000349', '_blank'); GA_Event('공고_PC', '관련키워드', '기술·전문강사');" type="button" formtarget="_blank" title="'새창'">기술·전문강사</button>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <div class="divReadBx_1 divReadFalse">
+                    <div class="recurit-copyright">
+                        <span class="toggle-button" aria-expanded="false" aria-controls="toggle-target">
+                            <span class="recurit-copyright--title">본 채용정보는 잡코리아의 동의없이 무단전재, 재배포, 재가공할 수 없으며, 구직활동 이외의 용도로 사용될 수 없습니다. <i class="content-copyright--icon"></i></span>
+                        </span>
+                        <p class="recurit-copyright--content" id="toggle-target" aria-hidden="true">
+                            본 채용정보는 <strong>㈜송도국제정상어학원</strong>에서 제공한 자료를 바탕으로 잡코리아가 편집 및 그 표현방법을 수정하여 완성한 것입니다.
+                            본 정보는 잡코리아의 동의 없이 무단전재 또는 재배포, 재가공할 수 없으며, 게재된 채용기업과 채용담당자의 정보는 구직활동 이외의 용도로 사용될 수 없습니다.
+                            잡코리아는 <strong>㈜송도국제정상어학원</strong>에서 게재한 자료에 대한 오류와 사용자가 이를 신뢰하여 취한 조치에 대해 책임을 지지 않습니다.
+                            &lt;저작권자 ⓒ잡코리아. 무단전재-재배포금지&gt;
+
+                        </p>
+                        <a title="새창" class="girBtn girBtnReport" href="/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260" target="_blank">불법/허위/과장/오류 신고</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divReadFunc">
+                <ul>
+                    <li><button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_페이스북');goFacebook('http://joburl.kr/8Ovs3');return false;" class="girBtn girBtnFacebook" title=" 페이스북 전송(새창)"><span>페이스북</span></button></li>
+                    <li><button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_트위터');goTwitter('㈜송도국제정상어학원-송도정상어학원 영어교사 [초/중/고등부] 채용모집 (~06/06(목))http://joburl.kr/8Ovs3 - #jobkorea #jobko #kjob', 'http://joburl.kr/8Ovs3'); return false;" class="girBtn girBtnTwitter" title="트위터 전송(새창)"><span>트위터</span></button></li>
+                    <li>
+                        <button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_이메일');go_delivery(1); return false;" class="girBtn girBtnEmail" title="이메일"><span>이메일</span></button>
+                        <div id="devMsg" name="devMsg" style="position: absolute; top: 30px; left: -382px; z-index: 10000; display: none; user-select: auto !important;">
+                            <iframe id="MsgIfrm" name="MsgIfrm" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" title="스크랩,주소복사,채용공고 전달 레이어"></iframe>
+                        </div>
+                    </li>
+                    <li><button title="인쇄" class="girBtn girBtnPrint devPrint" type="button"><span>인쇄</span></button></li>
+                    <li><button title="신고" class="girBtn corporate-button-report" type="button" onclick="window.open('/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260')"><span>신고</span></button></li>
+                </ul>
+            </div>
+            <!--// 우측 컨텐츠 -->
+        </section>
+    </div>
+    <!--// 채용공고 끝 //-->
+</body>
