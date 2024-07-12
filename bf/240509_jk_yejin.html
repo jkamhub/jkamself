@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>잡코리아 - 채용공고</title>
+    <link rel="stylesheet" href="https://i.jobkorea.kr/content/css/ver_2/common-sv-202403271945.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/personal/pages/recruit/view/view.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/personal/common/gnb.css">
+    <link rel="stylesheet" href="https://i.jobkorea.kr/deploy/pc/dist/css/components/modal.css">
+</head>
+
+<body id="secLgi" class="lgiSubRead">
+    <!--// GNB 시작//-->
+    <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
+        <div id="header">
+            <!--신입공채 메뉴일경우 클래스 start-sub 추가 -->
+            <!-- // headInner -->
+            <div class="headInner">
+                <h1 class="jkLogo" onclick="GA_Event('공통_PC', '헤더', '잡코리아로고');">
+                    <a href="https://www.jobkorea.co.kr">
+                        <img height="78" src="https://file2.jobkorea.co.kr/Net/Mng/Image/LogoImage?FN=2024/04/5월 로고_1_1.png" alt="JOBKOREA">
+                    </a>
+                </h1>
+                <!-- // search -->
+                <div class="search" id="searchWrap">
+                    <h2 class="skip">검색</h2>
+                    <form name="global_seek" id="AKCFrm" autocomplete="off" action="/Search/" onsubmit="return GoMainTotalSearch();" target="_self">
+                        <fieldset>
+                            <legend>Smart Match 통합검색</legend>
+                            <div class="smKey">
+                                <input type="text" id="stext" title="검색어 입력" name="stext" placeholder="" maxlength="30">
+                                <input type="submit" value="검색" class="submit spGnb" id="common_search_btn" onclick="GA_Event('공통_PC', '검색', '검색_' + document.getElementById('stext').value);">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- search // -->
+                <!-- // 배너 영역 -->
+                <div class="headBann">
+                    <strong class="skip">잡코리아 주요 서비스</strong>
+                    <div class="bannBxAlignRow">
+                        <a href="https://www.albamon.com" target="_blank" title="새창 열림" class="bann-logo bann-albamon" onclick="GA_Event('공통_PC', '헤더', '배너_알바몬');">알바몬</a>
+                        <a href="https://www.gamejob.co.kr" target="_blank" title="새창 열림" class="bann-logo bann-gamejob" onclick="GA_Event('공통_PC', '헤더', '배너_게임잡');">게임잡</a>
+                        <a href="https://www.ninehire.com/" target="_blank" title="새창 열림" class="bann-logo bann-ninehire" onclick="GA_Event('공통_PC', '헤더', '배너_나인하이어');">나인하이어</a>
+                    </div>
+                </div>
+            </div>
+            <!-- headInner // -->
+            <div id="headNavBar" class="headNavBar dev-headNavBar">
+                <div class="navInner dev-navInner">
+
+                    <div class="jkNavArea dev-jkNavArea">
+                        <h2 class="skip">주요서비스</h2>
+                        <ul class="serviceNav dev-serviceNav">
+                            <!-- 메뉴 활성화 클래스 navFixed 마우스 오버시 active 클래스 추가 -->
+                            <li id="gnbGi" class="navItem gnbGi-fixed">
+                                <a href="https://www.jobkorea.co.kr/recruit/joblist?menucode=local&amp;localorder=1" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '채용정보');"><span class="spNav"><span class="txIr">채용정보</span></span></a>
+                            </li>
+                            <li class="navItem onepick" id="onepick">
+                                <a href="/OnePick/JobList" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '합격축하금 채용관');"><span class="spNav">원픽</span></a>
+                            </li>
+                            <li id="gnbStart" class="navItem start ">
+                                <a href="https://www.jobkorea.co.kr/starter/" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '공채정보');"><span class="spNav"><span class="txIr">공채정보</span></span></a>
+                            </li>
+                            <li id="gnbHh" class="navItem hh ">
+                                <a href="https://www.jobkorea.co.kr/headhunting/home" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '헤드헌팅');"><span class="spNav"><span class="txIr">헤드헌팅</span></span></a>
+                            </li>
+                            <li id="gnbSalary" class="navItem salary ">
+                                <a href="https://www.jobkorea.co.kr/Review/Home" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '기업·연봉');">
+                                    <span class="spNav"><span class="txIr">기업·연봉</span></span></a>
+                            </li>
+                            <li id="futurelab" class="navItem futurelab ">
+                                <a href="https://www.jobkorea.co.kr/starter/passassay" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '커리어');">
+                                    <span class="spNav"><span class="txIr">커리어</span></span></a>
+                            </li>
+                            <li id="gnbQna" class="navItem qna ">
+                                <a href="https://www.jobkorea.co.kr/User/Qstn/Index" class="linkItem" onclick="GA_Event('공통_PC', 'gnb', '취업톡톡');">
+                                    <span class="spNav"><span class="txIr">취업톡톡</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- my 홈일경우 클래스 myPage -->
+                        <ul id="devMyPage" class="userNav">
+                            <ul class="userNav">
+                                <li class="userNav-item login">
+                                    <a href="/Login/Login_Tot.asp?rDBName=GG&amp;re_url=/" class="txt-button login-button" onclick="GA_Event('공통_PC', 'gnb', '로그인');">로그인</a>
+                                </li>
+                                <li class="userNav-item join">
+                                    <a href="/Join/M_Regist" class="txt-button join-button" onclick="GA_Event('공통_PC', 'gnb', '회원가입');">회원가입</a>
+                                </li>
+                                <li class="userNav-item corp">
+                                    <a href="/Corp/Index" target="_blank" onclick="GA_Event('공통_PC', 'gnb', '기업회원 홈');"><span class="spGnb">기업서비스</span></a>
+                                    <div class="lyMyArea">
+                                        <div class="myInner">
+                                            <div class="lyRow">
+                                                <div class="btnRowWrap">
+                                                    <a href="/Login/Login_Tot.asp?rDBName=GI" onclick="GA_Event('공통_PC', 'gnb', '기업회원 로그인');">기업회원 로그인</a>
+                                                </div>
+                                            </div>
+                                            <div class="myLists">
+                                                <ul>
+                                                    <li><a href="/Corp/Main" onclick="GA_Event('공통_PC', 'gnb', '기업회원 홈');"><span class="tx">기업회원 홈</span></a></li>
+                                                    <li><a href="/Yocruit/Mng/GI_Reg" onclick="GA_Event('공통_PC', 'gnb', '공고등록');"><span class="tx">공고등록</span></a></li>
+                                                    <li><a href="/Corp/GiMng/List" onclick="GA_Event('공통_PC', 'gnb', '공고·지원자 관리');"><span class="tx">공고·지원자 관리</span></a></li>
+                                                    <li><a href="/Corp/Person/Find" onclick="GA_Event('공통_PC', 'gnb', '인재정보');"><span class="tx">인재정보</span></a></li>
+                                                    <li><a href="/OnePick/Intro" onclick="GA_Event('공통_PC', 'gnb', '원픽서비스 안내');"><span class="tx">원픽서비스 안내</span></a></li>
+                                                    <li><a href="/service/company/option" onclick="GA_Event('공통_PC', 'gnb', '기업회원 서비스 안내');"><span class="tx">기업회원 서비스 안내</span></a></li>
+                                                    <li><a href="/service/headhunting/platinum" onclick="GA_Event('공통_PC', 'gnb', '서치펌 서비스 안내');"><span class="tx">서치펌 서비스 안내</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="icnArr spGnb"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// GNB 끝 //-->
+    <!--// 채용공고 시작 //-->
+    <div id="wrap">
+        <section id="container">
+            <h1 class="tpl_hd_1">
+                <span class="blind">㈜송도국제정상어학원</span> 채용정보
+            </h1>
+            <section class="secReadSummary">
+                <h2 class="hd_2 blind">요약정보</h2>
+                <div class="readSumWrap clear">
+                    <article class="artReadJobSum">
+                        <div class="sumTit">
+                            <h3 class="hd_3">
+                                <div class="header">
+                                    <span class="coName">
+                                        ㈜송도국제정상어학원
+                                    </span>
+                                    <div class="ico-certify">
+                                        <span class="blind">기업인증 완료</span>
+                                    </div>
+                                    <div class="item favorite">
+                                        <button type="button" class="girBtn girBtn_2 girBtnFav  devFavor5_12204971" onclick="GA_Event('공고_PC', '채용정보', '관심_' + ($(this).hasClass('girBtnFavOn')?'해제':'등록') + '_㈜송도국제정상어학원');go_favor('12204971');"><span>관심기업</span></button>
+                                        <div class="tooltip-box-wrap  open">
+                                            <p class="txt">관심기업 추가하고 <em>채용소식 받기</em></p>
+                                            <button type="button" class="btn-tooltip-close"><span class="skip">닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                송도정상어학원 영어교사 [초/중/고등부] 채용모집
+                            </h3>
+                        </div>
+                        <div class="tbRow clear">
+                            <div class="tbCol ">
+                                <h4 class="hd_4">지원자격</h4>
+                                <dl class="tbList">
+                                    <dt>경력</dt>
+                                    <dd>
+                                        <strong class="col_1">신입·경력</strong>
+                                    </dd>
+                                    <dt>학력</dt>
+                                    <dd>
+                                        <strong class="col_1">대졸이상</strong>
+                                    </dd>
+                                    <dt>스킬</dt>
+                                    <dd>
+                                        영어
+                                    </dd>
+                                    <dt>핵심역량</dt>
+                                    <dd>
+                                        <strong>계획성, </strong>
+                                        <strong>성실성, </strong>
+                                        <strong>성취지향성, </strong>
+                                        꼼꼼함, 윤리의식, 적응성, 성장지향성
+                                    </dd>
+                                    <dt>우대</dt>
+                                    <dd>
+                                        <dl id="dlPref" class="tbAdd tbPref">
+                                            <dt>기본우대</dt>
+                                            <dd>
+                                                <span class="pref">영어가능자</span>
+                                                <div id="popupPref" class="tplLyWrap devTplLyClick divNotScrap">
+                                                    <button class="girBtnTy girBtnMore devTplLyBtn" type="button"><span class="blind">더보기</span></button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbCol ">
+                                <h4 class="hd_4">근무조건</h4>
+                                <dl class="tbList">
+                                    <dt>고용형태</dt>
+                                    <dd>
+                                        <ul class="addList">
+
+                                            <li>
+                                                <strong class="col_1">정규직</strong> 수습기간협의 <span class="tahoma"></span>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dt>급여</dt>
+                                    <dd>
+                                        <em class="dotum">연봉</em> <span class="tahoma">4,000~5,500</span>만원
+                                        - 면접 후 결정 경력에 따라 5500만원 이상가능
+                                    </dd>
+                                    <dt>지역</dt>
+                                    <dd>
+                                        <a href="https://www.jobkorea.co.kr/List_GI/GI_Area_List.asp?AreaNo=K080&amp;AllStat=1" target="_blank" title="새창" onclick="javascript:go_Area_List('K080',1); return false;">인천시 연수구</a>
+                                        , <a href="https://www.jobkorea.co.kr/List_GI/GI_Area_List.asp?AreaNo=K000&amp;AllStat=1" target="_blank" title="새창" onclick="javascript:go_Area_List('K000',1); return false;">인천전지역</a>
+                                        <button type="button" class="girBtn girBtn_3 girBtnMap" onclick="$('html, body').stop().animate({ scrollTop: $('#secReadWork').offset().top - 70 }, 500);"><span>지도</span></button>
+                                    </dd>
+                                    <dt>시간</dt>
+                                    <dd>
+                                        주<span class="tahoma">5</span>일
+                                        (월~금)
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbCol tbCoInfo">
+                                <h4 class="hd_4">기업정보</h4>
+
+                                <div class="tbLogo">
+                                    <div class="logo">
+                                        <p>
+                                            <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" onclick="GA_Event('공고_PC', '기업정보상단', '기업로고_㈜송도국제정상어학원');"><img src="http://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2013/6/2b7vt005Rt_vK2b2b2kt0btYtIg_tt.JPG" id="cologo" name="cologo" alt="㈜송도국제정상어학원" onload="go_logo_size(this, 100, 40);" width="100" height="40"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <dl class="tbList">
+
+                                    <dt>산업(업종)</dt>
+                                    <dd>
+                                        <text>일반 교과 학원</text>
+                                    </dd>
+                                    <dt>사원수</dt>
+                                    <dd>
+                                        <span class="tahoma">50</span>명
+                                    </dd>
+                                    <dt>설립년도</dt>
+                                    <dd>
+                                        <text>
+                                            <span class="tahoma">2010</span>년 (<span class="tahoma">15</span>년차)
+                                        </text>
+                                    </dd>
+                                    <dt>기업형태</dt>
+                                    <dd>
+                                        중소기업
+                                        (비상장)
+                                    </dd>
+
+                                </dl>
+                                <div class="coBtn">
+                                    <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보상단', '기업정보_㈜송도국제정상어학원');"><span>기업정보</span></a>
+                                    <a href="/Recruit/Co_Read/12204971/CoRecruitLink" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보상단', '진행중인채용보기_㈜송도국제정상어학원');"><span>진행중인 채용보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="sumBtn">
+                    <button type="button" class="girBtn tplBtn_1 tplBtnOrg girBtnOrg devOnlineApplyBtn" onclick="go_OnPass('', '', '');GI_Click_Cnt('','E01');;GA_Event('공고_PC', '공고지원상단', '즉시지원');" id="devApplyBtn">
+                        <span>즉시지원</span>
+                    </button>
+                    <button type="button" class="girBtn girBtn_1 girBtnScr devScrap144616260  " onclick="GA_Event('공고_PC','공고지원상단','스크랩_' + ($('.devScrap144616260').hasClass('girBtnScrOn')?'해제':'등록') + '_㈜송도국제정상어학원_㈜송도국제정상어학원송도정상어학원 영어교사 [초/중/고등부] 채용모집');go_scrap(46910105, 44616260, 'pppto', 'C');" data-brazeinfo="송도정상어학원 영어교사 [초/중/고등부] 채용모집|44616260|46910105|2024-05-07|2024-06-06|㈜송도국제정상어학원|12204971"><span>스크랩</span></button>
+                </div>
+            </section>
+            <div id="detailArea" class="divDetailWrap ">
+                <div id="menuContainer" class="devTplTabBx">
+                    <div id="topMenu" class="tplTabBx readTabBx">
+                        <ul class="tplTab clear">
+                            <li data-target="tab01" class=""><button type="button" onclick="GA_Event('공고_PC', '상세보기', '상세요강');"><span>상세요강</span></button></li>
+                            <li data-target="tab02" class="on"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '접수기간/방법');"><span>접수기간/방법</span></button></li>
+                            <li data-target="tab03"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '생생인담톡');"><span>생생인담톡 <em class="tahoma devIndamTalkComCnt">(0)</em></span></button></li>
+                            <li data-target="tab04"><button type="button" onclick="GA_Event('공고_PC', '상세보기', '기업정보');"><span>기업정보</span></button></li>
+                        </ul>
+                        <div class="recmdTheme"><a href="https://www.jobkorea.co.kr/Theme/Edu?rv=1" target="_blank" onclick="GA_Event('공고_PC', '상세보기', '교육 직무채용관'); ">교육 직무채용관<i class="girBtn girArrRBtn01"></i></a></div>
+                    </div>
+                </div>
+                <section id="tab01" class="secReadDetail">
+                    <h2 class="hd_2 blind">상세요강</h2>
+                    <article class="artReadReason">
+                        <h3 class="hd_3 blind">이 기업에 입사해야 하는 이유</h3>
+                        <ul class="reason">
+                            <li class="icn_8">지원자의 실제 역량을 중요시하는 <strong>열린 채용 실시!</strong> (포트폴리오 검토)</li>
+                            <li class="icn_1">관심기업으로 <strong>221명 이상 찜한</strong> 선망받는 기업</li>
+                            <li class="icn_2">적극적으로 인재를 채용하기 위한 서비스 이용 중 - <strong>연락 올 확률 높음!</strong></li>
+                            <li class="icn_4"><strong>설립 15년차</strong> 안정된 회사</li>
+                            <li class="icn_12">4대보험 가입정보 - <strong>국민연금, 건강보험, 고용보험, 산재보험
+                                </strong></li>
+                        </ul>
+                    </article>
+                    <article class="artReadDetail">
+                        <h3 class="hd_3 blind">상세요강 정보</h3>
+                        <div style="width:960px; background-color:aqua;">
+                            <!--// 여기서부터 넣어주세요. -->
+
+                            <div id="test_wrap" style="width: 100%; height: 1500px; background: #6d6d6d;">
+    <div id="test_inner" style="width: 960px; height: 1500px; background: #c5c5c5; margin: 0px auto;">
+        <div id="visual" style="width: 100%; height: 420px; background: #ffffff; font-size: 40px; text-align: center; line-height: 420px;">
+            <b>테스트 공고입니다. 지원하지마세요.</b>
+        </div>
+        <div id="detail_wrap" style="width: 850px; height: 1000px; background: #6d6d6d; margin: 30px auto;">
+            <p id="company_intro" style="font: 14px/20px 맑은고딕 !important; color: white;">
+                유베이스는 1999년에 설립된 회사로 자본금 219억 3,575만원, 매출액 4,267억 9,459만원, 사원수 10,679명 규모의 중견기업입니다.
+                <br>서울 용산구 원효로90길 11 (원효로1가, 용산더프라임)에 위치하고 있으며, 콜센타.아웃소싱.기타 인력업사업을 하고 있습니다.
+            </p>
+            <div style="width: 100%; height: 400px; background: #979797; margin-top: 50px;">
+                <p style="width: 100%; height: 50px; background: #c5c5c5; margin-bottom: 20px;">
+                    <b>0 포지션 및 자격요건</b>
+                </p>
+                <div id="table" style="width: 100%; height: 300px;">
+                    <div style="width: 30%; height: 100%; background: #ff1212; text-align: center; padding-top: 20px; box-sizing: border-box; float: left;">
+                        <b>테스트</b>
+                        <br>( 0명 )
+                    </div>
+                    <div style="width: 70%; height: 100%; background: #aaff2c; float: left;">
+                        <ul style="list-style: none; font-size: 14px;">
+                            <li style="width: 100%; height: 100px; background: #c5c5c5;">
+                                <p>담당업무</p>
+                                <p>- 상세내용을 입력하세요</p>
+                                <p>- 상세내용을 입력하세요</p>
+                            </li>
+                            <li style="width: 100%; height: 100px; background: #c5c5c5;">
+                                <p>자격요건</p>
+                                <p>- 학력 : 학력무관</p>
+                                <p>- 경력 : 신입</p>
+                            </li>
+                            <li style="width: 100%; height: 100px; background: #c5c5c5;">
+                                <p>우대사항</p>
+                                <p>- 상세내용을 입력하세요</p>
+                                <p>- 상세내용을 입력하세요</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 200px; background: #c5c5c5; margin-top: 50px;">
+                <p style="width: 100%; height: 50px; background: #c5c5c5; margin-bottom: 20px;">
+                    <b>0 전형절차</b>
+                </p>
+                <div>
+                    <p>
+                        - 서류전형 &gt; 1차면접 &gt; 2차면접 &gt; 임원면접 &gt; 최종합격
+                    </p>
+                    <p>
+                        - 면접일정은 추후 통보됩니다.
+                    </p>
+                </div>
+            </div>
+            <div style="width: 100%; height: 200px; background: #c5c5c5; margin-top: 50px;">
+                <p style="width: 100%; height: 50px; background: #c5c5c5; margin-bottom: 20px;">
+                    <b>0 유의사항</b>
+                </p>
+                <div>
+                    <p>
+                        - 허위사실이 발견될 경우 채용이 취소될 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                            <!--// 여기까지 넣어주세요. -->
+                        </div>
+                    </article>
+                    <div class="btnDetail">
+                        <div class="tplIcn tplIcnPit dotum">채용정보에 잘못된 내용이 있을 경우 <a class="girLinkReport" href="/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260" target="_blank">문의</a>해주세요.</div>
+                    </div>
+                </section>
+                <section id="tab02" class="secReadApply">
+                    <h2 class="hd_2">접수기간/방법</h2>
+                    <div class="divReadBx clear devMakeSameHeight">
+                        <article class="artReadPeriod" style="height: 211px;">
+                            <h3 class="hd_3 blind">접수기간</h3>
+                            <div>
+                                <dl class="time">
+                                    <dt class="girIcn icnTime">남은시간</dt>
+                                    <dd class="devRemainCount"><span class="tahoma">30</span>일 <span class="tahoma">10:11:22</span></dd>
+                                </dl>
+                                <dl class="date">
+                                    <dt>시작일</dt>
+                                    <dd><span class="tahoma">2024.05.07</span>(화)</dd>
+                                    <dt>마감일</dt>
+                                    <dd><span class="tahoma">2024.06.06</span>(목)</dd>
+                                </dl>
+                                <p class="deadline">
+                                </p>
+                                <div class="carlendar devTplLyClick">
+                                    <p class="btnCar"><button id="btnCalendar" type="button" class="girBtn girBtnCar devTplLyBtn"><span>달력보기</span></button></p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="artReadHow" style="height: 211px;">
+                            <h3 class="hd_3 blind">접수방법</h3>
+                            <div class="tbOline">
+                                <div class="btn">
+                                    <button type="button" class="girBtn tplBtn_1 tplBtnOrg girBtnOrg devOnlineApplyBtn" onclick="go_OnPass('', '', '');GI_Click_Cnt('','E02');;GA_Event('공고_PC', '공고지원하단', '즉시지원');" id="devApplyBtn"><span>즉시지원</span></button>
+                                    <button type="button" class="girBtn girBtn_1 girBtnBdOrg" onclick="lay_Booking_Open2('44616260', '1', '1'); GI_Click_Cnt('', 'E13');GA_Event('공고_PC', '공고지원하단', '안심 지원 예약');"><span>안심 지원 예약</span></button>
+
+                                </div>
+                            </div>
+                            <div class="tbRow tbRsm tbCase">
+                                <dl>
+                                    <dt>지원양식</dt>
+                                    <dd class="devTplLyClick">
+                                        <strong>잡코리아 이력서 양식</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tbRow">
+                                <dl>
+                                    <dt>모집분야</dt>
+                                    <dd>
+
+                                        <a href="#Apply" onclick="javascript:go_OnPass('초등부', '', '');return false;">초등부</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('중등부_활용', '', '');return false;">중등부_활용</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('중등부_성과', '', '');return false;">중등부_성과</a>
+                                        , <a href="#Apply" onclick="javascript:go_OnPass('고등부', '', '');return false;">고등부</a>
+                                    </dd>
+                                    <dt>모집인원</dt>
+                                    <dd><span class="tahoma">○</span>명</dd>
+                                </dl>
+                            </div>
+                            <div class="tbRow tbEtc">
+                                <dl>
+                                    <dt class="blind">기타</dt>
+                                    <dd>
+                                        포트폴리오 첨부희망
+                                    </dd>
+
+                                </dl>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="manager">
+                        <dl>
+                            <dt>인사 담당자</dt>
+                            <dd>
+                                홍회정 </dd>
+                            <dt>부서명</dt>
+                            <dd>
+                                인사과
+                            </dd>
+                            <dd class="devTplLyClick">
+                                <button type="button" class="girBtn girBtn_3 devTplLyBtn"><span>연락처 확인</span></button>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p class="textEnd">마감일은 기업의 사정으로 인해 조기 마감 또는 변경될 수 있습니다.</p>
+                </section>
+                <div id="INDAMTalk">
+                    <section id="tab03" class="secReadHrTalk">
+                        <!-- 생생인담톡 -->
+                        <h2 class="hd_2">생생인담톡 <em class="num tahoma devIndamTalkComCnt">(0)</em></h2>
+                        <article class="artReadQuestion devTplLyClick">
+                            <p>
+                                <button type="button" id="toggleIndamQstnLayer" class="girBtn girBtn_6 girBtnQuestion"><span>인사담당자에게 질문하기</span></button>
+                            </p>
+                        </article>
+                        <article class="artReadHrTalk divReadBx">
+                            <h3 class="hd_3 blind">생생인담톡 리스트</h3>
+                            <dl class="manager girIcn">
+                                <dt>인사담당자 한마디</dt>
+                                <dd>㈜송도국제정상어학원 채용정보에 관심 가져주셔서 감사합니다.
+                                    많은 지원 부탁 드립니다.</dd>
+                            </dl>
+                            <!-- 리스트 -->
+                            <div id="INDAMTalkList">
+                                <div class="talkList" data-searchtype="1" data-cnt="0">
+                                    <!--[개발] 질문이 없는 경우 .tplHide 추가 -->
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <section id="tab04" class="secReadCoInfo ">
+                    <h2 class="hd_2">기업정보</h2>
+                    <article class="artReadCoInfo divReadBx">
+                        <h3 class="hd_3 blind">요약정보</h3>
+                        <div class="tbRow clear">
+                            <div class="tbCol coLogo ">
+                                <p class="logo">
+                                    <a href="https://www.jobkorea.co.kr/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" onclick="GA_Event('공고_PC', '기업정보하단', '기업로고_㈜송도국제정상어학원');"><img src="http://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2013/6/2b7vt005Rt_vK2b2b2kt0btYtIg_tt.JPG" id="cologo" name="cologo" alt="㈜송도국제정상어학원" onload="go_logo_size(this, 180, 72);" width="180" height="72"></a>
+                                </p>
+                            </div>
+                            <div class="tbCol coInfo">
+                                <h4 class="hd_4">㈜송도국제정상어학원</h4>
+                                <p class="coBtn">
+                                    <a href="/Recruit/Co_Read/C/12204971?Oem_Code=C1" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보하단', '기업정보_㈜송도국제정상어학원');"><span>기업정보</span></a>
+                                    <button type="button" class="girBtn girBtn_2 girBtnFav  devFavor5_12204971" onclick="GA_Event('공고_PC', '기업정보하단', '관심_' + ($(this).hasClass('girBtnFavOn')?'해제':'등록') + '_㈜송도국제정상어학원');go_favor('12204971');"><span><strong class="tahoma devFavorCnt">221</strong>관심기업</span></button>
+                                    <a href="/Recruit/Salary/12204971" target="_blank" title="새창" class="girBtn girBtn_3" onclick="GA_Event('공고_PC', '기업정보하단', '연봉정보_㈜송도국제정상어학원');"><span>연봉정보</span></a>
+                                </p>
+                                <dl class="tbList">
+                                    <dt>산업</dt>
+                                    <dd>
+                                        <text>일반 교과 학원</text>
+                                    </dd>
+                                    <dt>사원수</dt>
+                                    <dd>
+                                        <span class="tahoma">50</span>명
+                                    </dd>
+                                    <dt>설립</dt>
+                                    <dd>
+                                        <span class="tahoma">2010</span>년 (<span class="tahoma">15</span>년차)
+                                    </dd>
+                                    <dt>기업형태</dt>
+                                    <dd>
+                                        중소기업
+                                        (비상장)
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="artReadStrategy">
+                    </article>
+                </section>
+                <section class="secReadWork" id="secReadWork">
+                    <h2 class="hd_2">근무환경</h2>
+                    <article class="artReadWork divReadBx">
+                        <h3 class="hd_3 blind">근무환경 정보</h3>
+                        <div class="address">
+                            <strong id="mapDtl" class="girIcn">인천 연수구 송도동 3-1번지 밀레니엄빌딩 5층</strong>
+                            <a href="https://maps.naver.com/?mapMode=0&amp;dlevel=12&amp;pinTitle=%e3%88%9c%ec%86%a1%eb%8f%84%ea%b5%ad%ec%a0%9c%ec%a0%95%ec%83%81%ec%96%b4%ed%95%99%ec%9b%90&amp;lat=37.3957028907164&amp;lng=126.650924558912" target="_blank" title="새창" class="btnMapApiS"><span>지도보기</span></a> <!-- 지도 api 이슈로 버튼 추가 -->
+                        </div>
+                        <div class="location">
+                            <div class="tbRow">
+                                <dl>
+                                    <dt>복리후생</dt>
+                                    <dd>
+                                        <dl>
+                                            <dt>보상·수당·지원</dt>
+                                            <dd>인센티브</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>기타</dt>
+                                            <dd>여름휴가, 분기별 특별휴일</dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="secReadCoKey">
+                    <h2 class="hd_2 girIcn">관련 키워드</h2>
+                    <article id="artKeywordSearch" class="artReadCoKey divReadBx clear">
+                        <ul class="list extendBx">
+                            <li><button onclick="window.open( 'https://www.jobkorea.co.kr/Theme/Edu?rv=1','_blank')" type="button" class="btnTheme" title="새창">교육 직무채용관</button></li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000345', '_blank'); GA_Event('공고_PC', '관련키워드', '학교·특수학교교사');" type="button" formtarget="_blank" title="'새창'">학교·특수학교교사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000345&amp;dkwrd=10003451850', '_blank'); GA_Event('공고_PC', '관련키워드', '영어');" type="button" formtarget="_blank" title="'새창'">영어</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347', '_blank'); GA_Event('공고_PC', '관련키워드', '학원강사');" type="button" formtarget="_blank" title="'새창'">학원강사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347&amp;dkwrd=10003472066', '_blank'); GA_Event('공고_PC', '관련키워드', '입시학원');" type="button" formtarget="_blank" title="'새창'">입시학원</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000347&amp;dkwrd=100034747674997', '_blank'); GA_Event('공고_PC', '관련키워드', '일반학원');" type="button" formtarget="_blank" title="'새창'">일반학원</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000348', '_blank'); GA_Event('공고_PC', '관련키워드', '외국어강사');" type="button" formtarget="_blank" title="'새창'">외국어강사</button>
+                            </li>
+                            <li>
+                                <button onclick="window.open('/Recruit/JobList?menucode=duty&amp;duty=1000349', '_blank'); GA_Event('공고_PC', '관련키워드', '기술·전문강사');" type="button" formtarget="_blank" title="'새창'">기술·전문강사</button>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <div class="divReadBx_1 divReadFalse">
+                    <div class="recurit-copyright">
+                        <span class="toggle-button" aria-expanded="false" aria-controls="toggle-target">
+                            <span class="recurit-copyright--title">본 채용정보는 잡코리아의 동의없이 무단전재, 재배포, 재가공할 수 없으며, 구직활동 이외의 용도로 사용될 수 없습니다. <i class="content-copyright--icon"></i></span>
+                        </span>
+                        <p class="recurit-copyright--content" id="toggle-target" aria-hidden="true">
+                            본 채용정보는 <strong>㈜송도국제정상어학원</strong>에서 제공한 자료를 바탕으로 잡코리아가 편집 및 그 표현방법을 수정하여 완성한 것입니다.
+                            본 정보는 잡코리아의 동의 없이 무단전재 또는 재배포, 재가공할 수 없으며, 게재된 채용기업과 채용담당자의 정보는 구직활동 이외의 용도로 사용될 수 없습니다.
+                            잡코리아는 <strong>㈜송도국제정상어학원</strong>에서 게재한 자료에 대한 오류와 사용자가 이를 신뢰하여 취한 조치에 대해 책임을 지지 않습니다.
+                            &lt;저작권자 ⓒ잡코리아. 무단전재-재배포금지&gt;
+
+                        </p>
+                        <a title="새창" class="girBtn girBtnReport" href="/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260" target="_blank">불법/허위/과장/오류 신고</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divReadFunc">
+                <ul>
+                    <li><button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_페이스북');goFacebook('http://joburl.kr/8Ovs3');return false;" class="girBtn girBtnFacebook" title=" 페이스북 전송(새창)"><span>페이스북</span></button></li>
+                    <li><button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_트위터');goTwitter('㈜송도국제정상어학원-송도정상어학원 영어교사 [초/중/고등부] 채용모집 (~06/06(목))http://joburl.kr/8Ovs3 - #jobkorea #jobko #kjob', 'http://joburl.kr/8Ovs3'); return false;" class="girBtn girBtnTwitter" title="트위터 전송(새창)"><span>트위터</span></button></li>
+                    <li>
+                        <button type="button" onclick="GA_Event('공고_PC', '공고상단', '공유하기_이메일');go_delivery(1); return false;" class="girBtn girBtnEmail" title="이메일"><span>이메일</span></button>
+                        <div id="devMsg" name="devMsg" style="position: absolute; top: 30px; left: -382px; z-index: 10000; display: none; user-select: auto !important;">
+                            <iframe id="MsgIfrm" name="MsgIfrm" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" title="스크랩,주소복사,채용공고 전달 레이어"></iframe>
+                        </div>
+                    </li>
+                    <li><button title="인쇄" class="girBtn girBtnPrint devPrint" type="button"><span>인쇄</span></button></li>
+                    <li><button title="신고" class="girBtn corporate-button-report" type="button" onclick="window.open('/help/inquiry?ctgrNo=603&amp;giNo=46910105&amp;coMemType=C&amp;gNo=44616260')"><span>신고</span></button></li>
+                </ul>
+            </div>
+            <!--// 우측 컨텐츠 -->
+        </section>
+    </div>
+    <!--// 채용공고 끝 //-->
+</body>
