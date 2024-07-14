@@ -1,352 +1,340 @@
+<style type="text/css">
+    td {
+        font-size: 9pt;
+        line-height: 1.5
+    }
 
-    <style type="text/css">
-        td {
-            font-size: 9pt;
-            line-height: 1.5
-        }
+    #contentsui_table {
+        border-collapse: collapse;
+        background-image: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_665tab_navy17.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 35px;
+    }
 
-        #contentsui_table {
-            border-collapse: collapse;
-            background-image: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_665tab_navy17.gif);
-            background-repeat: no-repeat;
-            background-size: 100% 35px;
-        }
+    #contentsui_table thead th {
+        height: 33px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 0px 5px 2px 5px;
+    }
 
-        #contentsui_table thead th {
-            height: 33px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #ffffff;
-            padding: 0px 5px 2px 5px;
-        }
+    #contentsui_table tbody th {
+        border-bottom: 1px solid #B3B3B3;
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: 15px;
+    }
 
-        #contentsui_table tbody th {
-            border-bottom: 1px solid #B3B3B3;
-            line-height: 1.5;
-            font-weight: bold;
-            font-size: 15px;
-        }
+    #contentsui_table tbody td {
+        border-width: 1px;
+        border-color: #B3B3B3;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        font-size: 15px;
+        padding: 8px;
+    }
 
-        #contentsui_table tbody td {
-            border-width: 1px;
-            border-color: #B3B3B3;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            font-size: 15px;
-            padding: 8px;
-        }
+    #contentsui_table .tab_line {
+        background-image: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_tab1_line.png);
+        background-repeat: no-repeat;
+    }
 
-        #contentsui_table .tab_line {
-            background-image: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_tab1_line.png);
-            background-repeat: no-repeat;
-        }
+    .weui_bot {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 20px 0px 25px;
+    }
 
-        .weui_bot {
-            margin: 0px 0px 0px 0px;
-            padding: 0px 20px 0px 25px;
-        }
+    /* 제목부분 css */
+    .weui_title {
+        height: 40px;
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
 
-        /* 제목부분 css */
-        .weui_title {
-            height: 40px;
-            display: inline-block;
-            width: 100%;
-            vertical-align: top;
-        }
+    .weui_title div {
+        float: left;
+    }
 
-        .weui_title div {
-            float: left;
-        }
+    /* 아이콘 변경 */
+    .weui_m36_text_cen {
+        vertical-align: bottom;
+        height: 40px;
+        color: #1d1d1d;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: normal !important;
+        background: url(https://file1.jobkorea.co.kr/Mng/2015/4/wiseui_icon_navy_m36.png) no-repeat;
+        background-position: 4px 3px;
+        padding: 0px 0px 0px 30px;
+    }
 
-        /* 아이콘 변경 */
-        .weui_m36_text_cen {
-            vertical-align: bottom;
-            height: 40px;
-            color: #1d1d1d;
-            font-weight: 500;
-            font-size: 26px;
-            line-height: normal !important;
-            background: url(https://file1.jobkorea.co.kr/Mng/2015/4/wiseui_icon_navy_m36.png) no-repeat;
-            background-position: 4px 3px;
-            padding: 0px 0px 0px 30px;
-        }
+    .weui_m36_text img {
+        vertical-align: bottom;
+        margin-bottom: 4px;
+    }
 
-        .weui_m36_text img {
-            vertical-align: bottom;
-            margin-bottom: 4px;
-        }
+    /* 서브 콘텐츠 css */
+    .weui_line {
+        clear: both;
+        height: 3px;
+        margin-top: 3px;
+        background: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_665line_1.jpg);
+    }
 
-        /* 서브 콘텐츠 css */
-        .weui_line {
-            clear: both;
-            height: 3px;
-            margin-top: 3px;
-            background: url(https://file1.jobkorea.co.kr/Mng/2015/5/wiseui_665line_1.jpg);
-        }
+    .weui_sub_contents {
+        margin: 45px 0px 0px 0px;
+    }
 
-        .weui_sub_contents {
-            margin: 45px 0px 0px 0px;
-        }
+    .weui_sub {
+        margin: 10px 0px 0px 13px;
+    }
 
-        .weui_sub {
-            margin: 10px 0px 0px 13px;
-        }
+    .weui_sub_icon {
+        width: 1.5%;
+        height: 16px;
+        float: left;
+        background-image: url(https://file1.jobkorea.co.kr/Mng/2015/4/wiseui_icon_black_s2.gif);
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        background-size: 3px 3px;
+    }
 
-        .weui_sub_icon {
-            width: 1.5%;
-            height: 16px;
-            float: left;
-            background-image: url(https://file1.jobkorea.co.kr/Mng/2015/4/wiseui_icon_black_s2.gif);
-            background-repeat: no-repeat;
-            background-position: 0% 100%;
-            background-size: 3px 3px;
-        }
+    .weui_sub_text {
+        line-height: 1.7;
+        margin-left: 13px;
+        text-align: left;
+        font-size: 15px;
+    }
 
-        .weui_sub_text {
-            line-height: 1.7;
-            margin-left: 13px;
-            text-align: left;
-            font-size: 15px;
-        }
+    .weui_title {
+        position: relative;
+        overflow: hidden;
+    }
 
-        .weui_title {
-            position: relative;
-            overflow: hidden;
-        }
-    </style>
-    <div align="center" style="margin: 0px auto; width: 800px;"> <!--상세공고-->
-        <table width="798" border="0" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td align="center" style="padding: 0px 0px 20px;"><!--상단이미지--><img
-                            title="잡코리아 1.png"
-                            src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990310"
-                           ></td>
-                </tr>
-            </tbody>
-        </table>
+
+    /* 240712 추가 CSS */
+    @font-face {
+        font-family: "GmarketSansBold";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+    }
+
+    img {
+        border: 0;
+        width: 100%;
+    }
+
+    .sub_contents {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+
+    .recruit_sub {
+        font-family: "GmarketSansBold" !important;
+        color: #001767;
+        font-size: 22px;
+        padding-left: 40px;
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        margin: 80px 0 25px 0;
+    }
+
+    .recruit_sub:before {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background: url(https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990935) no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        content: "";
+    }
+
+    .recruit_sub.eng:before {
+        top: 0px;
+    }
+
+    #btm_btn {
+        font-family: "GmarketSansBold" !important;
+        background-color: #001767;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        height:75px;
+        font-size: 24px;
+        line-height: 75px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @font-face {
+        font-family: "GmarketSansLight";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+    }
+
+    #btm_btn>span {        
+        font-size: 18px;
+        line-height: 75px;
+        font-family: "GmarketSansLight" !important;
+    }
+</style>
+<div style="width: 100%; margin:0 auto; background-color:#f7f7f7;">
+    <!--상단이미지-->
+    <img src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990933" alt="진인프라 2024년 진인프라 신입 및 경력 채용"
+        title="진인프라 2024년 진인프라 신입 및 경력 채용">
+    <!--상세공고-->
+    <div class="sub_contents">
+        <div class="recruit_sub">모집부문 및 자격요건</div>
         <div class="weui_bot">
-            <div class="weui_sub_contents">
-                <div class="weui_title">
-                    <div class="weui_m36_text_cen">모집부문 및 자격요건</div>
-                </div>
-            </div>
+            <table width="750" id="contentsui_table" border="0" cellspacing="0" cellpadding="7"
+                summary="모집부문 및 자격요건으로 이루어진 표" style="width: 100%;">
+                <thead style="background-color: #191a5b6b;">
+                    <tr>
+                        <th width="15%" align="center">모집부문</th>
+                        <th width="33%" align="center" class="tab_line">담당업무</th>
+                        <th width="*" align="center" class="tab_line">자격요건</th>
+                        <th width="12%" align="center" class="tab_line">근무지역</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> 정보통신공사<br> 컨설팅<br>
+                            (경력)</th>
+                        <td align="left"> - 정보통신공사사업 컨설팅 및 제안서 작성<br> - 정보통신공사 입찰분석 및 기획<br> - 현장 사업수행 PM 역할 </td>
+                        <td align="left"> - 정보통신사업 컨설팅 및 수행 PM 경험자<br> - 제안서 작성 가능한 자<br> - 입찰단가 분석 가능한 자<br> - 정보통신기술자
+                            초급
+                            이상인 자<br> - 정보통신, 전기, 소방 관련 자격증 보유자 우대<br> - 경력 : 5년 이상인 자 </td>
+                        <td align="center">본사</td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;">IPT 및<br> 팀즈보이스<br>
+                            엔지니어<br> (경력)</th>
+                        <td align="left"> - MS 팀즈보이스 서비스 운영<br> - 통화서비스 운영<br> - 팀즈 호스팅 서비스 컨설팅 및 운영<br> - 교환기, SBC,
+                            Trunk
+                            gateway 기술지원 <br> </td>
+                        <td align="left"> - IPT, MS 팀즈 경험자<br> - 네트워크 및 보이스 서비스에 대한 경험자<br> - FAE 경력 우대<br> - 경력 : 5년 이상
+                            <br>
+                        </td>
+                        <td align="center">본사</td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> QA/QC<br> (경력)</th>
+                        <td align="left"> - 네트워크, 방화벽, 서버 등 네트워크<br><span style="color: #fff;">- </span> 장비 전반
+                            품질 보증 및
+                            관리 업무<br> - QA/QC 프로세스 신규 수립 및 개선활동<br> - 성능, 기능 테스트 진행(PoC/BMT 지원)<br> - 국내외 호환 및 인증 요건
+                            테스트<br>
+                            - 각분야 전문 기술 엔지니어 지원 </td>
+                        <td align="left"> - QA/QC 프로세스를 이해하고 개선 가능한 자<br> - 계측기, Tool을 활용한 시스템검증 경험자<br> - 네트워크, 보안, 서버에
+                            대한
+                            기본 지식 보유자<br> - 문서작성 능력 우수한 자<br> - 매뉴얼 번역 가능한 영어가능자 우대<br> - 경력 : 3년 ~ 10년 사이 </td>
+                        <td align="center"> 본사 </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;">기술컨설팅<br> 및 제안수행<br>(신입/경력)</th>
+                        <td align="left"> - 네트워크, 보안, 솔루션 등 NI/SI<br><span style="color: #fff;">- </span> IT
+                            사업
+                            기술컨설팅<br> - 제안서 작성 및 사업수행 PM/PL역할<br> </td>
+                        <td align="left"> - NI/SI사업 기술컨설팅 경험자<br> - 사업수행 PM/PL 경험자<br> - 제안서 작성 및 프리젠테이션 능력우수한 자<br> -
+                            공공기관
+                            경험자 및 엔지니어 우대<br> - 경력 : 2년 ~ 20년 사이<br> - 신입 : 교육과정 이수자 혹은 관련학과 전공자 <br> </td>
+                        <td align="center">
+                            <p> 본사</p>
+                            <p>광주지사<br>
+                                대전지사<br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> 클라우드<br> 기술컨설팅<br> 및
+                            사업관리<br>(신입/경력)</th>
+                        <td align="left"> - 클라우드 영업<br> - 인프라, MSP, CSP, ISP 컨설팅 업무<br> - 제안서 및 견적서 작성<br> - 클라우드사업
+                            PM/PL 등
+                            사업수행 업무 </td>
+                        <td align="left"> - 클라우드 사업 관련 기술컨설팅 경험자<br> - ISP 컨설팅 경험자 우대<br> - 제안서 작성 및 프리젠테이션 능력 우수한자<br>
+                            - 경력
+                            : 2년 ~ 10년 사이<br> - 신입 : 교육과정 이수자 혹은 관련학과 전공자 <br> </td>
+                        <td align="center">본사</td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> 네트워크<br> 및 보안<br>
+                            필드엔지니어<br> (신입/경력)</th>
+                        <td align="left"> - 네트워크 Field Engineer<br><span style="color: #fff;">- </span> ㆍL2,
+                            L3 스위치 및
+                            라우터 등<br><span style="color: #fff;">- ㆍ</span>네트워크 장비
+                            구축(프로젝트)<br><span style="color: #fff;">- ㆍ</span>및 유지보수<br> - UTM/VPN Field
+                            Engineer<br><span style="color: #fff;">- </span> ㆍ장비 구축(프로젝트)
+                            및 유지보수 </td>
+                        <td align="left"> - L4, UTM, SDN 가능한 자 우대<br> - 네트워크, CISCO, 보안 등 자격증 소지자 우대<br> - 경력 : 3년 ~ 10년
+                            사이<br> - 신입 : 교육과정 이수자 혹은 관련학과 전공자 </td>
+                        <td align="center">
+                            <p>본사</p>
+                            <p>경인지사<br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;">모바일 및<br> 솔루션 B2B<br>
+                            컨설팅<br> (신입/경력)</th>
+                        <td align="left"> - KT 모바일 상품 컨설팅 및 제안<br> - 스마트폰 법인 모바일 상품 견적서 작성<br> - 모바일 관련 솔루션 제안서 작성 </td>
+                        <td align="left"> - B2B 사업 경력자 우대<br> - 엑셀, PPT 사용 능숙한 자<br> - 성실하고 적극적인 성격의 신입 직원 가능<br> - 경력 :
+                            1년
+                            ~ 10년 사이 <br> </td>
+                        <td align="center"> <span style="font-size: 13.33px;">본사</span> </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> 스마트폰<br> 법인개통<br>
+                            (신입/경력)</th>
+                        <td align="left"> - KT법인스마트폰 무선개통 업무<br> - KT전산시스템(kos) 개통<br> - 개통 결과처리 이메일 발송 및<br><span
+                                style="color: #fff;">- </span> 관리대장 등록 </td>
+                        <td align="left"> - 모바일 전산개통 가능한 직원<br> - 엑셀 가능한 자<br> - KT전산실 혹은 B2B 개통 경력자<br> - 기업 무선상품 경력자
+                            우대<br> - 개통업무 관심있는 신입직원 우대 <br> </td>
+                        <td align="center"> <span style="font-size: 13.33px;">본사</span> </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;"> 네트워크<br> 엔지니어 상주<br>
+                            (신입/경력)</th>
+                        <td align="left"> - 공공기관 시스템 인프라 운영<br> - 네트워크/서버 유지보수, 장애대응<br> - 주간, 월간 보고서 및 장애 리포트 작성 </td>
+                        <td align="left"> - 네트워크, 서버 등 시스템 운영 가능한 자<br> - CISCO장비 운영 가능한 자<br> - L4, 방화벽, VPN, DBMS 경험자
+                            우대<br> - 상주근무 경험자 우대<br> - 경력 : 1년 ~ 10년 사이<br> - 신입 : 교육과정 이수자 혹은 관련학과전공자 </td>
+                        <td align="center"> 충북<br> 음성군<br>
+                            공공기관<br> 상주 </td>
+                    </tr>
+                    <tr>
+                        <th align="center" style="color: #003d9a;">LLM 개발자<br>(신입/경력)</th>
+                        <td align="left"> - LLM 모델을 활용한 AI 서비스 개발 <br><span style="color: #fff;">- </span>
+                            ㆍPrompt
+                            Engineering/RAG/<br><span style="color: #fff;">- ㆍ</span>Llama 등<br> - LLM 서비스 고객
+                            컨설팅 및 지원 업무<br> - 공공, 기업 분야 특화 LLM 관련 서비스<br><span style="color: #fff;">- </span>
+                            개발 및 PoC 업무
+                        </td>
+                        <td align="left"> - LLM 개발 경험자 우대<br> - LangChain, chatGPT를 이용한 개발 경험<br> - java, python 등 개발
+                            경험<br>
+                            - Rest API 등 기본적인 네트워크 프로그래밍<br><span style="color: #fff;">- </span> 이해<br> - Git,
+                            DBMS 를 이용한 개발 경험<br> - 원활한 커뮤니케이션 능력 보유자<br> - 능동적, 주도적 업무 수행 가능자<br> - 경력 : 3년 ~ 7년 사이<br>
+                            - 신입
+                            : 관련학과 졸업자 혹은 학원수강자 </td>
+                        <td align="center">본사</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table width="750" id="contentsui_table" border="0" cellspacing="0" cellpadding="7"
-            summary="모집부문 및 자격요건으로 이루어진 표">
-            <thead>
-                <tr>
-                    <th width="14%" align="center">모집부문</th>
-                    <th width="36%" align="center" class="tab_line">담당업무</th>
-                    <th align="center" class="tab_line">자격요건</th>
-                    <th width="10%" align="center" class="tab_line">근무지역</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> 정보통신공사<br
-                           > 컨설팅<br> (경력)
-                    </th>
-                    <td align="left"> - 정보통신공사사업 컨설팅 및 제안서 작성<br
-                           > - 정보통신공사 입찰분석 및 기획<br
-                           > - 현장 사업수행 PM 역할 </td>
-                    <td align="left"> - 정보통신사업 컨설팅 및 수행 PM 경험자<br
-                           > - 제안서 작성 가능한 자<br
-                           > - 입찰단가 분석 가능한 자<br
-                           > - 정보통신기술자 초급 이상인 자<br
-                           > - 정보통신, 전기, 소방 관련 자격증 보유자 우대<br
-                           > - 경력 : 5년 이상인 자 </td>
-                    <td align="center">본사</td>
-                </tr>
-                <tr>
-                    <th align="center" style="color: #0075c8;">IPT 및<br
-                           > 팀즈보이스<br>
-                        엔지니어<br> (경력)</th>
-                    <td align="left"> - MS 팀즈보이스 서비스 운영<br
-                           > - 통화서비스 운영<br>
-                        - 팀즈 호스팅 서비스 컨설팅 및 운영<br> - 교환기, SBC, Trunk gateway 기술지원
-                        <br> </td>
-                    <td align="left"> - IPT, MS 팀즈 경험자<br
-                           > - 네트워크 및 보이스 서비스에 대한 경험자<br
-                           > - FAE 경력 우대<br>
-                        - 경력 : 5년 이상 <br> </td>
-                    <td align="center">본사</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> QA/QC<br
-                           > (경력)</th>
-                    <td align="left"> - 네트워크, 방화벽, 서버 등 네트워크<br
-                           ><span
-                            style="color: #fff;">- </span> 장비 전반 품질 보증 및 관리
-                        업무<br> - QA/QC 프로세스 신규 수립 및 개선활동<br
-                           > - 성능, 기능 테스트 진행(PoC/BMT 지원)<br
-                           > - 국내외 호환 및 인증 요건 테스트<br
-                           > - 각분야 전문 기술 엔지니어 지원 </td>
-                    <td align="left"> - QA/QC 프로세스를 이해하고 개선 가능한 자<br
-                           > - 계측기, Tool을 활용한 시스템검증 경험자<br
-                           > - 네트워크, 보안, 서버에 대한 기본 지식 보유자<br
-                           > - 문서작성 능력 우수한 자<br
-                           > - 매뉴얼 번역 가능한 영어가능자 우대<br
-                           > - 경력 : 3년 ~ 10년 사이 </td>
-                    <td align="center"> 본사 </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;">기술컨설팅<br
-                           > 및 제안수행<br
-                           >(신입/경력)</th>
-                    <td align="left"> - 네트워크, 보안, 솔루션 등 NI/SI<br
-                           ><span
-                            style="color: #fff;">- </span> IT 사업 기술컨설팅<br
-                           > - 제안서 작성 및 사업수행 PM/PL역할<br
-                           > </td>
-                    <td align="left"> - NI/SI사업 기술컨설팅 경험자<br
-                           > - 사업수행 PM/PL 경험자<br
-                           > - 제안서 작성 및 프리젠테이션 능력우수한 자<br
-                           > - 공공기관 경험자 및 엔지니어 우대<br
-                           > - 경력 : 2년 ~ 20년 사이<br
-                           > - 신입 : 교육과정 이수자 혹은 관련학과 전공자 <br
-                           > </td>
-                    <td align="center">
-                        <p> 본사</p>
-                        <p>광주지사<br> 대전지사<br
-                               ></p>
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> 클라우드<br
-                           > 기술컨설팅<br> 및
-                        사업관리<br>(신입/경력)</th>
-                    <td align="left"> - 클라우드 영업<br
-                           > - 인프라, MSP, CSP, ISP 컨설팅 업무<br
-                           > - 제안서 및 견적서 작성<br
-                           > - 클라우드사업 PM/PL 등 사업수행 업무 </td>
-                    <td align="left"> - 클라우드 사업 관련 기술컨설팅 경험자<br
-                           > - ISP 컨설팅 경험자 우대<br
-                           > - 제안서 작성 및 프리젠테이션 능력 우수한자<br
-                           > - 경력 : 2년 ~ 10년 사이<br
-                           > - 신입 : 교육과정 이수자 혹은 관련학과 전공자 <br
-                           > </td>
-                    <td align="center">본사</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> 네트워크<br
-                           > 및 보안<br>
-                        필드엔지니어<br> (신입/경력)</th>
-                    <td align="left"> - 네트워크 Field Engineer<br
-                           ><span
-                            style="color: #fff;">- </span> ㆍL2, L3 스위치 및 라우터
-                        등<br><span
-                            style="color: #fff;">- ㆍ</span>네트워크 장비
-                        구축(프로젝트)<br><span
-                            style="color: #fff;">- ㆍ</span>및 유지보수<br
-                           > - UTM/VPN Field Engineer<br
-                           ><span
-                            style="color: #fff;">- </span> ㆍ장비 구축(프로젝트) 및
-                        유지보수 </td>
-                    <td align="left"> - L4, UTM, SDN 가능한 자 우대<br
-                           > - 네트워크, CISCO, 보안 등 자격증 소지자 우대<br
-                           > - 경력 : 3년 ~ 10년 사이<br
-                           > - 신입 : 교육과정 이수자 혹은 관련학과 전공자 </td>
-                    <td align="center">
-                        <p>본사</p>
-                        <p>경인지사<br></p>
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;">모바일 및<br
-                           > 솔루션 B2B<br>
-                        컨설팅<br> (신입/경력)</th>
-                    <td align="left"> - KT 모바일 상품 컨설팅 및 제안<br
-                           > - 스마트폰 법인 모바일 상품 견적서 작성<br
-                           > - 모바일 관련 솔루션 제안서 작성 </td>
-                    <td align="left"> - B2B 사업 경력자 우대<br
-                           > - 엑셀, PPT 사용 능숙한 자<br
-                           > - 성실하고 적극적인 성격의 신입 직원 가능<br
-                           > - 경력 : 1년 ~ 10년 사이 <br
-                           > </td>
-                    <td align="center"> <span
-                            style="font-size: 13.33px;">본사</span> </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> 스마트폰<br
-                           > 법인개통<br>
-                        (신입/경력)</th>
-                    <td align="left"> - KT법인스마트폰 무선개통 업무<br
-                           > - KT전산시스템(kos) 개통<br
-                           > - 개통 결과처리 이메일 발송 및<br
-                           ><span
-                            style="color: #fff;">- </span> 관리대장 등록 </td>
-                    <td align="left"> - 모바일 전산개통 가능한 직원<br
-                           > - 엑셀 가능한 자<br>
-                        - KT전산실 혹은 B2B 개통 경력자<br> - 기업 무선상품 경력자 우대<br
-                           > - 개통업무 관심있는 신입직원 우대 <br
-                           > </td>
-                    <td align="center"> <span
-                            style="font-size: 13.33px;">본사</span> </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th align="center" style="color: #0075c8;"> 네트워크<br
-                           > 엔지니어 상주<br>
-                        (신입/경력)</th>
-                    <td align="left"> - 공공기관 시스템 인프라 운영<br
-                           > - 네트워크/서버 유지보수, 장애대응<br
-                           > - 주간, 월간 보고서 및 장애 리포트 작성 </td>
-                    <td align="left"> - 네트워크, 서버 등 시스템 운영 가능한 자<br
-                           > - CISCO장비 운영 가능한 자<br
-                           > - L4, 방화벽, VPN, DBMS 경험자 우대<br
-                           > - 상주근무 경험자 우대<br
-                           > - 경력 : 1년 ~ 10년 사이<br
-                           > - 신입 : 교육과정 이수자 혹은 관련학과전공자 </td>
-                    <td align="center"> 충북<br
-                           > 음성군<br> 공공기관<br
-                           > 상주 </td>
-                </tr>
-                <tr>
-                    <th align="center" style="color: #0075c8;">LLM 개발자<br
-                           >(신입/경력)</th>
-                    <td align="left"> - LLM 모델을 활용한 AI 서비스 개발 <br
-                           ><span
-                            style="color: #fff;">- </span> ㆍPrompt
-                        Engineering/RAG/<br><span
-                            style="color: #fff;">- ㆍ</span>Llama 등<br
-                           > - LLM 서비스 고객 컨설팅 및 지원 업무<br
-                           > - 공공, 기업 분야 특화 LLM 관련 서비스<br
-                           ><span
-                            style="color: #fff;">- </span> 개발 및 PoC 업무 </td>
-                    <td align="left"> - LLM 개발 경험자 우대<br
-                           > - LangChain, chatGPT를 이용한 개발 경험<br
-                           > - java, python 등 개발 경험<br
-                           > - Rest API 등 기본적인 네트워크 프로그래밍<br
-                           ><span
-                            style="color: #fff;">- </span> 이해<br
-                           > - Git, DBMS 를 이용한 개발 경험<br
-                           > - 원활한 커뮤니케이션 능력 보유자<br
-                           > - 능동적, 주도적 업무 수행 가능자<br
-                           > - 경력 : 3년 ~ 7년 사이<br
-                           > - 신입 : 관련학과 졸업자 혹은 학원수강자 </td>
-                    <td align="center">본사</td>
-                </tr>
-            </tbody>
-        </table>
-        <div style="padding: 40px 0px 0px;"><!--- 버튼 없을 때 40px---></div>
-        <p align="center" style="margin: 0px auto; width: 698px; position: relative;">
-            <img title="잡코리아 2.png" src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990314"
-               > <a
-                style="left: 2.7%; top: 96.5%; width: 60.7%; height: 2.8%; display: block; position: absolute;"
-                href="http://www.jobkorea.co.kr/List_GI/Co_HomePage_Open.asp?home=https%3A//www.jobkorea.co.kr/Company/16152630/%3FC_IDX%3D7665&amp;GI_No=47359046"
-                target="_blank"></a> </p>
     </div>
+    <div class="sub_contents">
+        <div class="recruit_sub">진인프라 근무환경</div>
+        <img src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990934"
+            alt="근무환경 - 진인프라 2024년 진인프라 신입 및 경력 채용" title="근무환경 - 진인프라 2024년 진인프라 신입 및 경력 채용"
+            style="width:95%; margin:0 auto;">
+    </div>
+    <div class="sub_contents">
+        <div class="recruit_sub eng">BENEFIT</div>
+        <img src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990942"
+            alt="복리후생 - 진인프라 2024년 진인프라 신입 및 경력 채용" title="복리후생 - 진인프라 2024년 진인프라 신입 및 경력 채용">
+    </div>
+    <img src="https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=990937" alt="진인프라 2024년 진인프라 신입 및 경력 채용"
+        title="진인프라 2024년 진인프라 신입 및 경력 채용">
+    <a href="https://www.jobkorea.co.kr/company/16152630" target="_blank" title="잡코리아 슈퍼기업관 진인프라(구.넷케이티아이) 기업정보 보러가기"
+        id="btm_btn">잡코리아 슈퍼기업관 진인프라<span>(구.넷케이티아이)</span> 기업정보 보러가기</a>
+</div>
