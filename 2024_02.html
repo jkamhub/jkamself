@@ -1,4 +1,384 @@
-<link rel="stylesheet" href="https://jkamhub.github.io/css/icofont/Duotone/icofont.min.css">
+<style type="text/css">
+    @media (max-width: 774px) {
+        #detail-content .allbox {
+            font-size: 0.9rem;
+        }
+    }
+
+    @font-face {
+        font-family: Giants-Bold;
+        src: url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2) format("woff2")
+    }
+
+    @font-face {
+        font-family: JalnanGothic;
+        src: url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff) format("woff")
+    }
+
+    @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 900;
+        font-display: block;
+        src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2) format("woff2"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf) format("truetype")
+    }
+
+    .fa-solid {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: var(--fa-display, inline-block);
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+    }
+
+    .fa-phone:before {
+        content: "\f095"
+    }
+
+    :root {
+        --main-text-color: #fff;
+        --main-point-color: #4272d7;
+    }
+
+    .allbox {
+        max-width: 775px;
+        min-width: 400px;
+        margin: 0 auto;
+        padding-bottom: 1.875rem;
+        font-family: Pretendard Variable, -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.05em;
+        color: #222
+    }
+
+    .allbox .logo {
+        text-align: right;
+        padding: 0.625rem 0 0.5rem 0;
+        border-top: 0.188rem solid #e9e9e9;
+        margin: 0
+    }
+
+    .allbox .logo img {
+        width: 5.625rem
+    }
+
+    .allbox .visual {
+        max-width: 100%;
+        vertical-align: top;
+        margin: 0 auto;
+        padding: 6rem 0 1rem 0;
+        background-color: var(--main-point-color);
+        z-index: 0
+    }
+
+    .allbox .visual img {
+        border: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .allbox h1 {
+        font-family: Giants-Bold !important;
+        font-weight: 700;
+        font-size: 2.2em;
+        padding: 0.938rem;
+        line-height: 1.2em;
+        margin: 0 auto -17.5rem auto;
+        color: var(--main-text-color);
+        word-break: keep-all;
+        position: relative;
+        text-shadow: 2px 0.188rem 0 #4272d7
+    }
+
+    .allbox h2 {
+        clear: both;
+        font-size: 2em;
+        letter-spacing: 0;
+        padding: 1.875rem 0 0.625rem 0;
+        margin: 0.625rem 0 0 0;
+        color: #000;
+        text-align: center;
+        font-family: Giants-Bold !important;
+        font-weight: 700;
+        word-break: keep-all
+    }
+
+    .allbox h2 img {
+        padding-right: 0.188rem
+    }
+
+    .allbox h3 {
+        color: #000
+    }
+
+    .allbox h4 {
+        text-align: center;
+        letter-spacing: 0;
+        font-size: 1.3em;
+        line-height: 1.8em;
+        font-weight: 400;
+        padding-bottom: 3rem;
+        margin: 0 auto 5rem auto;
+        font-family: JalnanGothic !important;
+        background-color: var(--main-point-color);
+        color: var(--main-text-color);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .allbox p.txt {
+        width: 100%;
+        line-height: 1.5em;
+        margin-top: 0;
+        padding-left: 0.313rem
+    }
+
+    .allbox ul {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        width: fit-content
+    }
+
+    .allbox li {
+        margin: 0 0 0.375rem 0;
+        padding: 0 0 0 1.25rem;
+        /* background: url(http://img.albamon.kr/etc/monform_v3/common/bul_st.png) no-repeat 2px 0.75rem;*/
+        font-family: JalnanGothic !important;
+        line-height: 1.8em;
+        list-style: none;
+        word-break: keep-all;
+        width: fit-content;
+        position: relative;
+    }
+
+    .allbox li:before {
+        position: absolute;
+        content: "";
+        left: 0.125rem;
+        top: 1rem;
+        width: 0.188rem;
+        height: 0.188rem;
+        background-color: #111;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+
+    .allbox .step li {
+        float: left;
+        width: 5.375rem;
+        height: 5rem;
+        padding: 2.188rem 0 0 0.625rem;
+        text-align: center;
+        font-size: 1.1em
+    }
+
+    .allbox table {
+        width: 100%
+    }
+
+    .allbox table,
+    .allbox td,
+    .allbox tr {
+        padding: .2em;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: .97em;
+        letter-spacing: -1px;
+        line-height: 1.5rem
+    }
+
+    .allbox thead th {
+        background: #fff5f3;
+        color: #494949;
+        border-top: 2px solid var(--main-point-color);
+        border-bottom: 2px solid var(--main-point-color);
+        padding: 0.313rem 0 0.438rem 0;
+        font-weight: 700;
+        border-right: 1px solid #d3d3d3
+    }
+
+    .allbox tbody td {
+        border-bottom: 1px solid #d3d3d3;
+        border-right: 1px solid #d3d3d3;
+        padding: 0.625rem 0;
+        background: #fff;
+        line-height: 1.6em
+    }
+
+    .allbox tbody .end,
+    .allbox thead .end {
+        border-right: 0 none
+    }
+
+    .allbox a {
+        text-decoration: underline
+    }
+
+    .allbox .btn {
+        text-align: center;
+        margin: 1.875rem auto 3.125rem auto;
+        padding: 0.625rem
+    }
+
+    .allbox .btn img {
+        vertical-align: middle;
+        margin-right: 0.313rem
+    }
+
+    .allbox img {
+        border: none
+    }
+
+    .allbox li.list_tit {
+        padding: 0 0 0 0.625rem;
+        color: var(--main-point-color);
+        font-size: 1.25em
+    }
+
+    .allbox li.list_tit:before {
+        display: none;
+    }
+
+    .allbox li.list_tit(not:first-child) {
+        margin-top: 3rem;
+        margin-top: 0
+    }
+</style>
+
+<div class="allbox" style="background-color:#daf8f7">
+    <p class="logo"><img src="http://img.albamon.kr/etc/monform_v3/common/bi_albamon.png" alt="알바몬 로고" title="알바몬 로고">
+    </p>
+    <h1 style="text-align:center"><span style="font-size:0.8em">YH물류</span><br>[최대21만원][주말알바][당일지급][택배][신규교육][초보][단기장기]
+    </h1>
+    <div class="visual">
+        <img src="https://file.albamon.com/albamon/admin/GuinHtmlUpload/ImageView?fn=2024/08/img/meghit14162030.png"
+            alt="YH물류 [최대21만원][주말알바][당일지급][택배][신규교육][초보][단기장기]" title="YH물류 [최대21만원][주말알바][당일지급][택배][신규교육][초보][단기장기]">
+    </div>
+    <h4>
+        오늘 바로 출근!! 당일지급!!<br>친구, 커플,가족 동반지원 가능<br>상하차, 분류, 스캔작업 / 신규교육 후 투입<br>단기/장기/격일/격주 근무 및 예약 가능<br>
+        <i class="fa-solid fa-phone"></i>
+        <span style="color:#ff5d4f;text-shadow:0 1px 0 #fff">&nbsp;010.5535.5083</span>
+    </h4>
+</div>
+
+
+<div class="allbox" style="background-color:#daf8f7">
+
+
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">채용정보</span>
+    </h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li>한진택배 상차, 하차, 스캔, 분류<br>(원하시는 업무 가능)</li>
+            <li>성별무관, 나이 무관</li>
+            <li>신규교육 2시간 진행 후 투입 (교육시간도 임금포함)</li>
+            <li>동반지원 가능 (같은 업무 배정)</li>
+            <li>원하시는 날짜에 원하시는 근무 가능합니다.<br>(근무일수 상관 없음)</li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">근
+            무 정 보</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li>근무기간 : 하루근무(1일), 격일근무, 장기근무, 단기근무<br>&nbsp;원하시는 날짜에 협의 가능합니다.</span></li>
+            <li>근무요일 : 월요일 ~ 금요일 (토요일 및 일요일 휴무)</li>
+            <li>근무시간 : 19:30 ~ 08: 30 ( 현장 상황에 따라 유동적)<br>&nbsp;근무 중간에 무료식사 및 휴게시간 제공</span></li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">급
+            여 정 보</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li>18:00 ~ 08:00&nbsp;<span style="color:#e74b3c">190,643</span>원</li>
+            <li>18:00 ~ 07:00&nbsp;<span style="color:#e74b3c">175,853</span>원</li>
+            <li>18:00 ~ 06:00&nbsp;<span style="color:#e74b3c">161,063</span>원</li>
+            <li>18:00 ~ 05:00&nbsp;<span style="color:#e74b3c">141,343</span>원</li>
+            <li>신규교육 시간도 임금에 포함됩니다.</li>
+            <li>연장수당&nbsp;<span style="color:#e74b3c">14,790</span>원 별도지급</li>
+            <li>월 ~ 금 출근시 주휴수당&nbsp;<span style="color:#e74b3c">78,880</span>원 별도지급</li>
+            <li>월 ~ 금 + 일요일 출근시&nbsp;<span style="color:#e74b3c">44,370</span>원 별도지급</li>
+            <li>급여는 4대보험 공제 후 당일에 본인계좌로 입급됩니다.</li>
+            <li>작업종료 시간에 따라 금액은 조정 될 수 있습니다.</li>
+            <li>수수료 없습니다.</li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">기
+            타 사 항</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li class="list_tit">지원자격</li>
+            <li>성별 : 셩별무관</li>
+            <li>연령 : 연령무관</li>
+            <li>학력 : 학력무관</li>
+            <li>우대조건 : 유사업무경험, 인근거주, 대학생, 휴학생,<br>&nbsp;장기근무자</span></li>
+        </ul>
+        <ul>
+            <li class="list_tit">준비물 및 복장</li>
+            <li>신분증 (주민등록증, 운전면허증, 임시신분증, 여권)</li>
+            <li>본인계좌 (타인명의 및 현금 지급 불가)</li>
+            <li>긴바지에 편한복장 (민소매, 반바지 금지)</li>
+            <li>운동화 또는 안전화 (슬리퍼, 크룩스 금지)</li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">통근버스
+            및 현장주소</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li>대전지역</li>
+            <li>전주지역</li>
+            <li>문의시 통근버스 운행표 보내드립니다.</li>
+            <li>통근버스는 왕복으로 운행합니다.</li>
+            <li>통근버스 이용 불가시 자차로 오시면 됩니다.</li>
+            <li>현장주소 : 대전 유성구 대정로 68</li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">접
+            수 방 법</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul>
+            <li>전화 연락 및 문자, 카톡</li>
+            <li>연락처 :&nbsp;<span style="color:#e74b3c">010.5535.5083</span></li>
+            <li>지원양식 : 이름/나이/성별/사는지역/근무날짜<br>&nbsp;예시 ( 홍길동/26/남/청주/15일 )</span></li>
+            <li>부재중인 경우 문자 남겨주시면 확인 즉시 연락드립니다.</li>
+            <li>24시간 편하실때 연락주세요. 예약 가능합니다.</li>
+            <li>원하시는날에 원하는 근무 가능합니다.</li>
+        </ul>
+    </div>
+    <h2><span
+            style="background:var(--main-point-color);color:var(--main-text-color);padding:0.625rem 1.875rem;border-radius:1.563rem">참
+            고 사 항</span></h2>
+    <div
+        style="border:1.2rem solid var(--main-point-color);margin-bottom:3.125rem;margin-top:-1.563rem;padding:4.375rem 1.875rem 2.5rem 1.875rem;border-radius:3.125rem;background-color:#fff">
+        <ul class="rbox">
+            <li>통근버스, 식사 및 장갑은 무료로 제공해드립니다.</li>
+            <li>휴대폰, 지갑, 모자, 가방(파우치크기) 반입 가능합니다.</li>
+            <li>개인 사물함 제공 됩니다.</li>
+            <li>4대보험 의무 가입입니다 (월 8일미만 출근시 미적용)</li>
+            <li>연락처 :&nbsp;<span style="color:#e74b3c">010.5535.5083</span></li>
+            <li>현장내 혈압체크 후 고혈압 및 저혈압 근무 불가합니다.<br>&nbsp;(수축기 160이상/이완기 100 이상/ 저혈압 50이하)</li>
+            <li>천식, 디스크 등 건강상의 유소견이 있으면 근무가 어려울수 있습니다.</li>
+        </ul>
+    </div>
+</div>
+</style>
 <div id="allbox">
     <div id="visual_box">
         <p>
